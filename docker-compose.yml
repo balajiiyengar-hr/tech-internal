@@ -1,0 +1,123 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: tech-internal-db
+    environment:
+      POSTGRES_USER: portal
+      POSTGRES_PASSWORD: portal
+      POSTGRES_DB: tech_internal
+    ports:
+      - "5434:5432"
+    volumes:
+      - tech_internal_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U portal -d tech_internal"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: tech-internal-redis
+    ports:
+      - "6380:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # Jaeger UI: http://localhost:16687; OTLP: 4320 (gRPC), 4319 (HTTP).
+  # The non-default host ports avoid colliding with other local Jaeger stacks.
+  jaeger:
+    image: jaegertracing/all-in-one:1.76.0
+    container_name: tech-internal-jaeger
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports:
+      - "16687:16686"
+      - "4320:4317"
+      - "4319:4318"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tech-internal-api
+    environment:
+      PORT: "8080"
+      DATABASE_URL: postgres://portal:portal@postgres:5432/tech_internal?sslmode=disable
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: tech-internal-dev-secret-change-in-production
+      DATA_ENCRYPTION_KEY: tech-internal-dev-data-key-change-me
+      PASSWORD_KDF: sha256
+      DEV_LOG_OTP: "true"
+      CORS_ORIGINS: http://localhost:3100,http://127.0.0.1:3100
+      MIGRATION_DIR: /app/migrations
+      APP_ENV: dev
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      jaeger:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/api/v1/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: tech-internal-ui
+    environment:
+      UI_PORT: "3100"
+      UI_DIR: /app/frontend
+      API_BASE_URL: http://localhost:8080/api/v1
+      APP_ENV: dev
+    ports:
+      - "3100:3100"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3100/"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  prometheus:
+    image: prom/prometheus:v3.6.0
+    container_name: tech-internal-prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./deploy/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+
+  grafana:
+    image: grafana/grafana:12.1.1
+    container_name: tech-internal-grafana
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_AUTH_DISABLE_LOGIN_FORM: "true"
+    ports:
+      - "3200:3000"
+    volumes:
+      - ./deploy/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./deploy/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on:
+      prometheus:
+        condition: service_started
+
+volumes:
+  tech_internal_pg:

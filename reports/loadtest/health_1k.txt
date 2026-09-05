@@ -1,0 +1,112 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/ibalaji/Uber/Code/Pers/tech-internal/scripts/loadtest/k6_auth.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 25s max duration (incl. graceful stop):
+              * health_1k: 1000.00 iterations/s for 20s (maxVUs: 80-200, gracefulStop: 5s)
+
+
+running (01.0s), 000/080 VUs, 994 complete and 0 interrupted iterations
+health_1k   [   5% ] 000/080 VUs  01.0s/20s  1000.00 iters/s
+
+running (02.0s), 000/080 VUs, 1994 complete and 0 interrupted iterations
+health_1k   [  10% ] 000/080 VUs  02.0s/20s  1000.00 iters/s
+
+running (03.0s), 000/080 VUs, 2994 complete and 0 interrupted iterations
+health_1k   [  15% ] 000/080 VUs  03.0s/20s  1000.00 iters/s
+
+running (04.0s), 000/080 VUs, 3994 complete and 0 interrupted iterations
+health_1k   [  20% ] 000/080 VUs  04.0s/20s  1000.00 iters/s
+
+running (05.0s), 000/080 VUs, 4994 complete and 0 interrupted iterations
+health_1k   [  25% ] 000/080 VUs  05.0s/20s  1000.00 iters/s
+
+running (06.0s), 000/080 VUs, 5994 complete and 0 interrupted iterations
+health_1k   [  30% ] 000/080 VUs  06.0s/20s  1000.00 iters/s
+
+running (07.0s), 000/080 VUs, 6994 complete and 0 interrupted iterations
+health_1k   [  35% ] 000/080 VUs  07.0s/20s  1000.00 iters/s
+
+running (08.0s), 000/080 VUs, 7994 complete and 0 interrupted iterations
+health_1k   [  40% ] 000/080 VUs  08.0s/20s  1000.00 iters/s
+
+running (09.0s), 000/080 VUs, 8994 complete and 0 interrupted iterations
+health_1k   [  45% ] 000/080 VUs  09.0s/20s  1000.00 iters/s
+
+running (10.0s), 000/080 VUs, 9994 complete and 0 interrupted iterations
+health_1k   [  50% ] 000/080 VUs  10.0s/20s  1000.00 iters/s
+
+running (11.0s), 000/080 VUs, 10994 complete and 0 interrupted iterations
+health_1k   [  55% ] 000/080 VUs  11.0s/20s  1000.00 iters/s
+
+running (12.0s), 000/080 VUs, 11994 complete and 0 interrupted iterations
+health_1k   [  60% ] 000/080 VUs  12.0s/20s  1000.00 iters/s
+
+running (13.0s), 000/080 VUs, 12994 complete and 0 interrupted iterations
+health_1k   [  65% ] 000/080 VUs  13.0s/20s  1000.00 iters/s
+
+running (14.0s), 000/080 VUs, 13994 complete and 0 interrupted iterations
+health_1k   [  70% ] 000/080 VUs  14.0s/20s  1000.00 iters/s
+
+running (15.0s), 000/080 VUs, 14994 complete and 0 interrupted iterations
+health_1k   [  75% ] 000/080 VUs  15.0s/20s  1000.00 iters/s
+
+running (16.0s), 000/080 VUs, 15994 complete and 0 interrupted iterations
+health_1k   [  80% ] 000/080 VUs  16.0s/20s  1000.00 iters/s
+
+running (17.0s), 000/080 VUs, 16994 complete and 0 interrupted iterations
+health_1k   [  85% ] 000/080 VUs  17.0s/20s  1000.00 iters/s
+
+running (18.0s), 000/080 VUs, 17994 complete and 0 interrupted iterations
+health_1k   [  90% ] 000/080 VUs  18.0s/20s  1000.00 iters/s
+
+running (19.0s), 000/080 VUs, 18994 complete and 0 interrupted iterations
+health_1k   [  95% ] 000/080 VUs  19.0s/20s  1000.00 iters/s
+
+running (20.0s), 000/080 VUs, 19994 complete and 0 interrupted iterations
+health_1k   [ 100% ] 000/080 VUs  20.0s/20s  1000.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 20001   1000.030299/s
+    checks_succeeded...: 100.00% 20001 out of 20001
+    checks_failed......: 0.00%   0 out of 20001
+
+    ✓ health 200
+
+    HTTP
+    http_req_duration..............: min=73µs    avg=203.68µs med=200µs    p(90)=253µs    p(95)=281µs    p(99)=431µs    max=3.12ms
+      { expected_response:true }...: min=73µs    avg=203.68µs med=200µs    p(90)=253µs    p(95)=281µs    p(99)=431µs    max=3.12ms
+    http_req_failed................: 0.00%  0 out of 20001
+    http_reqs......................: 20001  1000.030299/s
+
+    EXECUTION
+    iteration_duration.............: min=90.25µs avg=234.27µs med=223.08µs p(90)=294.79µs p(95)=330.29µs p(99)=568.83µs max=3.21ms
+    iterations.....................: 20001  1000.030299/s
+    vus............................: 0      min=0          max=0 
+    vus_max........................: 80     min=80         max=80
+
+    NETWORK
+    data_received..................: 3.7 MB 186 kB/s
+    data_sent......................: 1.7 MB 83 kB/s
+
+
+
+
+running (20.0s), 000/080 VUs, 20001 complete and 0 interrupted iterations
+health_1k ✓ [ 100% ] 000/080 VUs  20s  1000.00 iters/s

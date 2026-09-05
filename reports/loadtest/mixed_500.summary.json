@@ -1,0 +1,475 @@
+{
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "GET /health 200": {
+                    "fails": 0,
+                    "name": "GET /health 200",
+                    "path": "::GET /health 200",
+                    "id": "70af5caa174e04733a643e12413f85c2",
+                    "passes": 90001
+                },
+                "GET /auth/domain 200": {
+                    "path": "::GET /auth/domain 200",
+                    "id": "7f091c125d039b5d5209892bad5c1c93",
+                    "passes": 89964,
+                    "fails": 0,
+                    "name": "GET /auth/domain 200"
+                },
+                "GET /admin/domain 200": {
+                    "path": "::GET /admin/domain 200",
+                    "id": "883183ca88595f7e65ed07f33dd33d82",
+                    "passes": 78588,
+                    "fails": 0,
+                    "name": "GET /admin/domain 200"
+                },
+                "GET /me 200": {
+                    "path": "::GET /me 200",
+                    "id": "6ff9ccac44d1895a1727258c10eef936",
+                    "passes": 78571,
+                    "fails": 0,
+                    "name": "GET /me 200"
+                },
+                "DELETE /admin/apps 404": {
+                    "passes": 60898,
+                    "fails": 0,
+                    "name": "DELETE /admin/apps 404",
+                    "path": "::DELETE /admin/apps 404",
+                    "id": "a00d66f34e554881118046a0a6188a25"
+                },
+                "POST /admin/apps 201": {
+                    "name": "POST /admin/apps 201",
+                    "path": "::POST /admin/apps 201",
+                    "id": "d6317ee3cba07591920bbff3a655c4b0",
+                    "passes": 68365,
+                    "fails": 0
+                },
+                "POST /auth/otp/request 200": {
+                    "name": "POST /auth/otp/request 200",
+                    "path": "::POST /auth/otp/request 200",
+                    "id": "c4bd599703448e699c1e39edbbd0656a",
+                    "passes": 79622,
+                    "fails": 1916
+                },
+                "PUT /admin/domain 200": {
+                    "name": "PUT /admin/domain 200",
+                    "path": "::PUT /admin/domain 200",
+                    "id": "7ab1bffe91009c74a077f73ad2fbe753",
+                    "passes": 4123,
+                    "fails": 469
+                },
+                "GET /apps 200": {
+                    "fails": 0,
+                    "name": "GET /apps 200",
+                    "path": "::GET /apps 200",
+                    "id": "a42c1a351f66654a04dbb2377ec493b3",
+                    "passes": 44738
+                },
+                "POST /auth/login/email 200": {
+                    "name": "POST /auth/login/email 200",
+                    "path": "::POST /auth/login/email 200",
+                    "id": "22e72999e3d0c43e0939cf5e7220d21d",
+                    "passes": 89547,
+                    "fails": 0
+                },
+                "POST /admin/users 201": {
+                    "passes": 2556,
+                    "fails": 1555,
+                    "name": "POST /admin/users 201",
+                    "path": "::POST /admin/users 201",
+                    "id": "8e9dff8a85a031a349a1832974396d71"
+                },
+                "GET /admin/users 200": {
+                    "id": "a1cea83aed3a613aac92b68e20667ce0",
+                    "passes": 4974,
+                    "fails": 188,
+                    "name": "GET /admin/users 200",
+                    "path": "::GET /admin/users 200"
+                },
+                "POST /auth/otp/verify 200": {
+                    "name": "POST /auth/otp/verify 200",
+                    "path": "::POST /auth/otp/verify 200",
+                    "id": "b5fbac24c4b05675381ff20ffa1dbaa2",
+                    "passes": 79622,
+                    "fails": 1795
+                },
+                "PUT /admin/users/password 200": {
+                    "path": "::PUT /admin/users/password 200",
+                    "id": "4c49abf6db8bcba67e798932141166ab",
+                    "passes": 6585,
+                    "fails": 5125,
+                    "name": "PUT /admin/users/password 200"
+                },
+                "DELETE /admin/users 200": {
+                    "name": "DELETE /admin/users 200",
+                    "path": "::DELETE /admin/users 200",
+                    "id": "cce62d13b3f03284547b56ef19c903fc",
+                    "passes": 4057,
+                    "fails": 0
+                }
+            },
+        "name": ""
+    },
+    "metrics": {
+        "http_req_blocked": {
+            "max": 36.505,
+            "min": 0,
+            "avg": 0.013949902299282177,
+            "med": 0.002,
+            "p(90)": 0.003,
+            "p(95)": 0.004,
+            "p(99)": 0.291,
+            "p(99.9)": 2.299
+        },
+        "checks": {
+            "passes": 782211,
+            "fails": 11048,
+            "value": 0.9860726446217439
+        },
+        "vus_max": {
+            "value": 4113,
+            "min": 1150,
+            "max": 4113
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(95)": 1082.9625499999993,
+            "p(99)": 3403.906109999999,
+            "p(99.9)": 14259.201277000086,
+            "max": 30911.759,
+            "min": 0.081,
+            "avg": 337.2517053645094,
+            "med": 174.36,
+            "p(90)": 612.7321
+        },
+        "err_otp_request": {
+            "fails": 79622,
+            "passes": 1916,
+            "value": 0.02349824621648802
+        },
+        "err_health": {
+            "passes": 0,
+            "fails": 90001,
+            "value": 0
+        },
+        "lat_me": {
+            "p(90)": 375.136,
+            "p(95)": 616.1779999999998,
+            "p(99)": 1167.8623,
+            "p(99.9)": 1278.8294200000034,
+            "max": 1341.561,
+            "min": 2.383,
+            "avg": 245.00341460589894,
+            "med": 202.4
+        },
+        "http_req_sending": {
+            "min": 0.001,
+            "avg": 8.123790773586238,
+            "med": 0.005,
+            "p(90)": 0.012,
+            "p(95)": 0.019,
+            "p(99)": 0.094,
+            "p(99.9)": 0.47924600000017603,
+            "max": 26146.678
+        },
+        "err_app_delete": {
+            "passes": 0,
+            "fails": 60898,
+            "value": 0
+        },
+        "err_login": {
+            "passes": 0,
+            "fails": 89547,
+            "value": 0
+        },
+        "http_req_failed": {
+            "passes": 11048,
+            "fails": 788330,
+            "value": 0.013820745629727113
+        },
+        "err_admin_domain_get": {
+            "passes": 0,
+            "fails": 78588,
+            "value": 0
+        },
+        "http_req_waiting": {
+            "p(95)": 1190.9387499999998,
+            "p(99)": 15480.363719999998,
+            "p(99.9)": 37558.98979500028,
+            "max": 52326.724,
+            "min": 0.072,
+            "avg": 640.4647300063201,
+            "med": 178.39,
+            "p(90)": 662.3646000000001
+        },
+        "data_received": {
+            "count": 1110259841,
+            "rate": 4515111.520354689
+        },
+        "lat_admin_users": {
+            "max": 51918.231,
+            "min": 16.001,
+            "avg": 6726.374405075558,
+            "med": 2566.297,
+            "p(90)": 13459.557,
+            "p(95)": 29271.793249999995,
+            "p(99)": 49367.822969999994,
+            "p(99.9)": 51137.379189
+        },
+        "lat_otp_verify": {
+            "avg": 713.906329034477,
+            "med": 223.183,
+            "p(90)": 487.9974000000001,
+            "p(95)": 1109.9896,
+            "p(99)": 17253.96888,
+            "p(99.9)": 37800.6338160001,
+            "max": 38247.253,
+            "min": 8.867
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "p(99.9)": 0,
+            "max": 0,
+            "min": 0
+        },
+        "lat_admin_domain_put": {
+            "p(99)": 32776.46782,
+            "p(99.9)": 37284.770957000066,
+            "max": 38126.612,
+            "min": 5.424,
+            "avg": 6309.72776785714,
+            "med": 2727.181,
+            "p(90)": 15159.091000000002,
+            "p(95)": 19184.20489999999
+        },
+        "err_user_create": {
+            "passes": 1555,
+            "fails": 2556,
+            "value": 0.37825346630990025
+        },
+        "http_reqs": {
+            "count": 799378,
+            "rate": 3250.8433464253258
+        },
+        "lat_app_delete": {
+            "max": 2531.335,
+            "min": 3.054,
+            "avg": 414.97266095766753,
+            "med": 369.436,
+            "p(90)": 644.4866000000001,
+            "p(95)": 820.4694499999987,
+            "p(99)": 2263.2461200000002,
+            "p(99.9)": 2478.1609720000033
+        },
+        "lat_apps": {
+            "min": 5.496,
+            "avg": 594.355613572357,
+            "med": 551.5985000000001,
+            "p(90)": 966.9747,
+            "p(95)": 1221.5859999999996,
+            "p(99)": 3384.01671,
+            "p(99.9)": 3620.5730920000005,
+            "max": 3694.708
+        },
+        "http_req_duration": {
+            "med": 178.412,
+            "p(90)": 662.4135000000001,
+            "p(95)": 1190.9725999999998,
+            "p(99)": 15591.369739999998,
+            "p(99.9)": 43966.31088200484,
+            "max": 52326.735,
+            "min": 0.081,
+            "avg": 648.6104156356427
+        },
+        "err_app_create": {
+            "passes": 0,
+            "fails": 68365,
+            "value": 0
+        },
+        "lat_user_create": {
+            "max": 52232.748,
+            "min": 12.17,
+            "avg": 12158.343688883495,
+            "med": 6557.244,
+            "p(90)": 29425.831,
+            "p(95)": 31450.273999999994,
+            "p(99)": 49117.5691,
+            "p(99.9)": 52148.92849000006
+        },
+        "lat_domain": {
+            "p(90)": 7.311,
+            "p(95)": 11.418399999999984,
+            "p(99)": 38.25524999999998,
+            "p(99.9)": 120.41514600000058,
+            "max": 189.624,
+            "min": 0.315,
+            "avg": 4.093333455604511,
+            "med": 2.219
+        },
+        "err_me": {
+            "passes": 0,
+            "fails": 78571,
+            "value": 0
+        },
+        "err_otp_verify": {
+            "passes": 1795,
+            "fails": 79622,
+            "value": 0.022046992642814154
+        },
+        "lat_password": {
+            "p(99)": 50524.73152,
+            "p(99.9)": 52092.27123900006,
+            "max": 52326.735,
+            "min": 86.668,
+            "avg": 14004.58924671222,
+            "med": 13332.685000000001,
+            "p(90)": 29965.5193,
+            "p(95)": 33778.66884999999
+        },
+        "lat_health": {
+            "p(99)": 4.041,
+            "p(99.9)": 13.248000000002715,
+            "max": 50.35,
+            "min": 0.081,
+            "avg": 0.6508339574004738,
+            "med": 0.356,
+            "p(90)": 1.365,
+            "p(95)": 1.913
+        },
+        "dropped_iterations": {
+            "rate": 1875.549110876992,
+            "count": 461195
+        },
+        "err_apps": {
+            "passes": 0,
+            "fails": 44738,
+            "value": 0
+        },
+        "lat_otp_request": {
+            "max": 34339.753,
+            "min": 0.628,
+            "avg": 326.9192971988539,
+            "med": 6.355,
+            "p(90)": 19.631,
+            "p(95)": 32.53189999999998,
+            "p(99)": 12964.84219,
+            "p(99.9)": 19459.106627000012
+        },
+        "data_sent": {
+            "count": 574721420,
+            "rate": 2337228.8257309
+        },
+        "lat_admin_domain_get": {
+            "p(95)": 616.09565,
+            "p(99)": 1167.4667299999999,
+            "p(99.9)": 1276.8073320000465,
+            "max": 1341.717,
+            "min": 2.287,
+            "avg": 245.00344877080258,
+            "med": 202.4785,
+            "p(90)": 375.3503
+        },
+        "http_req_connecting": {
+            "max": 36.47,
+            "min": 0,
+            "avg": 0.01110843555864683,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0.255,
+            "p(99.9)": 2.208623000000088
+        },
+        "lat_app_create": {
+            "p(95)": 906.7573999999998,
+            "p(99)": 2271.60168,
+            "p(99.9)": 2487.0113680000018,
+            "max": 2535.096,
+            "min": 3.074,
+            "avg": 439.54477744460087,
+            "med": 385.927,
+            "p(90)": 670.6882
+        },
+        "err_admin_users": {
+            "passes": 188,
+            "fails": 4974,
+            "value": 0.03641999225106548
+        },
+        "err_user_delete": {
+            "passes": 0,
+            "fails": 4057,
+            "value": 0
+        },
+        "lat_login": {
+            "p(99.9)": 1420.6573900000028,
+            "max": 1512.947,
+            "min": 8.501,
+            "avg": 362.4872168916886,
+            "med": 247.672,
+            "p(90)": 1129.3706,
+            "p(95)": 1227.4769999999999,
+            "p(99)": 1323.5224600000001
+        },
+        "err_domain": {
+            "passes": 0,
+            "fails": 89964,
+            "value": 0
+        },
+        "vus": {
+            "min": 0,
+            "max": 4004,
+            "value": 0
+        },
+        "http_req_receiving": {
+            "min": 0,
+            "avg": 0.021894855750341516,
+            "med": 0.012,
+            "p(90)": 0.035,
+            "p(95)": 0.052,
+            "p(99)": 0.147,
+            "p(99.9)": 0.867,
+            "max": 49.45
+        },
+        "iteration_duration": {
+            "max": 53108.553167,
+            "min": 0.106583,
+            "avg": 724.8730952504033,
+            "med": 204.0371455,
+            "p(90)": 709.250725,
+            "p(95)": 1214.9675527499999,
+            "p(99)": 17907.395285469996,
+            "p(99.9)": 48190.7133382973
+        },
+        "iterations": {
+            "count": 707610,
+            "rate": 2877.6489475117214
+        },
+        "lat_user_delete": {
+            "p(99)": 2352.95264,
+            "p(99.9)": 2862.8864720000215,
+            "max": 3002.664,
+            "min": 23.186,
+            "avg": 594.3563098348524,
+            "med": 352.448,
+            "p(90)": 1383.8752000000002,
+            "p(95)": 1724.1387999999997
+        },
+        "err_admin_domain_put": {
+            "passes": 469,
+            "fails": 4123,
+            "value": 0.10213414634146341
+        },
+        "err_password": {
+            "passes": 5125,
+            "fails": 6585,
+            "value": 0.4376601195559351
+        }
+    },
+    "setup_data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0ZWNoLWludGVybmFsIiwiZGlzcGxheV9uYW1lIjoiUG9ydGFsIEFkbWluIiwiZG9tYWluIjoidGVjaGhyLmNvbSIsImV4cCI6MTc4ODcyNzY3OCwiZmFtaWx5X2lkIjoiMDM2ZTg5MzkxNGE1OGFmM2U3ZTc3ZjgwNTY1OTAwOTgiLCJpYXQiOjE3ODg2NDEyNzgsImlkZW50aWZpZXIiOiJhZG1pbkB0ZWNoaHIuY29tIiwiaWRlbnRpdHlfaWQiOiJjZDhhNGY2Mi05MzlkLTUzZTAtYzQ1NS04ZDk3ZWM5MmRjMzMiLCJqdGkiOiJmMzY4YmQyZTAzY2IwMWI4YTgzMmEyYjNiMmNkY2Y3OSIsIm9yZ19zbHVnIjoidGVjaGhyLmNvbSIsIm9yZ2FuaXphdGlvbl9pZCI6IjhhYWY4MTIyLTJkYzctNDhjZS04YTU5LWFjODE3MTJkYWQ5MSIsInBlcm1pc3Npb25zIjpbImFwcHM6cmVhZCIsImFwcHM6d3JpdGUiLCJtZW1iZXJzOnJlYWQiLCJtZW1iZXJzOndyaXRlIiwib3JnYW5pemF0aW9uOnJlYWQiLCJvcmdhbml6YXRpb246d3JpdGUiLCJwcm9maWxlOnJlYWQiLCJyb2xlczpyZWFkIiwicm9sZXM6d3JpdGUiXSwicGVyc29uX2lkIjoiY2EzYzBlYWUtZTkxMi03YWQ2LTY0NjktYWI1YTE2M2IxOTEyIiwicm9sZSI6ImFkbWluIiwicm9sZXMiOlsib3JnX2FkbWluIl0sInNjb3BlcyI6WyJhcHBzOnJlYWQiLCJhcHBzOndyaXRlIiwibWVtYmVyczpyZWFkIiwibWVtYmVyczp3cml0ZSIsIm9yZ2FuaXphdGlvbjpyZWFkIiwib3JnYW5pemF0aW9uOndyaXRlIiwicHJvZmlsZTpyZWFkIiwicm9sZXM6cmVhZCIsInJvbGVzOndyaXRlIl0sInN1YiI6IjQyOTdlZWVjLTc5M2ItYjQzNS1kNmQ1LTg3OGM2OTEwYTdmMyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInR5cGUiOiJlbWFpbCJ9.3KKXVcTVONIHgIoY_xCCjYkv5C7p7CGVmaJ_kNOn2ws"
+    }
+}

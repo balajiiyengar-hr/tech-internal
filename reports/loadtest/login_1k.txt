@@ -1,0 +1,120 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/ibalaji/Uber/Code/Pers/tech-internal/scripts/loadtest/k6_auth.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1200 max VUs, 25s max duration (incl. graceful stop):
+              * login_1k: 1000.00 iterations/s for 20s (maxVUs: 400-1200, gracefulStop: 5s)
+
+
+running (01.0s), 0440/0442 VUs, 470 complete and 0 interrupted iterations
+login_1k   [   5% ] 0440/0442 VUs  01.0s/20s  1000.00 iters/s
+
+running (02.0s), 0680/0681 VUs, 879 complete and 0 interrupted iterations
+login_1k   [  10% ] 0680/0681 VUs  02.0s/20s  1000.00 iters/s
+
+running (03.0s), 0942/0942 VUs, 1344 complete and 0 interrupted iterations
+login_1k   [  15% ] 0942/0942 VUs  03.0s/20s  1000.00 iters/s
+
+running (04.0s), 1170/1170 VUs, 1812 complete and 0 interrupted iterations
+login_1k   [  20% ] 1170/1170 VUs  04.0s/20s  1000.00 iters/s
+
+running (05.0s), 1199/1200 VUs, 2246 complete and 0 interrupted iterations
+login_1k   [  25% ] 1199/1200 VUs  05.0s/20s  1000.00 iters/s
+
+running (06.0s), 1200/1200 VUs, 2693 complete and 0 interrupted iterations
+login_1k   [  30% ] 1200/1200 VUs  06.0s/20s  1000.00 iters/s
+
+running (07.0s), 1200/1200 VUs, 3137 complete and 0 interrupted iterations
+login_1k   [  35% ] 1200/1200 VUs  07.0s/20s  1000.00 iters/s
+
+running (08.0s), 1199/1200 VUs, 3575 complete and 0 interrupted iterations
+login_1k   [  40% ] 1199/1200 VUs  08.0s/20s  1000.00 iters/s
+
+running (09.0s), 1199/1200 VUs, 4037 complete and 0 interrupted iterations
+login_1k   [  45% ] 1199/1200 VUs  09.0s/20s  1000.00 iters/s
+
+running (10.0s), 1199/1200 VUs, 4493 complete and 0 interrupted iterations
+login_1k   [  50% ] 1199/1200 VUs  10.0s/20s  1000.00 iters/s
+
+running (11.0s), 1200/1200 VUs, 4967 complete and 0 interrupted iterations
+login_1k   [  55% ] 1200/1200 VUs  11.0s/20s  1000.00 iters/s
+
+running (12.0s), 1200/1200 VUs, 5426 complete and 0 interrupted iterations
+login_1k   [  60% ] 1200/1200 VUs  12.0s/20s  1000.00 iters/s
+
+running (13.0s), 1200/1200 VUs, 5887 complete and 0 interrupted iterations
+login_1k   [  65% ] 1200/1200 VUs  13.0s/20s  1000.00 iters/s
+
+running (14.0s), 1200/1200 VUs, 6345 complete and 0 interrupted iterations
+login_1k   [  70% ] 1200/1200 VUs  14.0s/20s  1000.00 iters/s
+
+running (15.0s), 1200/1200 VUs, 6788 complete and 0 interrupted iterations
+login_1k   [  75% ] 1200/1200 VUs  15.0s/20s  1000.00 iters/s
+
+running (16.0s), 1200/1200 VUs, 7213 complete and 0 interrupted iterations
+login_1k   [  80% ] 1200/1200 VUs  16.0s/20s  1000.00 iters/s
+
+running (17.0s), 1200/1200 VUs, 7653 complete and 0 interrupted iterations
+login_1k   [  85% ] 1200/1200 VUs  17.0s/20s  1000.00 iters/s
+
+running (18.0s), 1200/1200 VUs, 8100 complete and 0 interrupted iterations
+login_1k   [  90% ] 1200/1200 VUs  18.0s/20s  1000.00 iters/s
+
+running (19.0s), 1200/1200 VUs, 8556 complete and 0 interrupted iterations
+login_1k   [  95% ] 1200/1200 VUs  19.0s/20s  1000.00 iters/s
+
+running (20.0s), 1199/1200 VUs, 9024 complete and 0 interrupted iterations
+login_1k   [ 100% ] 1199/1200 VUs  20.0s/20s  1000.00 iters/s
+
+running (21.0s), 0758/1200 VUs, 9472 complete and 0 interrupted iterations
+login_1k ↓ [ 100% ] 1200/1200 VUs  20s  1000.00 iters/s
+
+running (22.0s), 0299/1200 VUs, 9931 complete and 0 interrupted iterations
+login_1k ↓ [ 100% ] 1200/1200 VUs  20s  1000.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 20460   904.232937/s
+    checks_succeeded...: 100.00% 20460 out of 20460
+    checks_failed......: 0.00%   0 out of 20460
+
+    ✓ login 200
+    ✓ login has token
+
+    HTTP
+    http_req_duration..............: min=24.17ms avg=2.29s med=2.54s p(90)=2.85s p(95)=2.95s p(99)=3.15s max=3.91s
+      { expected_response:true }...: min=24.17ms avg=2.29s med=2.54s p(90)=2.85s p(95)=2.95s p(99)=3.15s max=3.91s
+    http_req_failed................: 0.00%  0 out of 10230
+    http_reqs......................: 10230  452.116469/s
+
+    EXECUTION
+    dropped_iterations.............: 9770   431.786696/s
+    iteration_duration.............: min=24.53ms avg=2.29s med=2.54s p(90)=2.85s p(95)=2.95s p(99)=3.15s max=3.91s
+    iterations.....................: 10230  452.116469/s
+    vus............................: 299    min=299        max=1200
+    vus_max........................: 1200   min=442        max=1200
+
+    NETWORK
+    data_received..................: 8.0 MB 353 kB/s
+    data_sent......................: 2.3 MB 101 kB/s
+
+
+
+
+running (22.6s), 0000/1200 VUs, 10230 complete and 0 interrupted iterations
+login_1k ✓ [ 100% ] 0000/1200 VUs  20s  1000.00 iters/s

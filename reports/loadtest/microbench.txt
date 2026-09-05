@@ -1,0 +1,10 @@
+goos: darwin
+goarch: arm64
+pkg: tech-internal/internal/auth
+cpu: Apple M4 Max
+BenchmarkArgon2idHash-16      	      66	  17828666 ns/op	19927764 B/op	      32 allocs/op
+BenchmarkArgon2idVerify-16    	      66	  17704603 ns/op	19927765 B/op	      37 allocs/op
+BenchmarkJWTIssuePair-16      	  174440	      6905 ns/op	    9550 B/op	     144 allocs/op
+BenchmarkJWTParse-16          	  384260	      3176 ns/op	    3908 B/op	      56 allocs/op
+PASS
+ok  	tech-internal/internal/auth	9.507s

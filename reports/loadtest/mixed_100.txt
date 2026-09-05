@@ -1,0 +1,1049 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/ibalaji/Uber/Code/Pers/tech-internal/scripts/loadtest/k6_mixed.js
+        output: -
+
+     scenarios: (100.00%) 13 scenarios, 4600 max VUs, 25s max duration (incl. graceful stop):
+              * admin_domain_get: 100.00 iterations/s for 20s (maxVUs: 40-160, exec: adminDomainGet, gracefulStop: 5s)
+              * admin_domain_put: 100.00 iterations/s for 20s (maxVUs: 40-160, exec: adminDomainPut, gracefulStop: 5s)
+              * admin_users: 100.00 iterations/s for 20s (maxVUs: 50-200, exec: adminUsers, gracefulStop: 5s)
+              * app_create: 100.00 iterations/s for 20s (maxVUs: 50-200, exec: appCreate, gracefulStop: 5s)
+              * app_delete: 100.00 iterations/s for 20s (maxVUs: 40-160, exec: appDelete, gracefulStop: 5s)
+              * apps: 100.00 iterations/s for 20s (maxVUs: 40-160, exec: apps, gracefulStop: 5s)
+              * domain: 100.00 iterations/s for 20s (maxVUs: 40-160, exec: domain, gracefulStop: 5s)
+              * health: 100.00 iterations/s for 20s (maxVUs: 30-120, exec: health, gracefulStop: 5s)
+              * login: 100.00 iterations/s for 20s (maxVUs: 250-1000, exec: login, gracefulStop: 5s)
+              * me: 100.00 iterations/s for 20s (maxVUs: 40-160, exec: me, gracefulStop: 5s)
+              * otp_flow: 100.00 iterations/s for 20s (maxVUs: 200-800, exec: otpFlow, gracefulStop: 5s)
+              * password: 100.00 iterations/s for 20s (maxVUs: 250-1000, exec: passwordReset, gracefulStop: 5s)
+              * user_flow: 100.00 iterations/s for 20s (maxVUs: 80-320, exec: userFlow, gracefulStop: 5s)
+
+
+Run                [ 100% ] setup()
+admin_domain_get   [   0% ]
+admin_domain_put   [   0% ]
+admin_users        [   0% ]
+app_create         [   0% ]
+app_delete         [   0% ]
+apps               [   0% ]
+domain             [   0% ]
+health             [   0% ]
+login              [   0% ]
+me                 [   0% ]
+otp_flow           [   0% ]
+password           [   0% ]
+user_flow          [   0% ]
+
+Run                [ 100% ] setup()
+admin_domain_get   [   0% ]
+admin_domain_put   [   0% ]
+admin_users        [   0% ]
+app_create         [   0% ]
+app_delete         [   0% ]
+apps               [   0% ]
+domain             [   0% ]
+health             [   0% ]
+login              [   0% ]
+me                 [   0% ]
+otp_flow           [   0% ]
+password           [   0% ]
+user_flow          [   0% ]
+
+Run                [ 100% ] setup()
+admin_domain_get   [   0% ]
+admin_domain_put   [   0% ]
+admin_users        [   0% ]
+app_create         [   0% ]
+app_delete         [   0% ]
+apps               [   0% ]
+domain             [   0% ]
+health             [   0% ]
+login              [   0% ]
+me                 [   0% ]
+otp_flow           [   0% ]
+password           [   0% ]
+user_flow          [   0% ]
+
+Run                [ 100% ] setup()
+admin_domain_get   [   0% ]
+admin_domain_put   [   0% ]
+admin_users        [   0% ]
+app_create         [   0% ]
+app_delete         [   0% ]
+apps               [   0% ]
+domain             [   0% ]
+health             [   0% ]
+login              [   0% ]
+me                 [   0% ]
+otp_flow           [   0% ]
+password           [   0% ]
+user_flow          [   0% ]
+
+Run                [ 100% ] setup()
+admin_domain_get   [   0% ]
+admin_domain_put   [   0% ]
+admin_users        [   0% ]
+app_create         [   0% ]
+app_delete         [   0% ]
+apps               [   0% ]
+domain             [   0% ]
+health             [   0% ]
+login              [   0% ]
+me                 [   0% ]
+otp_flow           [   0% ]
+password           [   0% ]
+user_flow          [   0% ]
+
+running (05.9s), 0167/1150 VUs, 132 complete and 0 interrupted iterations
+admin_domain_get   [   1% ] 007/040 VUs    00.2s/20s  100.00 iters/s
+admin_domain_put   [   1% ] 016/040 VUs    00.2s/20s  100.00 iters/s
+admin_users        [   1% ] 017/050 VUs    00.2s/20s  100.00 iters/s
+app_create         [   1% ] 011/050 VUs    00.2s/20s  100.00 iters/s
+app_delete         [   1% ] 008/040 VUs    00.2s/20s  100.00 iters/s
+apps               [   1% ] 014/040 VUs    00.2s/20s  100.00 iters/s
+domain             [   1% ] 004/040 VUs    00.2s/20s  100.00 iters/s
+health             [   1% ] 000/030 VUs    00.2s/20s  100.00 iters/s
+login              [   1% ] 0019/0250 VUs  00.2s/20s  100.00 iters/s
+me                 [   1% ] 010/040 VUs    00.2s/20s  100.00 iters/s
+otp_flow           [   1% ] 023/200 VUs    00.2s/20s  100.00 iters/s
+password           [   1% ] 0017/0250 VUs  00.2s/20s  100.00 iters/s
+user_flow          [   1% ] 021/080 VUs    00.2s/20s  100.00 iters/s
+
+running (06.9s), 0355/1152 VUs, 1242 complete and 0 interrupted iterations
+admin_domain_get   [   6% ] 019/040 VUs    01.2s/20s  100.00 iters/s
+admin_domain_put   [   6% ] 028/040 VUs    01.2s/20s  100.00 iters/s
+admin_users        [   6% ] 027/050 VUs    01.2s/20s  100.00 iters/s
+app_create         [   6% ] 019/050 VUs    01.2s/20s  100.00 iters/s
+app_delete         [   6% ] 020/040 VUs    01.2s/20s  100.00 iters/s
+apps               [   6% ] 027/040 VUs    01.2s/20s  100.00 iters/s
+domain             [   6% ] 013/040 VUs    01.2s/20s  100.00 iters/s
+health             [   6% ] 000/030 VUs    01.2s/20s  100.00 iters/s
+login              [   6% ] 0028/0250 VUs  01.2s/20s  100.00 iters/s
+me                 [   6% ] 019/040 VUs    01.2s/20s  100.00 iters/s
+otp_flow           [   6% ] 046/200 VUs    01.2s/20s  100.00 iters/s
+password           [   6% ] 0027/0250 VUs  01.2s/20s  100.00 iters/s
+user_flow          [   6% ] 082/082 VUs    01.2s/20s  100.00 iters/s
+
+running (07.9s), 0461/1175 VUs, 2413 complete and 0 interrupted iterations
+admin_domain_get   [  11% ] 023/040 VUs    02.2s/20s  100.00 iters/s
+admin_domain_put   [  11% ] 035/044 VUs    02.2s/20s  100.00 iters/s
+admin_users        [  11% ] 041/050 VUs    02.2s/20s  100.00 iters/s
+app_create         [  11% ] 023/050 VUs    02.2s/20s  100.00 iters/s
+app_delete         [  11% ] 024/040 VUs    02.2s/20s  100.00 iters/s
+apps               [  11% ] 035/044 VUs    02.2s/20s  100.00 iters/s
+domain             [  11% ] 014/040 VUs    02.2s/20s  100.00 iters/s
+health             [  11% ] 000/030 VUs    02.2s/20s  100.00 iters/s
+login              [  11% ] 0039/0250 VUs  02.2s/20s  100.00 iters/s
+me                 [  11% ] 023/040 VUs    02.2s/20s  100.00 iters/s
+otp_flow           [  11% ] 069/200 VUs    02.2s/20s  100.00 iters/s
+password           [  11% ] 0039/0250 VUs  02.2s/20s  100.00 iters/s
+user_flow          [  11% ] 096/097 VUs    02.2s/20s  100.00 iters/s
+
+running (08.9s), 0743/1250 VUs, 3356 complete and 0 interrupted iterations
+admin_domain_get   [  16% ] 045/045 VUs    03.2s/20s  100.00 iters/s
+admin_domain_put   [  16% ] 056/057 VUs    03.2s/20s  100.00 iters/s
+admin_users        [  16% ] 059/059 VUs    03.2s/20s  100.00 iters/s
+app_create         [  16% ] 050/051 VUs    03.2s/20s  100.00 iters/s
+app_delete         [  16% ] 045/046 VUs    03.2s/20s  100.00 iters/s
+apps               [  16% ] 056/057 VUs    03.2s/20s  100.00 iters/s
+domain             [  16% ] 033/040 VUs    03.2s/20s  100.00 iters/s
+health             [  16% ] 000/030 VUs    03.2s/20s  100.00 iters/s
+login              [  16% ] 0068/0250 VUs  03.2s/20s  100.00 iters/s
+me                 [  16% ] 045/045 VUs    03.2s/20s  100.00 iters/s
+otp_flow           [  16% ] 099/200 VUs    03.2s/20s  100.00 iters/s
+password           [  16% ] 0068/0250 VUs  03.2s/20s  100.00 iters/s
+user_flow          [  16% ] 119/120 VUs    03.2s/20s  100.00 iters/s
+
+running (09.9s), 0826/1354 VUs, 4469 complete and 0 interrupted iterations
+admin_domain_get   [  21% ] 045/055 VUs    04.2s/20s  100.00 iters/s
+admin_domain_put   [  21% ] 065/073 VUs    04.2s/20s  100.00 iters/s
+admin_users        [  21% ] 066/074 VUs    04.2s/20s  100.00 iters/s
+app_create         [  21% ] 048/058 VUs    04.2s/20s  100.00 iters/s
+app_delete         [  21% ] 045/055 VUs    04.2s/20s  100.00 iters/s
+apps               [  21% ] 065/073 VUs    04.2s/20s  100.00 iters/s
+domain             [  21% ] 017/040 VUs    04.2s/20s  100.00 iters/s
+health             [  21% ] 000/030 VUs    04.2s/20s  100.00 iters/s
+login              [  21% ] 0078/0250 VUs  04.2s/20s  100.00 iters/s
+me                 [  21% ] 045/055 VUs    04.2s/20s  100.00 iters/s
+otp_flow           [  21% ] 134/200 VUs    04.2s/20s  100.00 iters/s
+password           [  21% ] 0078/0250 VUs  04.2s/20s  100.00 iters/s
+user_flow          [  21% ] 140/141 VUs    04.2s/20s  100.00 iters/s
+
+running (10.9s), 1067/1466 VUs, 5416 complete and 0 interrupted iterations
+admin_domain_get   [  26% ] 065/067 VUs    05.2s/20s  100.00 iters/s
+admin_domain_put   [  26% ] 086/087 VUs    05.2s/20s  100.00 iters/s
+admin_users        [  26% ] 087/087 VUs    05.2s/20s  100.00 iters/s
+app_create         [  26% ] 068/068 VUs    05.2s/20s  100.00 iters/s
+app_delete         [  26% ] 066/067 VUs    05.2s/20s  100.00 iters/s
+apps               [  26% ] 086/087 VUs    05.2s/20s  100.00 iters/s
+domain             [  26% ] 034/045 VUs    05.2s/20s  100.00 iters/s
+health             [  26% ] 000/030 VUs    05.2s/20s  100.00 iters/s
+login              [  26% ] 0100/0250 VUs  05.2s/20s  100.00 iters/s
+me                 [  26% ] 066/066 VUs    05.2s/20s  100.00 iters/s
+otp_flow           [  26% ] 149/200 VUs    05.2s/20s  100.00 iters/s
+password           [  26% ] 0099/0250 VUs  05.2s/20s  100.00 iters/s
+user_flow          [  26% ] 161/162 VUs    05.2s/20s  100.00 iters/s
+
+running (11.9s), 0882/1520 VUs, 6847 complete and 0 interrupted iterations
+admin_domain_get   [  31% ] 045/070 VUs    06.2s/20s  100.00 iters/s
+admin_domain_put   [  31% ] 073/096 VUs    06.2s/20s  100.00 iters/s
+admin_users        [  31% ] 072/097 VUs    06.2s/20s  100.00 iters/s
+app_create         [  31% ] 044/071 VUs    06.2s/20s  100.00 iters/s
+app_delete         [  31% ] 044/070 VUs    06.2s/20s  100.00 iters/s
+apps               [  31% ] 073/096 VUs    06.2s/20s  100.00 iters/s
+domain             [  31% ] 027/049 VUs    06.2s/20s  100.00 iters/s
+health             [  31% ] 000/030 VUs    06.2s/20s  100.00 iters/s
+login              [  31% ] 0075/0250 VUs  06.2s/20s  100.00 iters/s
+me                 [  31% ] 043/070 VUs    06.2s/20s  100.00 iters/s
+otp_flow           [  31% ] 144/200 VUs    06.2s/20s  100.00 iters/s
+password           [  31% ] 0074/0250 VUs  06.2s/20s  100.00 iters/s
+user_flow          [  31% ] 168/171 VUs    06.2s/20s  100.00 iters/s
+
+running (12.9s), 1143/1587 VUs, 7815 complete and 0 interrupted iterations
+admin_domain_get   [  36% ] 055/076 VUs    07.2s/20s  100.00 iters/s
+admin_domain_put   [  36% ] 105/105 VUs    07.2s/20s  100.00 iters/s
+admin_users        [  36% ] 105/106 VUs    07.2s/20s  100.00 iters/s
+app_create         [  36% ] 057/077 VUs    07.2s/20s  100.00 iters/s
+app_delete         [  36% ] 056/076 VUs    07.2s/20s  100.00 iters/s
+apps               [  36% ] 104/105 VUs    07.2s/20s  100.00 iters/s
+domain             [  36% ] 037/051 VUs    07.2s/20s  100.00 iters/s
+health             [  36% ] 000/030 VUs    07.2s/20s  100.00 iters/s
+login              [  36% ] 0114/0250 VUs  07.2s/20s  100.00 iters/s
+me                 [  36% ] 057/076 VUs    07.2s/20s  100.00 iters/s
+otp_flow           [  36% ] 155/200 VUs    07.2s/20s  100.00 iters/s
+password           [  36% ] 0114/0250 VUs  07.2s/20s  100.00 iters/s
+user_flow          [  36% ] 184/185 VUs    07.2s/20s  100.00 iters/s
+
+running (13.9s), 1007/1597 VUs, 9241 complete and 0 interrupted iterations
+admin_domain_get   [  41% ] 059/076 VUs    08.2s/20s  100.00 iters/s
+admin_domain_put   [  41% ] 079/108 VUs    08.2s/20s  100.00 iters/s
+admin_users        [  41% ] 079/108 VUs    08.2s/20s  100.00 iters/s
+app_create         [  41% ] 060/077 VUs    08.2s/20s  100.00 iters/s
+app_delete         [  41% ] 060/076 VUs    08.2s/20s  100.00 iters/s
+apps               [  41% ] 080/107 VUs    08.2s/20s  100.00 iters/s
+domain             [  41% ] 037/051 VUs    08.2s/20s  100.00 iters/s
+health             [  41% ] 000/030 VUs    08.2s/20s  100.00 iters/s
+login              [  41% ] 0080/0250 VUs  08.2s/20s  100.00 iters/s
+me                 [  41% ] 060/076 VUs    08.2s/20s  100.00 iters/s
+otp_flow           [  41% ] 149/200 VUs    08.2s/20s  100.00 iters/s
+password           [  41% ] 0079/0250 VUs  08.2s/20s  100.00 iters/s
+user_flow          [  41% ] 185/188 VUs    08.2s/20s  100.00 iters/s
+
+running (14.9s), 1036/1601 VUs, 10508 complete and 0 interrupted iterations
+admin_domain_get   [  46% ] 056/076 VUs    09.2s/20s  100.00 iters/s
+admin_domain_put   [  46% ] 088/108 VUs    09.2s/20s  100.00 iters/s
+admin_users        [  46% ] 089/108 VUs    09.2s/20s  100.00 iters/s
+app_create         [  46% ] 057/077 VUs    09.2s/20s  100.00 iters/s
+app_delete         [  46% ] 056/076 VUs    09.2s/20s  100.00 iters/s
+apps               [  46% ] 087/108 VUs    09.2s/20s  100.00 iters/s
+domain             [  46% ] 025/051 VUs    09.2s/20s  100.00 iters/s
+health             [  46% ] 000/030 VUs    09.2s/20s  100.00 iters/s
+login              [  46% ] 0088/0250 VUs  09.2s/20s  100.00 iters/s
+me                 [  46% ] 056/076 VUs    09.2s/20s  100.00 iters/s
+otp_flow           [  46% ] 156/200 VUs    09.2s/20s  100.00 iters/s
+password           [  46% ] 0089/0250 VUs  09.2s/20s  100.00 iters/s
+user_flow          [  46% ] 189/191 VUs    09.2s/20s  100.00 iters/s
+
+running (15.9s), 1520/1773 VUs, 11152 complete and 0 interrupted iterations
+admin_domain_get   [  51% ] 095/095 VUs    10.2s/20s  100.00 iters/s
+admin_domain_put   [  51% ] 125/125 VUs    10.2s/20s  100.00 iters/s
+admin_users        [  51% ] 125/125 VUs    10.2s/20s  100.00 iters/s
+app_create         [  51% ] 095/096 VUs    10.2s/20s  100.00 iters/s
+app_delete         [  51% ] 095/095 VUs    10.2s/20s  100.00 iters/s
+apps               [  51% ] 124/125 VUs    10.2s/20s  100.00 iters/s
+domain             [  51% ] 062/063 VUs    10.2s/20s  100.00 iters/s
+health             [  51% ] 000/030 VUs    10.2s/20s  100.00 iters/s
+login              [  51% ] 0142/0250 VUs  10.2s/20s  100.00 iters/s
+me                 [  51% ] 095/095 VUs    10.2s/20s  100.00 iters/s
+otp_flow           [  51% ] 204/205 VUs    10.2s/20s  100.00 iters/s
+password           [  51% ] 0141/0250 VUs  10.2s/20s  100.00 iters/s
+user_flow          [  51% ] 217/219 VUs    10.2s/20s  100.00 iters/s
+
+running (16.9s), 1789/1944 VUs, 12012 complete and 0 interrupted iterations
+admin_domain_get   [  56% ] 104/107 VUs    11.2s/20s  100.00 iters/s
+admin_domain_put   [  56% ] 151/151 VUs    11.2s/20s  100.00 iters/s
+admin_users        [  56% ] 151/151 VUs    11.2s/20s  100.00 iters/s
+app_create         [  56% ] 104/108 VUs    11.2s/20s  100.00 iters/s
+app_delete         [  56% ] 104/107 VUs    11.2s/20s  100.00 iters/s
+apps               [  56% ] 151/151 VUs    11.2s/20s  100.00 iters/s
+domain             [  56% ] 063/064 VUs    11.2s/20s  100.00 iters/s
+health             [  56% ] 000/030 VUs    11.2s/20s  100.00 iters/s
+login              [  56% ] 0195/0250 VUs  11.2s/20s  100.00 iters/s
+me                 [  56% ] 104/107 VUs    11.2s/20s  100.00 iters/s
+otp_flow           [  56% ] 226/226 VUs    11.2s/20s  100.00 iters/s
+password           [  56% ] 0194/0250 VUs  11.2s/20s  100.00 iters/s
+user_flow          [  56% ] 242/242 VUs    11.2s/20s  100.00 iters/s
+
+running (17.9s), 1996/2119 VUs, 12912 complete and 0 interrupted iterations
+admin_domain_get   [  61% ] 125/125 VUs    12.2s/20s  100.00 iters/s
+admin_domain_put   [  61% ] 160/160 VUs    12.2s/20s  100.00 iters/s
+admin_users        [  61% ] 164/164 VUs    12.2s/20s  100.00 iters/s
+app_create         [  61% ] 126/126 VUs    12.2s/20s  100.00 iters/s
+app_delete         [  61% ] 125/125 VUs    12.2s/20s  100.00 iters/s
+apps               [  61% ] 160/160 VUs    12.2s/20s  100.00 iters/s
+domain             [  61% ] 068/074 VUs    12.2s/20s  100.00 iters/s
+health             [  61% ] 000/030 VUs    12.2s/20s  100.00 iters/s
+login              [  61% ] 0207/0250 VUs  12.2s/20s  100.00 iters/s
+me                 [  61% ] 124/125 VUs    12.2s/20s  100.00 iters/s
+otp_flow           [  61% ] 259/260 VUs    12.2s/20s  100.00 iters/s
+password           [  61% ] 0209/0250 VUs  12.2s/20s  100.00 iters/s
+user_flow          [  61% ] 269/270 VUs    12.2s/20s  100.00 iters/s
+
+running (18.9s), 2228/2294 VUs, 13698 complete and 0 interrupted iterations
+admin_domain_get   [  66% ] 142/143 VUs    13.2s/20s  100.00 iters/s
+admin_domain_put   [  66% ] 160/160 VUs    13.2s/20s  100.00 iters/s
+admin_users        [  66% ] 191/191 VUs    13.2s/20s  100.00 iters/s
+app_create         [  66% ] 143/143 VUs    13.2s/20s  100.00 iters/s
+app_delete         [  66% ] 142/143 VUs    13.2s/20s  100.00 iters/s
+apps               [  66% ] 160/160 VUs    13.2s/20s  100.00 iters/s
+domain             [  66% ] 076/089 VUs    13.2s/20s  100.00 iters/s
+health             [  66% ] 000/030 VUs    13.2s/20s  100.00 iters/s
+login              [  66% ] 0241/0250 VUs  13.2s/20s  100.00 iters/s
+me                 [  66% ] 142/143 VUs    13.2s/20s  100.00 iters/s
+otp_flow           [  66% ] 288/289 VUs    13.2s/20s  100.00 iters/s
+password           [  66% ] 0240/0250 VUs  13.2s/20s  100.00 iters/s
+user_flow          [  66% ] 303/303 VUs    13.2s/20s  100.00 iters/s
+
+running (19.9s), 2487/2519 VUs, 14147 complete and 0 interrupted iterations
+admin_domain_get   [  71% ] 160/160 VUs    14.2s/20s  100.00 iters/s
+admin_domain_put   [  71% ] 160/160 VUs    14.2s/20s  100.00 iters/s
+admin_users        [  71% ] 200/200 VUs    14.2s/20s  100.00 iters/s
+app_create         [  71% ] 177/177 VUs    14.2s/20s  100.00 iters/s
+app_delete         [  71% ] 160/160 VUs    14.2s/20s  100.00 iters/s
+apps               [  71% ] 160/160 VUs    14.2s/20s  100.00 iters/s
+domain             [  71% ] 113/114 VUs    14.2s/20s  100.00 iters/s
+health             [  71% ] 000/030 VUs    14.2s/20s  100.00 iters/s
+login              [  71% ] 0281/0282 VUs  14.2s/20s  100.00 iters/s
+me                 [  71% ] 160/160 VUs    14.2s/20s  100.00 iters/s
+otp_flow           [  71% ] 314/314 VUs    14.2s/20s  100.00 iters/s
+password           [  71% ] 0282/0282 VUs  14.2s/20s  100.00 iters/s
+user_flow          [  71% ] 320/320 VUs    14.2s/20s  100.00 iters/s
+
+running (20.9s), 2592/2643 VUs, 14822 complete and 0 interrupted iterations
+admin_domain_get   [  76% ] 159/160 VUs    15.2s/20s  100.00 iters/s
+admin_domain_put   [  76% ] 157/160 VUs    15.2s/20s  100.00 iters/s
+admin_users        [  76% ] 198/200 VUs    15.2s/20s  100.00 iters/s
+app_create         [  76% ] 200/200 VUs    15.2s/20s  100.00 iters/s
+app_delete         [  76% ] 159/160 VUs    15.2s/20s  100.00 iters/s
+apps               [  76% ] 158/160 VUs    15.2s/20s  100.00 iters/s
+domain             [  76% ] 130/135 VUs    15.2s/20s  100.00 iters/s
+health             [  76% ] 000/030 VUs    15.2s/20s  100.00 iters/s
+login              [  76% ] 0302/0304 VUs  15.2s/20s  100.00 iters/s
+me                 [  76% ] 160/160 VUs    15.2s/20s  100.00 iters/s
+otp_flow           [  76% ] 348/349 VUs    15.2s/20s  100.00 iters/s
+password           [  76% ] 0302/0305 VUs  15.2s/20s  100.00 iters/s
+user_flow          [  76% ] 319/320 VUs    15.2s/20s  100.00 iters/s
+
+running (21.9s), 2613/2682 VUs, 15839 complete and 0 interrupted iterations
+admin_domain_get   [  81% ] 160/160 VUs    16.2s/20s  100.00 iters/s
+admin_domain_put   [  81% ] 160/160 VUs    16.2s/20s  100.00 iters/s
+admin_users        [  81% ] 200/200 VUs    16.2s/20s  100.00 iters/s
+app_create         [  81% ] 200/200 VUs    16.2s/20s  100.00 iters/s
+app_delete         [  81% ] 160/160 VUs    16.2s/20s  100.00 iters/s
+apps               [  81% ] 160/160 VUs    16.2s/20s  100.00 iters/s
+domain             [  81% ] 098/135 VUs    16.2s/20s  100.00 iters/s
+health             [  81% ] 000/030 VUs    16.2s/20s  100.00 iters/s
+login              [  81% ] 0312/0314 VUs  16.2s/20s  100.00 iters/s
+me                 [  81% ] 160/160 VUs    16.2s/20s  100.00 iters/s
+otp_flow           [  81% ] 370/370 VUs    16.2s/20s  100.00 iters/s
+password           [  81% ] 0313/0313 VUs  16.2s/20s  100.00 iters/s
+user_flow          [  81% ] 320/320 VUs    16.2s/20s  100.00 iters/s
+
+running (22.9s), 2662/2720 VUs, 16695 complete and 0 interrupted iterations
+admin_domain_get   [  86% ] 160/160 VUs    17.2s/20s  100.00 iters/s
+admin_domain_put   [  86% ] 160/160 VUs    17.2s/20s  100.00 iters/s
+admin_users        [  86% ] 200/200 VUs    17.2s/20s  100.00 iters/s
+app_create         [  86% ] 185/200 VUs    17.2s/20s  100.00 iters/s
+app_delete         [  86% ] 160/160 VUs    17.2s/20s  100.00 iters/s
+apps               [  86% ] 160/160 VUs    17.2s/20s  100.00 iters/s
+domain             [  86% ] 123/135 VUs    17.2s/20s  100.00 iters/s
+health             [  86% ] 000/030 VUs    17.2s/20s  100.00 iters/s
+login              [  86% ] 0322/0323 VUs  17.2s/20s  100.00 iters/s
+me                 [  86% ] 160/160 VUs    17.2s/20s  100.00 iters/s
+otp_flow           [  86% ] 389/389 VUs    17.2s/20s  100.00 iters/s
+password           [  86% ] 0323/0323 VUs  17.2s/20s  100.00 iters/s
+user_flow          [  86% ] 320/320 VUs    17.2s/20s  100.00 iters/s
+
+running (23.9s), 2764/2810 VUs, 17210 complete and 0 interrupted iterations
+admin_domain_get   [  91% ] 160/160 VUs    18.2s/20s  100.00 iters/s
+admin_domain_put   [  91% ] 160/160 VUs    18.2s/20s  100.00 iters/s
+admin_users        [  91% ] 200/200 VUs    18.2s/20s  100.00 iters/s
+app_create         [  91% ] 200/200 VUs    18.2s/20s  100.00 iters/s
+app_delete         [  91% ] 160/160 VUs    18.2s/20s  100.00 iters/s
+apps               [  91% ] 159/160 VUs    18.2s/20s  100.00 iters/s
+domain             [  91% ] 149/150 VUs    18.2s/20s  100.00 iters/s
+health             [  91% ] 000/030 VUs    18.2s/20s  100.00 iters/s
+login              [  91% ] 0336/0343 VUs  18.2s/20s  100.00 iters/s
+me                 [  91% ] 160/160 VUs    18.2s/20s  100.00 iters/s
+otp_flow           [  91% ] 420/422 VUs    18.2s/20s  100.00 iters/s
+password           [  91% ] 0340/0345 VUs  18.2s/20s  100.00 iters/s
+user_flow          [  91% ] 320/320 VUs    18.2s/20s  100.00 iters/s
+
+running (24.9s), 2787/2851 VUs, 18126 complete and 0 interrupted iterations
+admin_domain_get   [  96% ] 160/160 VUs    19.2s/20s  100.00 iters/s
+admin_domain_put   [  96% ] 159/160 VUs    19.2s/20s  100.00 iters/s
+admin_users        [  96% ] 200/200 VUs    19.2s/20s  100.00 iters/s
+app_create         [  96% ] 200/200 VUs    19.2s/20s  100.00 iters/s
+app_delete         [  96% ] 160/160 VUs    19.2s/20s  100.00 iters/s
+apps               [  96% ] 160/160 VUs    19.2s/20s  100.00 iters/s
+domain             [  96% ] 123/155 VUs    19.2s/20s  100.00 iters/s
+health             [  96% ] 000/030 VUs    19.2s/20s  100.00 iters/s
+login              [  96% ] 0345/0346 VUs  19.2s/20s  100.00 iters/s
+me                 [  96% ] 160/160 VUs    19.2s/20s  100.00 iters/s
+otp_flow           [  96% ] 453/453 VUs    19.2s/20s  100.00 iters/s
+password           [  96% ] 0347/0347 VUs  19.2s/20s  100.00 iters/s
+user_flow          [  96% ] 320/320 VUs    19.2s/20s  100.00 iters/s
+
+running (25.9s), 2638/2886 VUs, 19009 complete and 0 interrupted iterations
+admin_domain_get ↓ [ 100% ] 160/160 VUs    20s  100.00 iters/s
+admin_domain_put ↓ [ 100% ] 160/160 VUs    20s  100.00 iters/s
+admin_users      ↓ [ 100% ] 200/200 VUs    20s  100.00 iters/s
+app_create       ↓ [ 100% ] 199/200 VUs    20s  100.00 iters/s
+app_delete       ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+apps             ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+domain           ↓ [ 100% ] 125/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ↓ [ 100% ] 0358/0358 VUs  20s  100.00 iters/s
+me               ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+otp_flow         ↓ [ 100% ] 461/461 VUs    20s  100.00 iters/s
+password         ↓ [ 100% ] 0359/0360 VUs  20s  100.00 iters/s
+user_flow        ↓ [ 100% ] 320/320 VUs    20s  100.00 iters/s
+
+running (26.9s), 1934/2886 VUs, 19713 complete and 0 interrupted iterations
+admin_domain_get ↓ [ 100% ] 160/160 VUs    20s  100.00 iters/s
+admin_domain_put ↓ [ 100% ] 160/160 VUs    20s  100.00 iters/s
+admin_users      ↓ [ 100% ] 200/200 VUs    20s  100.00 iters/s
+app_create       ↓ [ 100% ] 199/200 VUs    20s  100.00 iters/s
+app_delete       ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+apps             ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+domain           ↓ [ 100% ] 125/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ↓ [ 100% ] 0358/0358 VUs  20s  100.00 iters/s
+me               ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+otp_flow         ↓ [ 100% ] 461/461 VUs    20s  100.00 iters/s
+password         ↓ [ 100% ] 0359/0360 VUs  20s  100.00 iters/s
+user_flow        ↓ [ 100% ] 320/320 VUs    20s  100.00 iters/s
+
+running (27.9s), 0941/2886 VUs, 20706 complete and 0 interrupted iterations
+admin_domain_get ↓ [ 100% ] 160/160 VUs    20s  100.00 iters/s
+admin_domain_put ↓ [ 100% ] 160/160 VUs    20s  100.00 iters/s
+admin_users      ↓ [ 100% ] 200/200 VUs    20s  100.00 iters/s
+app_create       ↓ [ 100% ] 199/200 VUs    20s  100.00 iters/s
+app_delete       ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+apps             ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ↓ [ 100% ] 0358/0358 VUs  20s  100.00 iters/s
+me               ↓ [ 100% ] 159/160 VUs    20s  100.00 iters/s
+otp_flow         ↓ [ 100% ] 461/461 VUs    20s  100.00 iters/s
+password         ↓ [ 100% ] 0359/0360 VUs  20s  100.00 iters/s
+user_flow        ↓ [ 100% ] 320/320 VUs    20s  100.00 iters/s
+
+running (28.9s), 0250/2886 VUs, 21397 complete and 0 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ↓ [ 100% ] 461/461 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ↓ [ 100% ] 320/320 VUs    20s  100.00 iters/s
+
+running (29.9s), 0113/2886 VUs, 21534 complete and 0 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ↓ [ 100% ] 461/461 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ↓ [ 100% ] 320/320 VUs    20s  100.00 iters/s
+
+running (30.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (31.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (32.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (33.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (34.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (35.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (36.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (37.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (38.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (39.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (40.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (41.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (42.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (43.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (44.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (45.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (46.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (47.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (48.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (49.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (50.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (51.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (52.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (53.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (54.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (55.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (56.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (57.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (58.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (59.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (1m00.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+running (1m01.9s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 24707  396.368242/s
+    checks_succeeded...: 97.40% 24065 out of 24707
+    checks_failed......: 2.59%  642 out of 24707
+
+    ✓ GET /health 200
+    ✓ GET /admin/domain 200
+    ✓ GET /auth/domain 200
+    ✓ GET /me 200
+    ✓ POST /admin/apps 201
+    ✓ DELETE /admin/apps 404
+    ✓ POST /auth/login/email 200
+    ✓ GET /apps 200
+    ✓ GET /admin/users 200
+    ✓ POST /admin/users 201
+    ✓ PUT /admin/users/password 200
+    ✓ PUT /admin/domain 200
+    ✗ POST /auth/otp/request 200
+      ↳  81% — ✓ 1410 / ✗ 321
+    ✓ DELETE /admin/users 200
+    ✗ POST /auth/otp/verify 200
+      ↳  81% — ✓ 1410 / ✗ 321
+
+    CUSTOM
+    err_admin_domain_get...........: 0.00%  0 out of 1616
+    err_admin_domain_put...........: 0.00%  0 out of 1413
+    err_admin_users................: 0.00%  0 out of 1505
+    err_app_create.................: 0.00%  0 out of 1713
+    err_app_delete.................: 0.00%  0 out of 1615
+    err_apps.......................: 0.00%  0 out of 1413
+    err_domain.....................: 0.00%  0 out of 1882
+    err_health.....................: 0.00%  0 out of 2001
+    err_login......................: 0.00%  0 out of 1884
+    err_me.........................: 0.00%  0 out of 1615
+    err_otp_request................: 18.54% 321 out of 1731
+    err_otp_verify.................: 18.54% 321 out of 1731
+    err_password...................: 0.00%  0 out of 1887
+    err_user_create................: 0.00%  0 out of 1372
+    err_user_delete................: 0.00%  0 out of 1329
+    lat_admin_domain_get...........: min=1.23ms   avg=1.3s     med=763.56ms p(90)=2.77s  p(95)=2.85s  p(99)=2.9s   p(99.9)=2.99s  max=2.99s  
+    lat_admin_domain_put...........: min=3ms      avg=1.78s    med=1.06s    p(90)=3.9s   p(95)=4.08s  p(99)=4.29s  p(99.9)=4.37s  max=4.37s  
+    lat_admin_users................: min=3.79ms   avg=1.89s    med=1.12s    p(90)=4s     p(95)=4.16s  p(99)=4.31s  p(99.9)=4.38s  max=4.38s  
+    lat_app_create.................: min=1.84ms   avg=1.37s    med=796.64ms p(90)=2.81s  p(95)=2.86s  p(99)=2.92s  p(99.9)=2.99s  max=3s     
+    lat_app_delete.................: min=2.41ms   avg=1.3s     med=765.42ms p(90)=2.77s  p(95)=2.86s  p(99)=2.91s  p(99.9)=2.98s  max=2.99s  
+    lat_apps.......................: min=3.43ms   avg=1.78s    med=1.06s    p(90)=3.91s  p(95)=4.08s  p(99)=4.28s  p(99.9)=4.38s  max=4.38s  
+    lat_domain.....................: min=1.06ms   avg=728.36ms med=604.89ms p(90)=1.52s  p(95)=1.7s   p(99)=1.77s  p(99.9)=1.79s  max=1.79s  
+    lat_health.....................: min=76µs     avg=593.09µs med=320µs    p(90)=1.23ms p(95)=2.02ms p(99)=4.47ms p(99.9)=9.28ms max=13.55ms
+    lat_login......................: min=3.38ms   avg=2.16s    med=1.97s    p(90)=4.09s  p(95)=4.23s  p(99)=4.36s  p(99.9)=4.38s  max=4.38s  
+    lat_me.........................: min=1.32ms   avg=1.3s     med=761.77ms p(90)=2.77s  p(95)=2.85s  p(99)=2.91s  p(99.9)=2.98s  max=2.99s  
+    lat_otp_request................: min=2.73ms   avg=1.34s    med=777.62ms p(90)=2.78s  p(95)=2.85s  p(99)=2.91s  p(99.9)=2.98s  max=2.99s  
+    lat_otp_verify.................: min=5.38ms   avg=1.85s    med=1.59s    p(90)=3.79s  p(95)=4.11s  p(99)=4.29s  p(99.9)=4.38s  max=4.39s  
+    lat_password...................: min=5ms      avg=2.16s    med=1.97s    p(90)=4.08s  p(95)=4.22s  p(99)=4.36s  p(99.9)=4.38s  max=4.41s  
+    lat_user_create................: min=5.35ms   avg=1.83s    med=1.08s    p(90)=3.93s  p(95)=4.16s  p(99)=4.34s  p(99.9)=4.37s  max=4.38s  
+    lat_user_delete................: min=95.36ms  avg=2.03s    med=1.52s    p(90)=3.61s  p(95)=3.69s  p(99)=3.81s  p(99.9)=3.84s  max=3.84s  
+
+    HTTP
+    http_req_duration..............: min=76µs     avg=1.21s    med=762.09ms p(90)=3.52s  p(95)=3.86s  p(99)=4.25s  p(99.9)=4.37s  max=4.41s  
+      { expected_response:true }...: min=76µs     avg=1.18s    med=741.42ms p(90)=3.53s  p(95)=3.87s  p(99)=4.25s  p(99.9)=4.37s  max=4.41s  
+    http_req_failed................: 2.09%  642 out of 30619
+    http_reqs......................: 30619  491.212984/s
+
+    EXECUTION
+    dropped_iterations.............: 4361   69.962436/s
+    iteration_duration.............: min=100.83µs avg=1.7s     med=1.07s    p(90)=3.99s  p(95)=4.79s  p(99)=7.04s  p(99.9)=7.68s  max=7.81s  
+    iterations.....................: 21604  346.587587/s
+    vus............................: 0      min=0            max=2787
+    vus_max........................: 2886   min=1150         max=2886
+
+    NETWORK
+    data_received..................: 46 MB  740 kB/s
+    data_sent......................: 31 MB  502 kB/s
+
+
+
+
+running (1m02.3s), 0000/2886 VUs, 21604 complete and 43 interrupted iterations
+admin_domain_get ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_domain_put ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+admin_users      ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_create       ✓ [ 100% ] 000/200 VUs    20s  100.00 iters/s
+app_delete       ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+apps             ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+domain           ✓ [ 100% ] 000/155 VUs    20s  100.00 iters/s
+health           ✓ [ 100% ] 000/030 VUs    20s  100.00 iters/s
+login            ✓ [ 100% ] 0000/0359 VUs  20s  100.00 iters/s
+me               ✓ [ 100% ] 000/160 VUs    20s  100.00 iters/s
+otp_flow         ✓ [ 100% ] 000/462 VUs    20s  100.00 iters/s
+password         ✓ [ 100% ] 0000/0360 VUs  20s  100.00 iters/s
+user_flow        ✓ [ 100% ] 043/320 VUs    20s  100.00 iters/s

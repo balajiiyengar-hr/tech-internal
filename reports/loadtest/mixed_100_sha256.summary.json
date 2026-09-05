@@ -1,0 +1,471 @@
+{
+    "metrics": {
+        "lat_admin_domain_put": {
+            "min": 1.109,
+            "avg": 2.259178910544728,
+            "med": 2.224,
+            "p(90)": 2.695,
+            "p(95)": 2.859,
+            "p(99)": 3.445,
+            "p(99.9)": 5.6330000000002105,
+            "max": 8.331
+        },
+        "lat_admin_users": {
+            "avg": 2.53338180909545,
+            "med": 2.52,
+            "p(90)": 2.963,
+            "p(95)": 3.14,
+            "p(99)": 3.584,
+            "p(99.9)": 4.466000000000095,
+            "max": 6.473,
+            "min": 1.295
+        },
+        "lat_health": {
+            "p(90)": 0.709,
+            "p(95)": 0.769,
+            "p(99)": 0.946,
+            "p(99.9)": 1.2700000000000187,
+            "max": 1.998,
+            "min": 0.149,
+            "avg": 0.5205522238880558,
+            "med": 0.504
+        },
+        "err_app_create": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "http_req_connecting": {
+            "min": 0,
+            "avg": 0.021637516928774803,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0.807,
+            "p(99.9)": 0.988820000000004,
+            "max": 3.844
+        },
+        "err_otp_request": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "lat_app_delete": {
+            "avg": 1.4621114442778613,
+            "med": 1.447,
+            "p(90)": 1.805,
+            "p(95)": 1.936,
+            "p(99)": 2.285,
+            "p(99.9)": 3.538000000000012,
+            "max": 3.655,
+            "min": 0.479
+        },
+        "data_sent": {
+            "count": 23745719,
+            "rate": 1127897.9497245867
+        },
+        "lat_login": {
+            "p(99.9)": 7.8077570000001675,
+            "max": 15.499,
+            "min": 1.769,
+            "avg": 3.5391390000000014,
+            "med": 3.492,
+            "p(90)": 4.143,
+            "p(95)": 4.386349999999999,
+            "p(99)": 5.33311
+        },
+        "http_req_receiving": {
+            "p(95)": 0.054,
+            "p(99)": 0.086,
+            "p(99.9)": 0.132,
+            "max": 0.445,
+            "min": 0.003,
+            "avg": 0.013940659462146721,
+            "med": 0.009,
+            "p(90)": 0.021
+        },
+        "http_req_tls_handshaking": {
+            "max": 0,
+            "min": 0,
+            "avg": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "p(99.9)": 0
+        },
+        "http_req_waiting": {
+            "p(90)": 2.772,
+            "p(95)": 3.282,
+            "p(99)": 4.022,
+            "p(99.9)": 5.83886000000049,
+            "max": 13.912,
+            "min": 0.129,
+            "avg": 1.7067165086647678,
+            "med": 1.668
+        },
+        "err_otp_verify": {
+            "fails": 2001,
+            "passes": 0,
+            "value": 0
+        },
+        "vus": {
+            "value": 0,
+            "min": 0,
+            "max": 12
+        },
+        "err_admin_users": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "iteration_duration": {
+            "p(90)": 3.937458,
+            "p(95)": 4.555771,
+            "p(99)": 5.2928964999999994,
+            "p(99.9)": 7.235301430000212,
+            "max": 16.266834,
+            "min": 0.204125,
+            "avg": 2.3121036141247955,
+            "med": 2.135583
+        },
+        "http_req_duration": {
+            "max": 15.499,
+            "min": 0.149,
+            "avg": 1.726016942594169,
+            "med": 1.685,
+            "p(90)": 2.804,
+            "p(95)": 3.299,
+            "p(99)": 4.039199999999999,
+            "p(99.9)": 5.854980000000355
+        },
+        "err_me": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "lat_otp_request": {
+            "max": 7.081,
+            "min": 0.996,
+            "avg": 2.5422583708145927,
+            "med": 2.523,
+            "p(90)": 3.118,
+            "p(95)": 3.3,
+            "p(99)": 4.011,
+            "p(99.9)": 4.789000000000056
+        },
+        "err_admin_domain_put": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "lat_app_create": {
+            "med": 1.786,
+            "p(90)": 2.085,
+            "p(95)": 2.213,
+            "p(99)": 2.641,
+            "p(99.9)": 4.797000000000098,
+            "max": 6.405,
+            "min": 0.858,
+            "avg": 1.8048015992004005
+        },
+        "data_received": {
+            "count": 35273495,
+            "rate": 1675455.8027963042
+        },
+        "lat_user_create": {
+            "min": 1.044,
+            "avg": 2.270406796601705,
+            "med": 2.233,
+            "p(90)": 2.718,
+            "p(95)": 2.891,
+            "p(99)": 3.469,
+            "p(99.9)": 5.871000000000149,
+            "max": 8.534
+        },
+        "err_domain": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "checks": {
+            "passes": 30013,
+            "fails": 0,
+            "value": 1
+        },
+        "http_reqs": {
+            "count": 36181,
+            "rate": 1718.5613844325062
+        },
+        "err_admin_domain_get": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "lat_user_delete": {
+            "med": 0.816,
+            "p(90)": 1.026,
+            "p(95)": 1.109,
+            "p(99)": 1.416,
+            "p(99.9)": 4.975000000000119,
+            "max": 5.6,
+            "min": 0.445,
+            "avg": 0.8393173413293362
+        },
+        "http_req_failed": {
+            "fails": 36181,
+            "passes": 0,
+            "value": 0
+        },
+        "lat_otp_verify": {
+            "p(99)": 3.134,
+            "p(99.9)": 7.481000000000389,
+            "max": 13.924,
+            "min": 1.307,
+            "avg": 1.9734807596201909,
+            "med": 1.924,
+            "p(90)": 2.199,
+            "p(95)": 2.334
+        },
+        "http_req_sending": {
+            "max": 1.854,
+            "min": 0.001,
+            "avg": 0.00535977446726074,
+            "med": 0.004,
+            "p(90)": 0.008,
+            "p(95)": 0.012,
+            "p(99)": 0.023,
+            "p(99.9)": 0.059
+        },
+        "err_user_create": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "http_req_blocked": {
+            "p(95)": 0.004,
+            "p(99)": 0.8261999999999996,
+            "p(99.9)": 1.009640000000008,
+            "max": 3.913,
+            "min": 0,
+            "avg": 0.02379121638426762,
+            "med": 0.001,
+            "p(90)": 0.003
+        },
+        "err_apps": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "lat_apps": {
+            "med": 2.544,
+            "p(90)": 3.031,
+            "p(95)": 3.212,
+            "p(99)": 3.789,
+            "p(99.9)": 5.013000000000209,
+            "max": 6.783,
+            "min": 1.054,
+            "avg": 2.5525052473763097
+        },
+        "err_login": {
+            "passes": 0,
+            "fails": 2000,
+            "value": 0
+        },
+        "err_health": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(95)": 3.299,
+            "p(99)": 4.039199999999999,
+            "p(99.9)": 5.854980000000355,
+            "max": 15.499,
+            "min": 0.149,
+            "avg": 1.726016942594169,
+            "med": 1.685,
+            "p(90)": 2.804
+        },
+        "lat_me": {
+            "min": 0.543,
+            "avg": 1.4321049475262335,
+            "med": 1.417,
+            "p(90)": 1.767,
+            "p(95)": 1.884,
+            "p(99)": 2.257,
+            "p(99.9)": 3.3410000000000117,
+            "max": 3.724
+        },
+        "err_app_delete": {
+            "fails": 2001,
+            "passes": 0,
+            "value": 0
+        },
+        "iterations": {
+            "count": 26011,
+            "rate": 1235.4965360402953
+        },
+        "lat_password": {
+            "max": 8.602,
+            "min": 1.085,
+            "avg": 2.2690089999999987,
+            "med": 2.2125000000000004,
+            "p(90)": 2.706,
+            "p(95)": 2.9240999999999997,
+            "p(99)": 3.5341399999999994,
+            "p(99.9)": 5.6377480000001645
+        },
+        "lat_admin_domain_get": {
+            "max": 3.377,
+            "min": 0.516,
+            "avg": 1.4353403298350842,
+            "med": 1.434,
+            "p(90)": 1.781,
+            "p(95)": 1.911,
+            "p(99)": 2.19,
+            "p(99.9)": 3.003000000000021
+        },
+        "err_password": {
+            "fails": 2000,
+            "passes": 0,
+            "value": 0
+        },
+        "lat_domain": {
+            "p(99.9)": 3.0540000000000025,
+            "max": 3.484,
+            "min": 0.452,
+            "avg": 1.409074462768617,
+            "med": 1.397,
+            "p(90)": 1.764,
+            "p(95)": 1.896,
+            "p(99)": 2.225
+        },
+        "vus_max": {
+            "value": 1150,
+            "min": 1150,
+            "max": 1150
+        },
+        "err_user_delete": {
+            "passes": 0,
+            "fails": 2001,
+            "value": 0
+        }
+    },
+    "setup_data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0ZWNoLWludGVybmFsIiwiZGlzcGxheV9uYW1lIjoiUG9ydGFsIEFkbWluIiwiZG9tYWluIjoidGVjaGhyLmNvbSIsImV4cCI6MTc4ODU2MDEwMSwiZmFtaWx5X2lkIjoiNGJhZjVmMzljNTdkOWU2OGY1YWNlMTVjNTJmNWQwZWQiLCJpYXQiOjE3ODg0NzM3MDEsImlkZW50aWZpZXIiOiJhZG1pbkB0ZWNoaHIuY29tIiwianRpIjoiMzA3YWMwNTMyMTYyOGU3MWYxNDZiNTU3NzcyNGMxYjkiLCJyb2xlIjoiYWRtaW4iLCJzY29wZXMiOlsicHJvZmlsZTpyZWFkIiwiYXBwczpyZWFkIiwiYXBwczp3cml0ZSIsInVzZXJzOnJlYWQiLCJ1c2Vyczp3cml0ZSIsImRvbWFpbjpyZWFkIiwiZG9tYWluOndyaXRlIl0sInN1YiI6InRlY2hoci5jb20vZW1haWwvYWRtaW5AdGVjaGhyLmNvbSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInR5cGUiOiJlbWFpbCJ9.d6V-zpTyXRV_HfszcJ7x0wU79sccKhd865-cxtP0kHo"
+    },
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "GET /health 200": {
+                    "name": "GET /health 200",
+                    "path": "::GET /health 200",
+                    "id": "70af5caa174e04733a643e12413f85c2",
+                    "passes": 2001,
+                    "fails": 0
+                },
+                "GET /auth/domain 200": {
+                    "id": "7f091c125d039b5d5209892bad5c1c93",
+                    "passes": 2001,
+                    "fails": 0,
+                    "name": "GET /auth/domain 200",
+                    "path": "::GET /auth/domain 200"
+                },
+                "GET /me 200": {
+                    "id": "6ff9ccac44d1895a1727258c10eef936",
+                    "passes": 2001,
+                    "fails": 0,
+                    "name": "GET /me 200",
+                    "path": "::GET /me 200"
+                },
+                "GET /admin/domain 200": {
+                    "name": "GET /admin/domain 200",
+                    "path": "::GET /admin/domain 200",
+                    "id": "883183ca88595f7e65ed07f33dd33d82",
+                    "passes": 2001,
+                    "fails": 0
+                },
+                "POST /admin/users 201": {
+                    "name": "POST /admin/users 201",
+                    "path": "::POST /admin/users 201",
+                    "id": "8e9dff8a85a031a349a1832974396d71",
+                    "passes": 2001,
+                    "fails": 0
+                },
+                "PUT /admin/domain 200": {
+                    "name": "PUT /admin/domain 200",
+                    "path": "::PUT /admin/domain 200",
+                    "id": "7ab1bffe91009c74a077f73ad2fbe753",
+                    "passes": 2001,
+                    "fails": 0
+                },
+                "GET /apps 200": {
+                    "path": "::GET /apps 200",
+                    "id": "a42c1a351f66654a04dbb2377ec493b3",
+                    "passes": 2001,
+                    "fails": 0,
+                    "name": "GET /apps 200"
+                },
+                "DELETE /admin/users 200": {
+                    "name": "DELETE /admin/users 200",
+                    "path": "::DELETE /admin/users 200",
+                    "id": "cce62d13b3f03284547b56ef19c903fc",
+                    "passes": 2001,
+                    "fails": 0
+                },
+                "POST /admin/apps 201": {
+                    "passes": 2001,
+                    "fails": 0,
+                    "name": "POST /admin/apps 201",
+                    "path": "::POST /admin/apps 201",
+                    "id": "d6317ee3cba07591920bbff3a655c4b0"
+                },
+                "GET /admin/users 200": {
+                    "name": "GET /admin/users 200",
+                    "path": "::GET /admin/users 200",
+                    "id": "a1cea83aed3a613aac92b68e20667ce0",
+                    "passes": 2001,
+                    "fails": 0
+                },
+                "POST /auth/otp/request 200": {
+                    "fails": 0,
+                    "name": "POST /auth/otp/request 200",
+                    "path": "::POST /auth/otp/request 200",
+                    "id": "c4bd599703448e699c1e39edbbd0656a",
+                    "passes": 2001
+                },
+                "DELETE /admin/apps 404": {
+                    "fails": 0,
+                    "name": "DELETE /admin/apps 404",
+                    "path": "::DELETE /admin/apps 404",
+                    "id": "a00d66f34e554881118046a0a6188a25",
+                    "passes": 2001
+                },
+                "POST /auth/login/email 200": {
+                    "name": "POST /auth/login/email 200",
+                    "path": "::POST /auth/login/email 200",
+                    "id": "22e72999e3d0c43e0939cf5e7220d21d",
+                    "passes": 2000,
+                    "fails": 0
+                },
+                "PUT /admin/users/password 200": {
+                    "path": "::PUT /admin/users/password 200",
+                    "id": "4c49abf6db8bcba67e798932141166ab",
+                    "passes": 2000,
+                    "fails": 0,
+                    "name": "PUT /admin/users/password 200"
+                },
+                "POST /auth/otp/verify 200": {
+                    "name": "POST /auth/otp/verify 200",
+                    "path": "::POST /auth/otp/verify 200",
+                    "id": "b5fbac24c4b05675381ff20ffa1dbaa2",
+                    "passes": 2001,
+                    "fails": 0
+                }
+            },
+        "name": ""
+    }
+}

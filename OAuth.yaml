@@ -1,0 +1,123 @@
+openapi: 3.0.3
+info:
+  title: Aperture OAuth API
+  version: 2.0.0
+servers:
+  - url: http://127.0.0.1:8080/api/v1
+paths:
+  /oauth/token/member:
+    post:
+      summary: Issue a member-only token pair
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordGrant' }
+      responses:
+        '200': { $ref: '#/components/responses/TokenPair' }
+        '401': { $ref: '#/components/responses/Error' }
+        '403': { $ref: '#/components/responses/Error' }
+  /oauth/token/admin:
+    post:
+      summary: Issue an org-admin-only token pair
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordGrant' }
+      responses:
+        '200': { $ref: '#/components/responses/TokenPair' }
+        '401': { $ref: '#/components/responses/Error' }
+        '403': { $ref: '#/components/responses/Error' }
+  /oauth/token:
+    post:
+      summary: V1-compatible password grant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordGrant' }
+      responses:
+        '200': { $ref: '#/components/responses/TokenPair' }
+        '401': { $ref: '#/components/responses/Error' }
+  /oauth/token/refresh:
+    post:
+      summary: Rotate a single-use refresh token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [refresh_token]
+              properties:
+                refresh_token: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/TokenPair' }
+        '401': { $ref: '#/components/responses/Error' }
+  /auth/logout:
+    post:
+      summary: Revoke the current token family
+      security: [{ bearerAuth: [] }]
+      responses:
+        '204': { description: Revoked }
+        '401': { $ref: '#/components/responses/Error' }
+  /oauth/revoke:
+    post:
+      summary: OAuth alias for logout
+      security: [{ bearerAuth: [] }]
+      responses:
+        '204': { description: Revoked }
+components:
+  securitySchemes:
+    bearerAuth: { type: http, scheme: bearer, bearerFormat: JWT }
+  schemas:
+    PasswordGrant:
+      type: object
+      required: [identifier, password]
+      properties:
+        organization: { type: string, example: techhr.com }
+        domain: { type: string, description: V1 alias for organization }
+        identifier: { type: string, example: admin@techhr.com }
+        password: { type: string, format: password }
+        portal: { type: string, enum: [member, admin] }
+    User:
+      type: object
+      properties:
+        membership_id: { type: string, format: uuid }
+        person_id: { type: string, format: uuid }
+        organization_id: { type: string, format: uuid }
+        organization: { type: string }
+        identity_id: { type: string, format: uuid }
+        domain: { type: string }
+        type: { type: string, enum: [email, sms] }
+        identifier: { type: string }
+        role: { type: string }
+        roles: { type: array, items: { type: string } }
+        permissions: { type: array, items: { type: string } }
+    TokenResponse:
+      type: object
+      properties:
+        token_type: { type: string, enum: [Bearer] }
+        access_token: { type: string }
+        refresh_token: { type: string }
+        expires_in: { type: integer, format: int64 }
+        refresh_expires_in: { type: integer, format: int64 }
+        token: { type: string, description: V1 access-token alias }
+        user: { $ref: '#/components/schemas/User' }
+    Error:
+      type: object
+      required: [error]
+      properties:
+        error: { type: string }
+  responses:
+    TokenPair:
+      description: Access and refresh pair
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/TokenResponse' }
+    Error:
+      description: Request failed
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }

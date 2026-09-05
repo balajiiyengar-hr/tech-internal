@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Org admin sign in · Aperture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;650;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="/assets/css/portal.css" rel="stylesheet">
+</head>
+<body data-portal="admin">
+  <div class="auth-shell">
+    <aside class="auth-panel">
+      <div>
+        <div class="d-flex align-items-center gap-2 mb-5">
+          <span class="logo-mark lg" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke="currentColor" stroke-width="1.7"/><path d="M12 8.5V21" stroke="currentColor" stroke-width="1.7"/><path d="M4.2 7.6L12 12l7.8-4.4" stroke="currentColor" stroke-width="1.7"/></svg>
+          </span>
+          <div class="wordmark">Aperture<small>Organization control</small></div>
+        </div>
+        <div class="auth-kicker">Org admin identity</div>
+        <h2 class="auth-headline">Manage one organization securely.</h2>
+        <p class="auth-lede">Create members, assign roles and permissions, and maintain your application catalog.</p>
+        <ul class="auth-points">
+          <li><i class="bi bi-people"></i><span>Organization-scoped member lifecycle controls.</span></li>
+          <li><i class="bi bi-person-badge"></i><span>System and custom role assignment.</span></li>
+          <li><i class="bi bi-shield-check"></i><span>Dedicated org admin authentication.</span></li>
+        </ul>
+      </div>
+      <div class="auth-trust">Aperture · Organization administration</div>
+    </aside>
+    <main class="auth-main">
+      <div class="auth-card">
+        <span class="workspace-chip"><i class="bi bi-shield-lock"></i> Org admin sign-in</span>
+        <h1>Administer Aperture</h1>
+        <p class="lede">Use your organization slug and org admin identity.</p>
+        <div class="mb-3">
+          <label class="form-label" for="loginDomain">Organization</label>
+          <input type="text" class="form-control" id="loginDomain" value="techhr.com" autocomplete="organization" required>
+          <div class="form-text" id="domainHint"></div>
+        </div>
+        <ul class="nav nav-pills nav-fill auth-tabs mb-4 d-none" id="loginTabs" role="tablist">
+          <li class="nav-item" id="emailTabItem"><button class="nav-link" id="email-tab" data-bs-toggle="pill" data-bs-target="#email-pane" type="button">Email</button></li>
+          <li class="nav-item" id="smsTabItem"><button class="nav-link" id="sms-tab" data-bs-toggle="pill" data-bs-target="#sms-pane" type="button">Mobile OTP</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade" id="email-pane">
+            <form id="emailLoginForm">
+              <div class="mb-3"><label class="form-label" for="emailIdentifier">Admin email</label><input type="email" class="form-control" id="emailIdentifier" autocomplete="username" required></div>
+              <div class="mb-4"><label class="form-label" for="emailPassword">Password</label><input type="password" class="form-control" id="emailPassword" autocomplete="current-password" required></div>
+              <button type="submit" class="btn btn-primary w-100">Continue to admin console</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="sms-pane">
+            <form id="otpRequestForm"><div class="mb-3"><label class="form-label" for="smsIdentifier">Admin mobile number</label><input type="tel" class="form-control" id="smsIdentifier" autocomplete="tel" required></div><button type="submit" class="btn btn-primary w-100" id="requestOtpBtn">Send verification code</button></form>
+            <form id="otpVerifyForm" class="mt-4 d-none"><div class="mb-3"><label class="form-label" for="otpCode">Verification code</label><input type="text" class="form-control" id="otpCode" maxlength="6" pattern="[0-9]{6}" inputmode="numeric" required><div class="form-text" id="otpHint"></div></div><button type="submit" class="btn btn-primary w-100">Verify and continue</button><button type="button" class="btn btn-link w-100 mt-1" id="resendOtpBtn">Request a new code</button></form>
+          </div>
+        </div>
+        <div id="loginAlert" class="alert alert-danger mt-3 d-none" role="alert"></div>
+        <p class="text-center small mt-4 mb-0">Member? <a href="/">Use member sign-in</a></p>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/login.js"></script>
+</body>
+</html>
