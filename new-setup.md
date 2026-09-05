@@ -118,8 +118,14 @@ requirements.
 2. The hook runs unit `go test ./...`, enforces the 90% gated Go coverage
    floor, and fails on lower coverage, fewer passing tests, or a package that
    passed in `reports/coverage/latest.txt` but now fails.
-3. Install the local repository hook once after cloning:
-   `git config core.hooksPath scripts/githooks`.
+3. Install the local repository hook once after cloning (bypasses Uber
+   `asd-cli` / `ussh` on commit for this repo):
+
+   ```bash
+   ./scripts/setup-githooks.sh
+   ```
+
+   Equivalent: `git config core.hooksPath scripts/githooks`.
 
 If no report exists, the first green run creates it. Every later green run
 updates the shared coverage, package, and test-count baseline. k6 is not part

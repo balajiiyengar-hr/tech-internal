@@ -109,7 +109,8 @@ See [env-variables.md](./env-variables.md). PostgreSQL uses the shared
    count, or previously passing package regressions against
    `reports/coverage/latest.txt`.
 3. Enable the repository hook once per clone with
-   `git config core.hooksPath scripts/githooks`.
+   `./scripts/setup-githooks.sh` (runs coverage only; bypasses Uber
+   `asd-cli` / `ussh` system hooks on commit).
 
 The first green run creates the shared baseline; each later green run updates
 it. The hook runs unit tests only and never runs k6.
