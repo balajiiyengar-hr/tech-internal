@@ -84,7 +84,7 @@ type startupDeps struct {
 type application struct {
 	handler *handlers.Handler
 	tokens  *auth.TokenService
-	oauth   *repository.TokenRepository
+	oauth   handlers.OAuthTokenStore
 	close   func()
 }
 
@@ -139,7 +139,7 @@ func initialize(ctx context.Context, cfg config.Config, deps startupDeps) (*appl
 	otpStore := otp.NewStore(rdb, cfg.OTPExpiry, cfg.EncryptionKey)
 	appRepo := repository.NewAppRepository(pool)
 	memberRepo := repository.NewMemberRepository(pool, userRepo)
-	tokenRepo := repository.NewTokenRepository(pool)
+	tokenRepo := repository.NewRedisTokenStore(rdb)
 	tokenSvc := auth.NewTokenService(cfg)
 	h := handlers.New(cfg, userRepo, domainRepo, otpStore, appRepo, memberRepo, tokenRepo, tokenSvc)
 	return &application{

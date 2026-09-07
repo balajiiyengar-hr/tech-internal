@@ -19,6 +19,7 @@ from typing import Any
 CONTAINERS = (
     ("postgres", "tech-internal-db"),
     ("redis", "tech-internal-redis"),
+    ("jaeger", "tech-internal-jaeger"),
 )
 
 
@@ -65,6 +66,7 @@ def docker_stats() -> dict[str, dict[str, Any]]:
                 "{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}",
                 "tech-internal-db",
                 "tech-internal-redis",
+                "tech-internal-jaeger",
             ],
             text=True,
             stderr=subprocess.DEVNULL,
@@ -224,7 +226,7 @@ def print_human(summary: dict[str, Any]) -> None:
         f"{'rss min':>10} {'rss avg':>10} {'rss p95':>10} {'rss max':>10}",
         file=sys.stderr,
     )
-    for target in ("postgres", "redis", "auth_api"):
+    for target in ("postgres", "redis", "jaeger", "auth_api"):
         block = summary.get(target) or {}
         cpu = block.get("cpu_pct") or {}
         mem = block.get("mem_mib") or {}

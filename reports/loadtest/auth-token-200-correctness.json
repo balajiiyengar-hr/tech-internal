@@ -1,0 +1,10 @@
+{
+  "login_setup_status": 200,
+  "refresh_rotation_status": 200,
+  "old_refresh_rejected_status": 401,
+  "new_access_accepted_status": 200,
+  "logout_status": 204,
+  "access_after_logout_rejected_status": 401,
+  "refresh_after_logout_rejected_status": 401,
+  "passed": true
+}

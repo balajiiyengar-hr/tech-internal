@@ -1,0 +1,991 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: scripts/loadtest/k6_auth_token_200.js
+        output: json (reports/loadtest/auth-token-200.raw.json)
+
+     scenarios: (100.00%) 3 scenarios, 320 max VUs, 3m10s max duration (incl. graceful stop):
+              * authtoken: 140.00 iterations/s for 3m0s (maxVUs: 30-100, exec: authtoken, gracefulStop: 10s)
+              * logout: 20.00 iterations/s for 3m0s (maxVUs: 30-100, exec: logout, gracefulStop: 10s)
+              * refreshtoken: 40.00 iterations/s for 3m0s (maxVUs: 40-120, exec: refreshtoken, gracefulStop: 10s)
+
+
+running (0m01.0s), 006/100 VUs, 19 complete and 0 interrupted iterations
+authtoken      [   0% ] 004/030 VUs  0m00.1s/3m0s  140.00 iters/s
+logout         [   0% ] 001/030 VUs  0m00.1s/3m0s  20.00 iters/s
+refreshtoken   [   0% ] 001/040 VUs  0m00.1s/3m0s  40.00 iters/s
+
+running (0m02.0s), 001/100 VUs, 224 complete and 0 interrupted iterations
+authtoken      [   1% ] 000/030 VUs  0m01.1s/3m0s  140.00 iters/s
+logout         [   1% ] 001/030 VUs  0m01.1s/3m0s  20.00 iters/s
+refreshtoken   [   1% ] 000/040 VUs  0m01.1s/3m0s  40.00 iters/s
+
+running (0m03.0s), 001/100 VUs, 424 complete and 0 interrupted iterations
+authtoken      [   1% ] 001/030 VUs  0m02.1s/3m0s  140.00 iters/s
+logout         [   1% ] 000/030 VUs  0m02.1s/3m0s  20.00 iters/s
+refreshtoken   [   1% ] 000/040 VUs  0m02.1s/3m0s  40.00 iters/s
+
+running (0m04.0s), 000/100 VUs, 625 complete and 0 interrupted iterations
+authtoken      [   2% ] 000/030 VUs  0m03.1s/3m0s  140.00 iters/s
+logout         [   2% ] 000/030 VUs  0m03.1s/3m0s  20.00 iters/s
+refreshtoken   [   2% ] 000/040 VUs  0m03.1s/3m0s  40.00 iters/s
+
+running (0m05.0s), 000/100 VUs, 825 complete and 0 interrupted iterations
+authtoken      [   2% ] 000/030 VUs  0m04.1s/3m0s  140.00 iters/s
+logout         [   2% ] 000/030 VUs  0m04.1s/3m0s  20.00 iters/s
+refreshtoken   [   2% ] 000/040 VUs  0m04.1s/3m0s  40.00 iters/s
+
+running (0m06.0s), 000/100 VUs, 1025 complete and 0 interrupted iterations
+authtoken      [   3% ] 000/030 VUs  0m05.1s/3m0s  140.00 iters/s
+logout         [   3% ] 000/030 VUs  0m05.1s/3m0s  20.00 iters/s
+refreshtoken   [   3% ] 000/040 VUs  0m05.1s/3m0s  40.00 iters/s
+
+running (0m07.0s), 000/100 VUs, 1225 complete and 0 interrupted iterations
+authtoken      [   3% ] 000/030 VUs  0m06.1s/3m0s  140.00 iters/s
+logout         [   3% ] 000/030 VUs  0m06.1s/3m0s  20.00 iters/s
+refreshtoken   [   3% ] 000/040 VUs  0m06.1s/3m0s  40.00 iters/s
+
+running (0m08.0s), 000/100 VUs, 1425 complete and 0 interrupted iterations
+authtoken      [   4% ] 000/030 VUs  0m07.1s/3m0s  140.00 iters/s
+logout         [   4% ] 000/030 VUs  0m07.1s/3m0s  20.00 iters/s
+refreshtoken   [   4% ] 000/040 VUs  0m07.1s/3m0s  40.00 iters/s
+
+running (0m09.0s), 000/100 VUs, 1625 complete and 0 interrupted iterations
+authtoken      [   5% ] 000/030 VUs  0m08.1s/3m0s  140.00 iters/s
+logout         [   5% ] 000/030 VUs  0m08.1s/3m0s  20.00 iters/s
+refreshtoken   [   5% ] 000/040 VUs  0m08.1s/3m0s  40.00 iters/s
+
+running (0m10.0s), 000/100 VUs, 1825 complete and 0 interrupted iterations
+authtoken      [   5% ] 000/030 VUs  0m09.1s/3m0s  140.00 iters/s
+logout         [   5% ] 000/030 VUs  0m09.1s/3m0s  20.00 iters/s
+refreshtoken   [   5% ] 000/040 VUs  0m09.1s/3m0s  40.00 iters/s
+
+running (0m11.0s), 000/100 VUs, 2025 complete and 0 interrupted iterations
+authtoken      [   6% ] 000/030 VUs  0m10.1s/3m0s  140.00 iters/s
+logout         [   6% ] 000/030 VUs  0m10.1s/3m0s  20.00 iters/s
+refreshtoken   [   6% ] 000/040 VUs  0m10.1s/3m0s  40.00 iters/s
+
+running (0m12.0s), 004/100 VUs, 2221 complete and 0 interrupted iterations
+authtoken      [   6% ] 003/030 VUs  0m11.1s/3m0s  140.00 iters/s
+logout         [   6% ] 000/030 VUs  0m11.1s/3m0s  20.00 iters/s
+refreshtoken   [   6% ] 001/040 VUs  0m11.1s/3m0s  40.00 iters/s
+
+running (0m13.0s), 000/100 VUs, 2425 complete and 0 interrupted iterations
+authtoken      [   7% ] 000/030 VUs  0m12.1s/3m0s  140.00 iters/s
+logout         [   7% ] 000/030 VUs  0m12.1s/3m0s  20.00 iters/s
+refreshtoken   [   7% ] 000/040 VUs  0m12.1s/3m0s  40.00 iters/s
+
+running (0m14.0s), 001/100 VUs, 2624 complete and 0 interrupted iterations
+authtoken      [   7% ] 001/030 VUs  0m13.1s/3m0s  140.00 iters/s
+logout         [   7% ] 000/030 VUs  0m13.1s/3m0s  20.00 iters/s
+refreshtoken   [   7% ] 000/040 VUs  0m13.1s/3m0s  40.00 iters/s
+
+running (0m15.0s), 000/100 VUs, 2825 complete and 0 interrupted iterations
+authtoken      [   8% ] 000/030 VUs  0m14.1s/3m0s  140.00 iters/s
+logout         [   8% ] 000/030 VUs  0m14.1s/3m0s  20.00 iters/s
+refreshtoken   [   8% ] 000/040 VUs  0m14.1s/3m0s  40.00 iters/s
+
+running (0m16.0s), 000/100 VUs, 3025 complete and 0 interrupted iterations
+authtoken      [   8% ] 000/030 VUs  0m15.1s/3m0s  140.00 iters/s
+logout         [   8% ] 000/030 VUs  0m15.1s/3m0s  20.00 iters/s
+refreshtoken   [   8% ] 000/040 VUs  0m15.1s/3m0s  40.00 iters/s
+
+running (0m17.0s), 000/100 VUs, 3225 complete and 0 interrupted iterations
+authtoken      [   9% ] 000/030 VUs  0m16.1s/3m0s  140.00 iters/s
+logout         [   9% ] 000/030 VUs  0m16.1s/3m0s  20.00 iters/s
+refreshtoken   [   9% ] 000/040 VUs  0m16.1s/3m0s  40.00 iters/s
+
+running (0m18.0s), 005/100 VUs, 3420 complete and 0 interrupted iterations
+authtoken      [  10% ] 003/030 VUs  0m17.1s/3m0s  140.00 iters/s
+logout         [  10% ] 001/030 VUs  0m17.1s/3m0s  20.00 iters/s
+refreshtoken   [  10% ] 001/040 VUs  0m17.1s/3m0s  40.00 iters/s
+
+running (0m19.0s), 000/100 VUs, 3625 complete and 0 interrupted iterations
+authtoken      [  10% ] 000/030 VUs  0m18.1s/3m0s  140.00 iters/s
+logout         [  10% ] 000/030 VUs  0m18.1s/3m0s  20.00 iters/s
+refreshtoken   [  10% ] 000/040 VUs  0m18.1s/3m0s  40.00 iters/s
+
+running (0m20.0s), 000/100 VUs, 3825 complete and 0 interrupted iterations
+authtoken      [  11% ] 000/030 VUs  0m19.1s/3m0s  140.00 iters/s
+logout         [  11% ] 000/030 VUs  0m19.1s/3m0s  20.00 iters/s
+refreshtoken   [  11% ] 000/040 VUs  0m19.1s/3m0s  40.00 iters/s
+
+running (0m21.0s), 000/100 VUs, 4025 complete and 0 interrupted iterations
+authtoken      [  11% ] 000/030 VUs  0m20.1s/3m0s  140.00 iters/s
+logout         [  11% ] 000/030 VUs  0m20.1s/3m0s  20.00 iters/s
+refreshtoken   [  11% ] 000/040 VUs  0m20.1s/3m0s  40.00 iters/s
+
+running (0m22.0s), 000/100 VUs, 4225 complete and 0 interrupted iterations
+authtoken      [  12% ] 000/030 VUs  0m21.1s/3m0s  140.00 iters/s
+logout         [  12% ] 000/030 VUs  0m21.1s/3m0s  20.00 iters/s
+refreshtoken   [  12% ] 000/040 VUs  0m21.1s/3m0s  40.00 iters/s
+
+running (0m23.0s), 000/100 VUs, 4425 complete and 0 interrupted iterations
+authtoken      [  12% ] 000/030 VUs  0m22.1s/3m0s  140.00 iters/s
+logout         [  12% ] 000/030 VUs  0m22.1s/3m0s  20.00 iters/s
+refreshtoken   [  12% ] 000/040 VUs  0m22.1s/3m0s  40.00 iters/s
+
+running (0m24.0s), 000/100 VUs, 4625 complete and 0 interrupted iterations
+authtoken      [  13% ] 000/030 VUs  0m23.1s/3m0s  140.00 iters/s
+logout         [  13% ] 000/030 VUs  0m23.1s/3m0s  20.00 iters/s
+refreshtoken   [  13% ] 000/040 VUs  0m23.1s/3m0s  40.00 iters/s
+
+running (0m25.0s), 000/100 VUs, 4825 complete and 0 interrupted iterations
+authtoken      [  13% ] 000/030 VUs  0m24.1s/3m0s  140.00 iters/s
+logout         [  13% ] 000/030 VUs  0m24.1s/3m0s  20.00 iters/s
+refreshtoken   [  13% ] 000/040 VUs  0m24.1s/3m0s  40.00 iters/s
+
+running (0m26.0s), 000/100 VUs, 5025 complete and 0 interrupted iterations
+authtoken      [  14% ] 000/030 VUs  0m25.1s/3m0s  140.00 iters/s
+logout         [  14% ] 000/030 VUs  0m25.1s/3m0s  20.00 iters/s
+refreshtoken   [  14% ] 000/040 VUs  0m25.1s/3m0s  40.00 iters/s
+
+running (0m27.0s), 002/100 VUs, 5223 complete and 0 interrupted iterations
+authtoken      [  15% ] 002/030 VUs  0m26.1s/3m0s  140.00 iters/s
+logout         [  15% ] 000/030 VUs  0m26.1s/3m0s  20.00 iters/s
+refreshtoken   [  15% ] 000/040 VUs  0m26.1s/3m0s  40.00 iters/s
+
+running (0m28.0s), 000/100 VUs, 5425 complete and 0 interrupted iterations
+authtoken      [  15% ] 000/030 VUs  0m27.1s/3m0s  140.00 iters/s
+logout         [  15% ] 000/030 VUs  0m27.1s/3m0s  20.00 iters/s
+refreshtoken   [  15% ] 000/040 VUs  0m27.1s/3m0s  40.00 iters/s
+
+running (0m29.0s), 001/100 VUs, 5624 complete and 0 interrupted iterations
+authtoken      [  16% ] 001/030 VUs  0m28.1s/3m0s  140.00 iters/s
+logout         [  16% ] 000/030 VUs  0m28.1s/3m0s  20.00 iters/s
+refreshtoken   [  16% ] 000/040 VUs  0m28.1s/3m0s  40.00 iters/s
+
+running (0m30.0s), 000/100 VUs, 5825 complete and 0 interrupted iterations
+authtoken      [  16% ] 000/030 VUs  0m29.1s/3m0s  140.00 iters/s
+logout         [  16% ] 000/030 VUs  0m29.1s/3m0s  20.00 iters/s
+refreshtoken   [  16% ] 000/040 VUs  0m29.1s/3m0s  40.00 iters/s
+
+running (0m31.0s), 000/100 VUs, 6025 complete and 0 interrupted iterations
+authtoken      [  17% ] 000/030 VUs  0m30.1s/3m0s  140.00 iters/s
+logout         [  17% ] 000/030 VUs  0m30.1s/3m0s  20.00 iters/s
+refreshtoken   [  17% ] 000/040 VUs  0m30.1s/3m0s  40.00 iters/s
+
+running (0m32.0s), 000/100 VUs, 6225 complete and 0 interrupted iterations
+authtoken      [  17% ] 000/030 VUs  0m31.1s/3m0s  140.00 iters/s
+logout         [  17% ] 000/030 VUs  0m31.1s/3m0s  20.00 iters/s
+refreshtoken   [  17% ] 000/040 VUs  0m31.1s/3m0s  40.00 iters/s
+
+running (0m33.0s), 000/100 VUs, 6425 complete and 0 interrupted iterations
+authtoken      [  18% ] 000/030 VUs  0m32.1s/3m0s  140.00 iters/s
+logout         [  18% ] 000/030 VUs  0m32.1s/3m0s  20.00 iters/s
+refreshtoken   [  18% ] 000/040 VUs  0m32.1s/3m0s  40.00 iters/s
+
+running (0m34.0s), 000/100 VUs, 6625 complete and 0 interrupted iterations
+authtoken      [  18% ] 000/030 VUs  0m33.1s/3m0s  140.00 iters/s
+logout         [  18% ] 000/030 VUs  0m33.1s/3m0s  20.00 iters/s
+refreshtoken   [  18% ] 000/040 VUs  0m33.1s/3m0s  40.00 iters/s
+
+running (0m35.0s), 000/100 VUs, 6825 complete and 0 interrupted iterations
+authtoken      [  19% ] 000/030 VUs  0m34.1s/3m0s  140.00 iters/s
+logout         [  19% ] 000/030 VUs  0m34.1s/3m0s  20.00 iters/s
+refreshtoken   [  19% ] 000/040 VUs  0m34.1s/3m0s  40.00 iters/s
+
+running (0m36.0s), 000/100 VUs, 7025 complete and 0 interrupted iterations
+authtoken      [  20% ] 000/030 VUs  0m35.1s/3m0s  140.00 iters/s
+logout         [  20% ] 000/030 VUs  0m35.1s/3m0s  20.00 iters/s
+refreshtoken   [  20% ] 000/040 VUs  0m35.1s/3m0s  40.00 iters/s
+
+running (0m37.0s), 001/100 VUs, 7224 complete and 0 interrupted iterations
+authtoken      [  20% ] 001/030 VUs  0m36.1s/3m0s  140.00 iters/s
+logout         [  20% ] 000/030 VUs  0m36.1s/3m0s  20.00 iters/s
+refreshtoken   [  20% ] 000/040 VUs  0m36.1s/3m0s  40.00 iters/s
+
+running (0m38.0s), 000/100 VUs, 7425 complete and 0 interrupted iterations
+authtoken      [  21% ] 000/030 VUs  0m37.1s/3m0s  140.00 iters/s
+logout         [  21% ] 000/030 VUs  0m37.1s/3m0s  20.00 iters/s
+refreshtoken   [  21% ] 000/040 VUs  0m37.1s/3m0s  40.00 iters/s
+
+running (0m39.0s), 002/100 VUs, 7623 complete and 0 interrupted iterations
+authtoken      [  21% ] 002/030 VUs  0m38.1s/3m0s  140.00 iters/s
+logout         [  21% ] 000/030 VUs  0m38.1s/3m0s  20.00 iters/s
+refreshtoken   [  21% ] 000/040 VUs  0m38.1s/3m0s  40.00 iters/s
+
+running (0m40.0s), 000/100 VUs, 7825 complete and 0 interrupted iterations
+authtoken      [  22% ] 000/030 VUs  0m39.1s/3m0s  140.00 iters/s
+logout         [  22% ] 000/030 VUs  0m39.1s/3m0s  20.00 iters/s
+refreshtoken   [  22% ] 000/040 VUs  0m39.1s/3m0s  40.00 iters/s
+
+running (0m41.0s), 000/100 VUs, 8025 complete and 0 interrupted iterations
+authtoken      [  22% ] 000/030 VUs  0m40.1s/3m0s  140.00 iters/s
+logout         [  22% ] 000/030 VUs  0m40.1s/3m0s  20.00 iters/s
+refreshtoken   [  22% ] 000/040 VUs  0m40.1s/3m0s  40.00 iters/s
+
+running (0m42.0s), 000/100 VUs, 8225 complete and 0 interrupted iterations
+authtoken      [  23% ] 000/030 VUs  0m41.1s/3m0s  140.00 iters/s
+logout         [  23% ] 000/030 VUs  0m41.1s/3m0s  20.00 iters/s
+refreshtoken   [  23% ] 000/040 VUs  0m41.1s/3m0s  40.00 iters/s
+
+running (0m43.0s), 000/100 VUs, 8425 complete and 0 interrupted iterations
+authtoken      [  23% ] 000/030 VUs  0m42.1s/3m0s  140.00 iters/s
+logout         [  23% ] 000/030 VUs  0m42.1s/3m0s  20.00 iters/s
+refreshtoken   [  23% ] 000/040 VUs  0m42.1s/3m0s  40.00 iters/s
+
+running (0m44.0s), 000/100 VUs, 8625 complete and 0 interrupted iterations
+authtoken      [  24% ] 000/030 VUs  0m43.1s/3m0s  140.00 iters/s
+logout         [  24% ] 000/030 VUs  0m43.1s/3m0s  20.00 iters/s
+refreshtoken   [  24% ] 000/040 VUs  0m43.1s/3m0s  40.00 iters/s
+
+running (0m45.0s), 000/100 VUs, 8825 complete and 0 interrupted iterations
+authtoken      [  25% ] 000/030 VUs  0m44.1s/3m0s  140.00 iters/s
+logout         [  25% ] 000/030 VUs  0m44.1s/3m0s  20.00 iters/s
+refreshtoken   [  25% ] 000/040 VUs  0m44.1s/3m0s  40.00 iters/s
+
+running (0m46.0s), 000/100 VUs, 9025 complete and 0 interrupted iterations
+authtoken      [  25% ] 000/030 VUs  0m45.1s/3m0s  140.00 iters/s
+logout         [  25% ] 000/030 VUs  0m45.1s/3m0s  20.00 iters/s
+refreshtoken   [  25% ] 000/040 VUs  0m45.1s/3m0s  40.00 iters/s
+
+running (0m47.0s), 000/100 VUs, 9225 complete and 0 interrupted iterations
+authtoken      [  26% ] 000/030 VUs  0m46.1s/3m0s  140.00 iters/s
+logout         [  26% ] 000/030 VUs  0m46.1s/3m0s  20.00 iters/s
+refreshtoken   [  26% ] 000/040 VUs  0m46.1s/3m0s  40.00 iters/s
+
+running (0m48.0s), 000/100 VUs, 9425 complete and 0 interrupted iterations
+authtoken      [  26% ] 000/030 VUs  0m47.1s/3m0s  140.00 iters/s
+logout         [  26% ] 000/030 VUs  0m47.1s/3m0s  20.00 iters/s
+refreshtoken   [  26% ] 000/040 VUs  0m47.1s/3m0s  40.00 iters/s
+
+running (0m49.0s), 000/100 VUs, 9625 complete and 0 interrupted iterations
+authtoken      [  27% ] 000/030 VUs  0m48.1s/3m0s  140.00 iters/s
+logout         [  27% ] 000/030 VUs  0m48.1s/3m0s  20.00 iters/s
+refreshtoken   [  27% ] 000/040 VUs  0m48.1s/3m0s  40.00 iters/s
+
+running (0m50.0s), 000/100 VUs, 9825 complete and 0 interrupted iterations
+authtoken      [  27% ] 000/030 VUs  0m49.1s/3m0s  140.00 iters/s
+logout         [  27% ] 000/030 VUs  0m49.1s/3m0s  20.00 iters/s
+refreshtoken   [  27% ] 000/040 VUs  0m49.1s/3m0s  40.00 iters/s
+
+running (0m51.0s), 002/100 VUs, 10023 complete and 0 interrupted iterations
+authtoken      [  28% ] 002/030 VUs  0m50.1s/3m0s  140.00 iters/s
+logout         [  28% ] 000/030 VUs  0m50.1s/3m0s  20.00 iters/s
+refreshtoken   [  28% ] 000/040 VUs  0m50.1s/3m0s  40.00 iters/s
+
+running (0m52.0s), 000/100 VUs, 10225 complete and 0 interrupted iterations
+authtoken      [  28% ] 000/030 VUs  0m51.1s/3m0s  140.00 iters/s
+logout         [  28% ] 000/030 VUs  0m51.1s/3m0s  20.00 iters/s
+refreshtoken   [  28% ] 000/040 VUs  0m51.1s/3m0s  40.00 iters/s
+
+running (0m53.0s), 000/100 VUs, 10425 complete and 0 interrupted iterations
+authtoken      [  29% ] 000/030 VUs  0m52.1s/3m0s  140.00 iters/s
+logout         [  29% ] 000/030 VUs  0m52.1s/3m0s  20.00 iters/s
+refreshtoken   [  29% ] 000/040 VUs  0m52.1s/3m0s  40.00 iters/s
+
+running (0m54.0s), 000/100 VUs, 10625 complete and 0 interrupted iterations
+authtoken      [  30% ] 000/030 VUs  0m53.1s/3m0s  140.00 iters/s
+logout         [  30% ] 000/030 VUs  0m53.1s/3m0s  20.00 iters/s
+refreshtoken   [  30% ] 000/040 VUs  0m53.1s/3m0s  40.00 iters/s
+
+running (0m55.0s), 000/100 VUs, 10825 complete and 0 interrupted iterations
+authtoken      [  30% ] 000/030 VUs  0m54.1s/3m0s  140.00 iters/s
+logout         [  30% ] 000/030 VUs  0m54.1s/3m0s  20.00 iters/s
+refreshtoken   [  30% ] 000/040 VUs  0m54.1s/3m0s  40.00 iters/s
+
+running (0m56.0s), 000/100 VUs, 11025 complete and 0 interrupted iterations
+authtoken      [  31% ] 000/030 VUs  0m55.1s/3m0s  140.00 iters/s
+logout         [  31% ] 000/030 VUs  0m55.1s/3m0s  20.00 iters/s
+refreshtoken   [  31% ] 000/040 VUs  0m55.1s/3m0s  40.00 iters/s
+
+running (0m57.0s), 000/100 VUs, 11225 complete and 0 interrupted iterations
+authtoken      [  31% ] 000/030 VUs  0m56.1s/3m0s  140.00 iters/s
+logout         [  31% ] 000/030 VUs  0m56.1s/3m0s  20.00 iters/s
+refreshtoken   [  31% ] 000/040 VUs  0m56.1s/3m0s  40.00 iters/s
+
+running (0m58.0s), 000/100 VUs, 11425 complete and 0 interrupted iterations
+authtoken      [  32% ] 000/030 VUs  0m57.1s/3m0s  140.00 iters/s
+logout         [  32% ] 000/030 VUs  0m57.1s/3m0s  20.00 iters/s
+refreshtoken   [  32% ] 000/040 VUs  0m57.1s/3m0s  40.00 iters/s
+
+running (0m59.0s), 000/100 VUs, 11625 complete and 0 interrupted iterations
+authtoken      [  32% ] 000/030 VUs  0m58.1s/3m0s  140.00 iters/s
+logout         [  32% ] 000/030 VUs  0m58.1s/3m0s  20.00 iters/s
+refreshtoken   [  32% ] 000/040 VUs  0m58.1s/3m0s  40.00 iters/s
+
+running (1m00.0s), 000/100 VUs, 11825 complete and 0 interrupted iterations
+authtoken      [  33% ] 000/030 VUs  0m59.1s/3m0s  140.00 iters/s
+logout         [  33% ] 000/030 VUs  0m59.1s/3m0s  20.00 iters/s
+refreshtoken   [  33% ] 000/040 VUs  0m59.1s/3m0s  40.00 iters/s
+
+running (1m01.0s), 000/100 VUs, 12025 complete and 0 interrupted iterations
+authtoken      [  33% ] 000/030 VUs  1m00.1s/3m0s  140.00 iters/s
+logout         [  33% ] 000/030 VUs  1m00.1s/3m0s  20.00 iters/s
+refreshtoken   [  33% ] 000/040 VUs  1m00.1s/3m0s  40.00 iters/s
+
+running (1m02.0s), 000/100 VUs, 12225 complete and 0 interrupted iterations
+authtoken      [  34% ] 000/030 VUs  1m01.1s/3m0s  140.00 iters/s
+logout         [  34% ] 000/030 VUs  1m01.1s/3m0s  20.00 iters/s
+refreshtoken   [  34% ] 000/040 VUs  1m01.1s/3m0s  40.00 iters/s
+
+running (1m03.0s), 000/100 VUs, 12425 complete and 0 interrupted iterations
+authtoken      [  35% ] 000/030 VUs  1m02.1s/3m0s  140.00 iters/s
+logout         [  35% ] 000/030 VUs  1m02.1s/3m0s  20.00 iters/s
+refreshtoken   [  35% ] 000/040 VUs  1m02.1s/3m0s  40.00 iters/s
+
+running (1m04.0s), 000/100 VUs, 12625 complete and 0 interrupted iterations
+authtoken      [  35% ] 000/030 VUs  1m03.1s/3m0s  140.00 iters/s
+logout         [  35% ] 000/030 VUs  1m03.1s/3m0s  20.00 iters/s
+refreshtoken   [  35% ] 000/040 VUs  1m03.1s/3m0s  40.00 iters/s
+
+running (1m05.0s), 000/100 VUs, 12825 complete and 0 interrupted iterations
+authtoken      [  36% ] 000/030 VUs  1m04.1s/3m0s  140.00 iters/s
+logout         [  36% ] 000/030 VUs  1m04.1s/3m0s  20.00 iters/s
+refreshtoken   [  36% ] 000/040 VUs  1m04.1s/3m0s  40.00 iters/s
+
+running (1m06.0s), 002/100 VUs, 13023 complete and 0 interrupted iterations
+authtoken      [  36% ] 002/030 VUs  1m05.1s/3m0s  140.00 iters/s
+logout         [  36% ] 000/030 VUs  1m05.1s/3m0s  20.00 iters/s
+refreshtoken   [  36% ] 000/040 VUs  1m05.1s/3m0s  40.00 iters/s
+
+running (1m07.0s), 000/100 VUs, 13225 complete and 0 interrupted iterations
+authtoken      [  37% ] 000/030 VUs  1m06.1s/3m0s  140.00 iters/s
+logout         [  37% ] 000/030 VUs  1m06.1s/3m0s  20.00 iters/s
+refreshtoken   [  37% ] 000/040 VUs  1m06.1s/3m0s  40.00 iters/s
+
+running (1m08.0s), 000/100 VUs, 13425 complete and 0 interrupted iterations
+authtoken      [  37% ] 000/030 VUs  1m07.1s/3m0s  140.00 iters/s
+logout         [  37% ] 000/030 VUs  1m07.1s/3m0s  20.00 iters/s
+refreshtoken   [  37% ] 000/040 VUs  1m07.1s/3m0s  40.00 iters/s
+
+running (1m09.0s), 000/100 VUs, 13625 complete and 0 interrupted iterations
+authtoken      [  38% ] 000/030 VUs  1m08.1s/3m0s  140.00 iters/s
+logout         [  38% ] 000/030 VUs  1m08.1s/3m0s  20.00 iters/s
+refreshtoken   [  38% ] 000/040 VUs  1m08.1s/3m0s  40.00 iters/s
+
+running (1m10.0s), 000/100 VUs, 13825 complete and 0 interrupted iterations
+authtoken      [  38% ] 000/030 VUs  1m09.1s/3m0s  140.00 iters/s
+logout         [  38% ] 000/030 VUs  1m09.1s/3m0s  20.00 iters/s
+refreshtoken   [  38% ] 000/040 VUs  1m09.1s/3m0s  40.00 iters/s
+
+running (1m11.0s), 000/100 VUs, 14025 complete and 0 interrupted iterations
+authtoken      [  39% ] 000/030 VUs  1m10.1s/3m0s  140.00 iters/s
+logout         [  39% ] 000/030 VUs  1m10.1s/3m0s  20.00 iters/s
+refreshtoken   [  39% ] 000/040 VUs  1m10.1s/3m0s  40.00 iters/s
+
+running (1m12.0s), 002/100 VUs, 14223 complete and 0 interrupted iterations
+authtoken      [  40% ] 002/030 VUs  1m11.1s/3m0s  140.00 iters/s
+logout         [  40% ] 000/030 VUs  1m11.1s/3m0s  20.00 iters/s
+refreshtoken   [  40% ] 000/040 VUs  1m11.1s/3m0s  40.00 iters/s
+
+running (1m13.0s), 000/100 VUs, 14425 complete and 0 interrupted iterations
+authtoken      [  40% ] 000/030 VUs  1m12.1s/3m0s  140.00 iters/s
+logout         [  40% ] 000/030 VUs  1m12.1s/3m0s  20.00 iters/s
+refreshtoken   [  40% ] 000/040 VUs  1m12.1s/3m0s  40.00 iters/s
+
+running (1m14.0s), 000/100 VUs, 14625 complete and 0 interrupted iterations
+authtoken      [  41% ] 000/030 VUs  1m13.1s/3m0s  140.00 iters/s
+logout         [  41% ] 000/030 VUs  1m13.1s/3m0s  20.00 iters/s
+refreshtoken   [  41% ] 000/040 VUs  1m13.1s/3m0s  40.00 iters/s
+
+running (1m15.0s), 002/100 VUs, 14823 complete and 0 interrupted iterations
+authtoken      [  41% ] 002/030 VUs  1m14.1s/3m0s  140.00 iters/s
+logout         [  41% ] 000/030 VUs  1m14.1s/3m0s  20.00 iters/s
+refreshtoken   [  41% ] 000/040 VUs  1m14.1s/3m0s  40.00 iters/s
+
+running (1m16.0s), 000/100 VUs, 15025 complete and 0 interrupted iterations
+authtoken      [  42% ] 000/030 VUs  1m15.1s/3m0s  140.00 iters/s
+logout         [  42% ] 000/030 VUs  1m15.1s/3m0s  20.00 iters/s
+refreshtoken   [  42% ] 000/040 VUs  1m15.1s/3m0s  40.00 iters/s
+
+running (1m17.0s), 000/100 VUs, 15225 complete and 0 interrupted iterations
+authtoken      [  42% ] 000/030 VUs  1m16.1s/3m0s  140.00 iters/s
+logout         [  42% ] 000/030 VUs  1m16.1s/3m0s  20.00 iters/s
+refreshtoken   [  42% ] 000/040 VUs  1m16.1s/3m0s  40.00 iters/s
+
+running (1m18.0s), 000/100 VUs, 15425 complete and 0 interrupted iterations
+authtoken      [  43% ] 000/030 VUs  1m17.1s/3m0s  140.00 iters/s
+logout         [  43% ] 000/030 VUs  1m17.1s/3m0s  20.00 iters/s
+refreshtoken   [  43% ] 000/040 VUs  1m17.1s/3m0s  40.00 iters/s
+
+running (1m19.0s), 000/100 VUs, 15625 complete and 0 interrupted iterations
+authtoken      [  43% ] 000/030 VUs  1m18.1s/3m0s  140.00 iters/s
+logout         [  43% ] 000/030 VUs  1m18.1s/3m0s  20.00 iters/s
+refreshtoken   [  43% ] 000/040 VUs  1m18.1s/3m0s  40.00 iters/s
+
+running (1m20.0s), 000/100 VUs, 15825 complete and 0 interrupted iterations
+authtoken      [  44% ] 000/030 VUs  1m19.1s/3m0s  140.00 iters/s
+logout         [  44% ] 000/030 VUs  1m19.1s/3m0s  20.00 iters/s
+refreshtoken   [  44% ] 000/040 VUs  1m19.1s/3m0s  40.00 iters/s
+
+running (1m21.0s), 002/100 VUs, 16023 complete and 0 interrupted iterations
+authtoken      [  45% ] 002/030 VUs  1m20.1s/3m0s  140.00 iters/s
+logout         [  45% ] 000/030 VUs  1m20.1s/3m0s  20.00 iters/s
+refreshtoken   [  45% ] 000/040 VUs  1m20.1s/3m0s  40.00 iters/s
+
+running (1m22.0s), 000/100 VUs, 16225 complete and 0 interrupted iterations
+authtoken      [  45% ] 000/030 VUs  1m21.1s/3m0s  140.00 iters/s
+logout         [  45% ] 000/030 VUs  1m21.1s/3m0s  20.00 iters/s
+refreshtoken   [  45% ] 000/040 VUs  1m21.1s/3m0s  40.00 iters/s
+
+running (1m23.0s), 000/100 VUs, 16425 complete and 0 interrupted iterations
+authtoken      [  46% ] 000/030 VUs  1m22.1s/3m0s  140.00 iters/s
+logout         [  46% ] 000/030 VUs  1m22.1s/3m0s  20.00 iters/s
+refreshtoken   [  46% ] 000/040 VUs  1m22.1s/3m0s  40.00 iters/s
+
+running (1m24.0s), 000/100 VUs, 16625 complete and 0 interrupted iterations
+authtoken      [  46% ] 000/030 VUs  1m23.1s/3m0s  140.00 iters/s
+logout         [  46% ] 000/030 VUs  1m23.1s/3m0s  20.00 iters/s
+refreshtoken   [  46% ] 000/040 VUs  1m23.1s/3m0s  40.00 iters/s
+
+running (1m25.0s), 000/100 VUs, 16825 complete and 0 interrupted iterations
+authtoken      [  47% ] 000/030 VUs  1m24.1s/3m0s  140.00 iters/s
+logout         [  47% ] 000/030 VUs  1m24.1s/3m0s  20.00 iters/s
+refreshtoken   [  47% ] 000/040 VUs  1m24.1s/3m0s  40.00 iters/s
+
+running (1m26.0s), 000/100 VUs, 17025 complete and 0 interrupted iterations
+authtoken      [  47% ] 000/030 VUs  1m25.1s/3m0s  140.00 iters/s
+logout         [  47% ] 000/030 VUs  1m25.1s/3m0s  20.00 iters/s
+refreshtoken   [  47% ] 000/040 VUs  1m25.1s/3m0s  40.00 iters/s
+
+running (1m27.0s), 000/100 VUs, 17225 complete and 0 interrupted iterations
+authtoken      [  48% ] 000/030 VUs  1m26.1s/3m0s  140.00 iters/s
+logout         [  48% ] 000/030 VUs  1m26.1s/3m0s  20.00 iters/s
+refreshtoken   [  48% ] 000/040 VUs  1m26.1s/3m0s  40.00 iters/s
+
+running (1m28.0s), 000/100 VUs, 17425 complete and 0 interrupted iterations
+authtoken      [  48% ] 000/030 VUs  1m27.1s/3m0s  140.00 iters/s
+logout         [  48% ] 000/030 VUs  1m27.1s/3m0s  20.00 iters/s
+refreshtoken   [  48% ] 000/040 VUs  1m27.1s/3m0s  40.00 iters/s
+
+running (1m29.0s), 000/100 VUs, 17625 complete and 0 interrupted iterations
+authtoken      [  49% ] 000/030 VUs  1m28.1s/3m0s  140.00 iters/s
+logout         [  49% ] 000/030 VUs  1m28.1s/3m0s  20.00 iters/s
+refreshtoken   [  49% ] 000/040 VUs  1m28.1s/3m0s  40.00 iters/s
+
+running (1m30.0s), 000/100 VUs, 17825 complete and 0 interrupted iterations
+authtoken      [  50% ] 000/030 VUs  1m29.1s/3m0s  140.00 iters/s
+logout         [  50% ] 000/030 VUs  1m29.1s/3m0s  20.00 iters/s
+refreshtoken   [  50% ] 000/040 VUs  1m29.1s/3m0s  40.00 iters/s
+
+running (1m31.0s), 000/100 VUs, 18025 complete and 0 interrupted iterations
+authtoken      [  50% ] 000/030 VUs  1m30.1s/3m0s  140.00 iters/s
+logout         [  50% ] 000/030 VUs  1m30.1s/3m0s  20.00 iters/s
+refreshtoken   [  50% ] 000/040 VUs  1m30.1s/3m0s  40.00 iters/s
+
+running (1m32.0s), 000/100 VUs, 18225 complete and 0 interrupted iterations
+authtoken      [  51% ] 000/030 VUs  1m31.1s/3m0s  140.00 iters/s
+logout         [  51% ] 000/030 VUs  1m31.1s/3m0s  20.00 iters/s
+refreshtoken   [  51% ] 000/040 VUs  1m31.1s/3m0s  40.00 iters/s
+
+running (1m33.0s), 000/100 VUs, 18425 complete and 0 interrupted iterations
+authtoken      [  51% ] 000/030 VUs  1m32.1s/3m0s  140.00 iters/s
+logout         [  51% ] 000/030 VUs  1m32.1s/3m0s  20.00 iters/s
+refreshtoken   [  51% ] 000/040 VUs  1m32.1s/3m0s  40.00 iters/s
+
+running (1m34.0s), 001/100 VUs, 18624 complete and 0 interrupted iterations
+authtoken      [  52% ] 001/030 VUs  1m33.1s/3m0s  140.00 iters/s
+logout         [  52% ] 000/030 VUs  1m33.1s/3m0s  20.00 iters/s
+refreshtoken   [  52% ] 000/040 VUs  1m33.1s/3m0s  40.00 iters/s
+
+running (1m35.0s), 000/100 VUs, 18825 complete and 0 interrupted iterations
+authtoken      [  52% ] 000/030 VUs  1m34.1s/3m0s  140.00 iters/s
+logout         [  52% ] 000/030 VUs  1m34.1s/3m0s  20.00 iters/s
+refreshtoken   [  52% ] 000/040 VUs  1m34.1s/3m0s  40.00 iters/s
+
+running (1m36.0s), 000/100 VUs, 19025 complete and 0 interrupted iterations
+authtoken      [  53% ] 000/030 VUs  1m35.1s/3m0s  140.00 iters/s
+logout         [  53% ] 000/030 VUs  1m35.1s/3m0s  20.00 iters/s
+refreshtoken   [  53% ] 000/040 VUs  1m35.1s/3m0s  40.00 iters/s
+
+running (1m37.0s), 000/100 VUs, 19225 complete and 0 interrupted iterations
+authtoken      [  53% ] 000/030 VUs  1m36.1s/3m0s  140.00 iters/s
+logout         [  53% ] 000/030 VUs  1m36.1s/3m0s  20.00 iters/s
+refreshtoken   [  53% ] 000/040 VUs  1m36.1s/3m0s  40.00 iters/s
+
+running (1m38.0s), 000/100 VUs, 19425 complete and 0 interrupted iterations
+authtoken      [  54% ] 000/030 VUs  1m37.1s/3m0s  140.00 iters/s
+logout         [  54% ] 000/030 VUs  1m37.1s/3m0s  20.00 iters/s
+refreshtoken   [  54% ] 000/040 VUs  1m37.1s/3m0s  40.00 iters/s
+
+running (1m39.0s), 000/100 VUs, 19625 complete and 0 interrupted iterations
+authtoken      [  55% ] 000/030 VUs  1m38.1s/3m0s  140.00 iters/s
+logout         [  55% ] 000/030 VUs  1m38.1s/3m0s  20.00 iters/s
+refreshtoken   [  55% ] 000/040 VUs  1m38.1s/3m0s  40.00 iters/s
+
+running (1m40.0s), 000/100 VUs, 19825 complete and 0 interrupted iterations
+authtoken      [  55% ] 000/030 VUs  1m39.1s/3m0s  140.00 iters/s
+logout         [  55% ] 000/030 VUs  1m39.1s/3m0s  20.00 iters/s
+refreshtoken   [  55% ] 000/040 VUs  1m39.1s/3m0s  40.00 iters/s
+
+running (1m41.0s), 000/100 VUs, 20025 complete and 0 interrupted iterations
+authtoken      [  56% ] 000/030 VUs  1m40.1s/3m0s  140.00 iters/s
+logout         [  56% ] 000/030 VUs  1m40.1s/3m0s  20.00 iters/s
+refreshtoken   [  56% ] 000/040 VUs  1m40.1s/3m0s  40.00 iters/s
+
+running (1m42.0s), 000/100 VUs, 20225 complete and 0 interrupted iterations
+authtoken      [  56% ] 000/030 VUs  1m41.1s/3m0s  140.00 iters/s
+logout         [  56% ] 000/030 VUs  1m41.1s/3m0s  20.00 iters/s
+refreshtoken   [  56% ] 000/040 VUs  1m41.1s/3m0s  40.00 iters/s
+
+running (1m43.0s), 000/100 VUs, 20425 complete and 0 interrupted iterations
+authtoken      [  57% ] 000/030 VUs  1m42.1s/3m0s  140.00 iters/s
+logout         [  57% ] 000/030 VUs  1m42.1s/3m0s  20.00 iters/s
+refreshtoken   [  57% ] 000/040 VUs  1m42.1s/3m0s  40.00 iters/s
+
+running (1m44.0s), 000/100 VUs, 20625 complete and 0 interrupted iterations
+authtoken      [  57% ] 000/030 VUs  1m43.1s/3m0s  140.00 iters/s
+logout         [  57% ] 000/030 VUs  1m43.1s/3m0s  20.00 iters/s
+refreshtoken   [  57% ] 000/040 VUs  1m43.1s/3m0s  40.00 iters/s
+
+running (1m45.0s), 000/100 VUs, 20825 complete and 0 interrupted iterations
+authtoken      [  58% ] 000/030 VUs  1m44.1s/3m0s  140.00 iters/s
+logout         [  58% ] 000/030 VUs  1m44.1s/3m0s  20.00 iters/s
+refreshtoken   [  58% ] 000/040 VUs  1m44.1s/3m0s  40.00 iters/s
+
+running (1m46.0s), 000/100 VUs, 21025 complete and 0 interrupted iterations
+authtoken      [  58% ] 000/030 VUs  1m45.1s/3m0s  140.00 iters/s
+logout         [  58% ] 000/030 VUs  1m45.1s/3m0s  20.00 iters/s
+refreshtoken   [  58% ] 000/040 VUs  1m45.1s/3m0s  40.00 iters/s
+
+running (1m47.0s), 000/100 VUs, 21225 complete and 0 interrupted iterations
+authtoken      [  59% ] 000/030 VUs  1m46.1s/3m0s  140.00 iters/s
+logout         [  59% ] 000/030 VUs  1m46.1s/3m0s  20.00 iters/s
+refreshtoken   [  59% ] 000/040 VUs  1m46.1s/3m0s  40.00 iters/s
+
+running (1m48.0s), 000/100 VUs, 21425 complete and 0 interrupted iterations
+authtoken      [  60% ] 000/030 VUs  1m47.1s/3m0s  140.00 iters/s
+logout         [  60% ] 000/030 VUs  1m47.1s/3m0s  20.00 iters/s
+refreshtoken   [  60% ] 000/040 VUs  1m47.1s/3m0s  40.00 iters/s
+
+running (1m49.0s), 001/100 VUs, 21624 complete and 0 interrupted iterations
+authtoken      [  60% ] 001/030 VUs  1m48.1s/3m0s  140.00 iters/s
+logout         [  60% ] 000/030 VUs  1m48.1s/3m0s  20.00 iters/s
+refreshtoken   [  60% ] 000/040 VUs  1m48.1s/3m0s  40.00 iters/s
+
+running (1m50.0s), 000/100 VUs, 21825 complete and 0 interrupted iterations
+authtoken      [  61% ] 000/030 VUs  1m49.1s/3m0s  140.00 iters/s
+logout         [  61% ] 000/030 VUs  1m49.1s/3m0s  20.00 iters/s
+refreshtoken   [  61% ] 000/040 VUs  1m49.1s/3m0s  40.00 iters/s
+
+running (1m51.0s), 002/100 VUs, 22023 complete and 0 interrupted iterations
+authtoken      [  61% ] 002/030 VUs  1m50.1s/3m0s  140.00 iters/s
+logout         [  61% ] 000/030 VUs  1m50.1s/3m0s  20.00 iters/s
+refreshtoken   [  61% ] 000/040 VUs  1m50.1s/3m0s  40.00 iters/s
+
+running (1m52.0s), 000/100 VUs, 22225 complete and 0 interrupted iterations
+authtoken      [  62% ] 000/030 VUs  1m51.1s/3m0s  140.00 iters/s
+logout         [  62% ] 000/030 VUs  1m51.1s/3m0s  20.00 iters/s
+refreshtoken   [  62% ] 000/040 VUs  1m51.1s/3m0s  40.00 iters/s
+
+running (1m53.0s), 000/100 VUs, 22425 complete and 0 interrupted iterations
+authtoken      [  62% ] 000/030 VUs  1m52.1s/3m0s  140.00 iters/s
+logout         [  62% ] 000/030 VUs  1m52.1s/3m0s  20.00 iters/s
+refreshtoken   [  62% ] 000/040 VUs  1m52.1s/3m0s  40.00 iters/s
+
+running (1m54.0s), 000/100 VUs, 22625 complete and 0 interrupted iterations
+authtoken      [  63% ] 000/030 VUs  1m53.1s/3m0s  140.00 iters/s
+logout         [  63% ] 000/030 VUs  1m53.1s/3m0s  20.00 iters/s
+refreshtoken   [  63% ] 000/040 VUs  1m53.1s/3m0s  40.00 iters/s
+
+running (1m55.0s), 000/100 VUs, 22825 complete and 0 interrupted iterations
+authtoken      [  63% ] 000/030 VUs  1m54.1s/3m0s  140.00 iters/s
+logout         [  63% ] 000/030 VUs  1m54.1s/3m0s  20.00 iters/s
+refreshtoken   [  63% ] 000/040 VUs  1m54.1s/3m0s  40.00 iters/s
+
+running (1m56.0s), 000/100 VUs, 23025 complete and 0 interrupted iterations
+authtoken      [  64% ] 000/030 VUs  1m55.1s/3m0s  140.00 iters/s
+logout         [  64% ] 000/030 VUs  1m55.1s/3m0s  20.00 iters/s
+refreshtoken   [  64% ] 000/040 VUs  1m55.1s/3m0s  40.00 iters/s
+
+running (1m57.0s), 000/100 VUs, 23225 complete and 0 interrupted iterations
+authtoken      [  65% ] 000/030 VUs  1m56.1s/3m0s  140.00 iters/s
+logout         [  65% ] 000/030 VUs  1m56.1s/3m0s  20.00 iters/s
+refreshtoken   [  65% ] 000/040 VUs  1m56.1s/3m0s  40.00 iters/s
+
+running (1m58.0s), 000/100 VUs, 23425 complete and 0 interrupted iterations
+authtoken      [  65% ] 000/030 VUs  1m57.1s/3m0s  140.00 iters/s
+logout         [  65% ] 000/030 VUs  1m57.1s/3m0s  20.00 iters/s
+refreshtoken   [  65% ] 000/040 VUs  1m57.1s/3m0s  40.00 iters/s
+
+running (1m59.0s), 001/100 VUs, 23624 complete and 0 interrupted iterations
+authtoken      [  66% ] 001/030 VUs  1m58.1s/3m0s  140.00 iters/s
+logout         [  66% ] 000/030 VUs  1m58.1s/3m0s  20.00 iters/s
+refreshtoken   [  66% ] 000/040 VUs  1m58.1s/3m0s  40.00 iters/s
+
+running (2m00.0s), 002/100 VUs, 23823 complete and 0 interrupted iterations
+authtoken      [  66% ] 002/030 VUs  1m59.1s/3m0s  140.00 iters/s
+logout         [  66% ] 000/030 VUs  1m59.1s/3m0s  20.00 iters/s
+refreshtoken   [  66% ] 000/040 VUs  1m59.1s/3m0s  40.00 iters/s
+
+running (2m01.0s), 000/100 VUs, 24025 complete and 0 interrupted iterations
+authtoken      [  67% ] 000/030 VUs  2m00.1s/3m0s  140.00 iters/s
+logout         [  67% ] 000/030 VUs  2m00.1s/3m0s  20.00 iters/s
+refreshtoken   [  67% ] 000/040 VUs  2m00.1s/3m0s  40.00 iters/s
+
+running (2m02.0s), 000/100 VUs, 24225 complete and 0 interrupted iterations
+authtoken      [  67% ] 000/030 VUs  2m01.1s/3m0s  140.00 iters/s
+logout         [  67% ] 000/030 VUs  2m01.1s/3m0s  20.00 iters/s
+refreshtoken   [  67% ] 000/040 VUs  2m01.1s/3m0s  40.00 iters/s
+
+running (2m03.0s), 000/100 VUs, 24425 complete and 0 interrupted iterations
+authtoken      [  68% ] 000/030 VUs  2m02.1s/3m0s  140.00 iters/s
+logout         [  68% ] 000/030 VUs  2m02.1s/3m0s  20.00 iters/s
+refreshtoken   [  68% ] 000/040 VUs  2m02.1s/3m0s  40.00 iters/s
+
+running (2m04.0s), 000/100 VUs, 24625 complete and 0 interrupted iterations
+authtoken      [  68% ] 000/030 VUs  2m03.1s/3m0s  140.00 iters/s
+logout         [  68% ] 000/030 VUs  2m03.1s/3m0s  20.00 iters/s
+refreshtoken   [  68% ] 000/040 VUs  2m03.1s/3m0s  40.00 iters/s
+
+running (2m05.0s), 000/100 VUs, 24825 complete and 0 interrupted iterations
+authtoken      [  69% ] 000/030 VUs  2m04.1s/3m0s  140.00 iters/s
+logout         [  69% ] 000/030 VUs  2m04.1s/3m0s  20.00 iters/s
+refreshtoken   [  69% ] 000/040 VUs  2m04.1s/3m0s  40.00 iters/s
+
+running (2m06.0s), 000/100 VUs, 25025 complete and 0 interrupted iterations
+authtoken      [  70% ] 000/030 VUs  2m05.1s/3m0s  140.00 iters/s
+logout         [  70% ] 000/030 VUs  2m05.1s/3m0s  20.00 iters/s
+refreshtoken   [  70% ] 000/040 VUs  2m05.1s/3m0s  40.00 iters/s
+
+running (2m07.0s), 001/100 VUs, 25224 complete and 0 interrupted iterations
+authtoken      [  70% ] 001/030 VUs  2m06.1s/3m0s  140.00 iters/s
+logout         [  70% ] 000/030 VUs  2m06.1s/3m0s  20.00 iters/s
+refreshtoken   [  70% ] 000/040 VUs  2m06.1s/3m0s  40.00 iters/s
+
+running (2m08.0s), 000/100 VUs, 25425 complete and 0 interrupted iterations
+authtoken      [  71% ] 000/030 VUs  2m07.1s/3m0s  140.00 iters/s
+logout         [  71% ] 000/030 VUs  2m07.1s/3m0s  20.00 iters/s
+refreshtoken   [  71% ] 000/040 VUs  2m07.1s/3m0s  40.00 iters/s
+
+running (2m09.0s), 000/100 VUs, 25625 complete and 0 interrupted iterations
+authtoken      [  71% ] 000/030 VUs  2m08.1s/3m0s  140.00 iters/s
+logout         [  71% ] 000/030 VUs  2m08.1s/3m0s  20.00 iters/s
+refreshtoken   [  71% ] 000/040 VUs  2m08.1s/3m0s  40.00 iters/s
+
+running (2m10.0s), 000/100 VUs, 25825 complete and 0 interrupted iterations
+authtoken      [  72% ] 000/030 VUs  2m09.1s/3m0s  140.00 iters/s
+logout         [  72% ] 000/030 VUs  2m09.1s/3m0s  20.00 iters/s
+refreshtoken   [  72% ] 000/040 VUs  2m09.1s/3m0s  40.00 iters/s
+
+running (2m11.0s), 000/100 VUs, 26025 complete and 0 interrupted iterations
+authtoken      [  72% ] 000/030 VUs  2m10.1s/3m0s  140.00 iters/s
+logout         [  72% ] 000/030 VUs  2m10.1s/3m0s  20.00 iters/s
+refreshtoken   [  72% ] 000/040 VUs  2m10.1s/3m0s  40.00 iters/s
+
+running (2m12.0s), 000/100 VUs, 26225 complete and 0 interrupted iterations
+authtoken      [  73% ] 000/030 VUs  2m11.1s/3m0s  140.00 iters/s
+logout         [  73% ] 000/030 VUs  2m11.1s/3m0s  20.00 iters/s
+refreshtoken   [  73% ] 000/040 VUs  2m11.1s/3m0s  40.00 iters/s
+
+running (2m13.0s), 000/100 VUs, 26425 complete and 0 interrupted iterations
+authtoken      [  73% ] 000/030 VUs  2m12.1s/3m0s  140.00 iters/s
+logout         [  73% ] 000/030 VUs  2m12.1s/3m0s  20.00 iters/s
+refreshtoken   [  73% ] 000/040 VUs  2m12.1s/3m0s  40.00 iters/s
+
+running (2m14.0s), 000/100 VUs, 26625 complete and 0 interrupted iterations
+authtoken      [  74% ] 000/030 VUs  2m13.1s/3m0s  140.00 iters/s
+logout         [  74% ] 000/030 VUs  2m13.1s/3m0s  20.00 iters/s
+refreshtoken   [  74% ] 000/040 VUs  2m13.1s/3m0s  40.00 iters/s
+
+running (2m15.0s), 000/100 VUs, 26825 complete and 0 interrupted iterations
+authtoken      [  75% ] 000/030 VUs  2m14.1s/3m0s  140.00 iters/s
+logout         [  75% ] 000/030 VUs  2m14.1s/3m0s  20.00 iters/s
+refreshtoken   [  75% ] 000/040 VUs  2m14.1s/3m0s  40.00 iters/s
+
+running (2m16.0s), 001/100 VUs, 27024 complete and 0 interrupted iterations
+authtoken      [  75% ] 001/030 VUs  2m15.1s/3m0s  140.00 iters/s
+logout         [  75% ] 000/030 VUs  2m15.1s/3m0s  20.00 iters/s
+refreshtoken   [  75% ] 000/040 VUs  2m15.1s/3m0s  40.00 iters/s
+
+running (2m17.0s), 000/100 VUs, 27225 complete and 0 interrupted iterations
+authtoken      [  76% ] 000/030 VUs  2m16.1s/3m0s  140.00 iters/s
+logout         [  76% ] 000/030 VUs  2m16.1s/3m0s  20.00 iters/s
+refreshtoken   [  76% ] 000/040 VUs  2m16.1s/3m0s  40.00 iters/s
+
+running (2m18.0s), 000/100 VUs, 27425 complete and 0 interrupted iterations
+authtoken      [  76% ] 000/030 VUs  2m17.1s/3m0s  140.00 iters/s
+logout         [  76% ] 000/030 VUs  2m17.1s/3m0s  20.00 iters/s
+refreshtoken   [  76% ] 000/040 VUs  2m17.1s/3m0s  40.00 iters/s
+
+running (2m19.0s), 000/100 VUs, 27625 complete and 0 interrupted iterations
+authtoken      [  77% ] 000/030 VUs  2m18.1s/3m0s  140.00 iters/s
+logout         [  77% ] 000/030 VUs  2m18.1s/3m0s  20.00 iters/s
+refreshtoken   [  77% ] 000/040 VUs  2m18.1s/3m0s  40.00 iters/s
+
+running (2m20.0s), 000/100 VUs, 27825 complete and 0 interrupted iterations
+authtoken      [  77% ] 000/030 VUs  2m19.1s/3m0s  140.00 iters/s
+logout         [  77% ] 000/030 VUs  2m19.1s/3m0s  20.00 iters/s
+refreshtoken   [  77% ] 000/040 VUs  2m19.1s/3m0s  40.00 iters/s
+
+running (2m21.0s), 002/100 VUs, 28023 complete and 0 interrupted iterations
+authtoken      [  78% ] 002/030 VUs  2m20.1s/3m0s  140.00 iters/s
+logout         [  78% ] 000/030 VUs  2m20.1s/3m0s  20.00 iters/s
+refreshtoken   [  78% ] 000/040 VUs  2m20.1s/3m0s  40.00 iters/s
+
+running (2m22.0s), 000/100 VUs, 28225 complete and 0 interrupted iterations
+authtoken      [  78% ] 000/030 VUs  2m21.1s/3m0s  140.00 iters/s
+logout         [  78% ] 000/030 VUs  2m21.1s/3m0s  20.00 iters/s
+refreshtoken   [  78% ] 000/040 VUs  2m21.1s/3m0s  40.00 iters/s
+
+running (2m23.0s), 000/100 VUs, 28425 complete and 0 interrupted iterations
+authtoken      [  79% ] 000/030 VUs  2m22.1s/3m0s  140.00 iters/s
+logout         [  79% ] 000/030 VUs  2m22.1s/3m0s  20.00 iters/s
+refreshtoken   [  79% ] 000/040 VUs  2m22.1s/3m0s  40.00 iters/s
+
+running (2m24.0s), 000/100 VUs, 28625 complete and 0 interrupted iterations
+authtoken      [  80% ] 000/030 VUs  2m23.1s/3m0s  140.00 iters/s
+logout         [  80% ] 000/030 VUs  2m23.1s/3m0s  20.00 iters/s
+refreshtoken   [  80% ] 000/040 VUs  2m23.1s/3m0s  40.00 iters/s
+
+running (2m25.0s), 000/100 VUs, 28825 complete and 0 interrupted iterations
+authtoken      [  80% ] 000/030 VUs  2m24.1s/3m0s  140.00 iters/s
+logout         [  80% ] 000/030 VUs  2m24.1s/3m0s  20.00 iters/s
+refreshtoken   [  80% ] 000/040 VUs  2m24.1s/3m0s  40.00 iters/s
+
+running (2m26.0s), 000/100 VUs, 29025 complete and 0 interrupted iterations
+authtoken      [  81% ] 000/030 VUs  2m25.1s/3m0s  140.00 iters/s
+logout         [  81% ] 000/030 VUs  2m25.1s/3m0s  20.00 iters/s
+refreshtoken   [  81% ] 000/040 VUs  2m25.1s/3m0s  40.00 iters/s
+
+running (2m27.0s), 000/100 VUs, 29225 complete and 0 interrupted iterations
+authtoken      [  81% ] 000/030 VUs  2m26.1s/3m0s  140.00 iters/s
+logout         [  81% ] 000/030 VUs  2m26.1s/3m0s  20.00 iters/s
+refreshtoken   [  81% ] 000/040 VUs  2m26.1s/3m0s  40.00 iters/s
+
+running (2m28.0s), 000/100 VUs, 29425 complete and 0 interrupted iterations
+authtoken      [  82% ] 000/030 VUs  2m27.1s/3m0s  140.00 iters/s
+logout         [  82% ] 000/030 VUs  2m27.1s/3m0s  20.00 iters/s
+refreshtoken   [  82% ] 000/040 VUs  2m27.1s/3m0s  40.00 iters/s
+
+running (2m29.0s), 000/100 VUs, 29625 complete and 0 interrupted iterations
+authtoken      [  82% ] 000/030 VUs  2m28.1s/3m0s  140.00 iters/s
+logout         [  82% ] 000/030 VUs  2m28.1s/3m0s  20.00 iters/s
+refreshtoken   [  82% ] 000/040 VUs  2m28.1s/3m0s  40.00 iters/s
+
+running (2m30.0s), 002/100 VUs, 29823 complete and 0 interrupted iterations
+authtoken      [  83% ] 002/030 VUs  2m29.1s/3m0s  140.00 iters/s
+logout         [  83% ] 000/030 VUs  2m29.1s/3m0s  20.00 iters/s
+refreshtoken   [  83% ] 000/040 VUs  2m29.1s/3m0s  40.00 iters/s
+
+running (2m31.0s), 001/100 VUs, 30024 complete and 0 interrupted iterations
+authtoken      [  83% ] 001/030 VUs  2m30.1s/3m0s  140.00 iters/s
+logout         [  83% ] 000/030 VUs  2m30.1s/3m0s  20.00 iters/s
+refreshtoken   [  83% ] 000/040 VUs  2m30.1s/3m0s  40.00 iters/s
+
+running (2m32.0s), 000/100 VUs, 30225 complete and 0 interrupted iterations
+authtoken      [  84% ] 000/030 VUs  2m31.1s/3m0s  140.00 iters/s
+logout         [  84% ] 000/030 VUs  2m31.1s/3m0s  20.00 iters/s
+refreshtoken   [  84% ] 000/040 VUs  2m31.1s/3m0s  40.00 iters/s
+
+running (2m33.0s), 000/100 VUs, 30425 complete and 0 interrupted iterations
+authtoken      [  85% ] 000/030 VUs  2m32.1s/3m0s  140.00 iters/s
+logout         [  85% ] 000/030 VUs  2m32.1s/3m0s  20.00 iters/s
+refreshtoken   [  85% ] 000/040 VUs  2m32.1s/3m0s  40.00 iters/s
+
+running (2m34.0s), 000/100 VUs, 30625 complete and 0 interrupted iterations
+authtoken      [  85% ] 000/030 VUs  2m33.1s/3m0s  140.00 iters/s
+logout         [  85% ] 000/030 VUs  2m33.1s/3m0s  20.00 iters/s
+refreshtoken   [  85% ] 000/040 VUs  2m33.1s/3m0s  40.00 iters/s
+
+running (2m35.0s), 000/100 VUs, 30825 complete and 0 interrupted iterations
+authtoken      [  86% ] 000/030 VUs  2m34.1s/3m0s  140.00 iters/s
+logout         [  86% ] 000/030 VUs  2m34.1s/3m0s  20.00 iters/s
+refreshtoken   [  86% ] 000/040 VUs  2m34.1s/3m0s  40.00 iters/s
+
+running (2m36.0s), 000/100 VUs, 31025 complete and 0 interrupted iterations
+authtoken      [  86% ] 000/030 VUs  2m35.1s/3m0s  140.00 iters/s
+logout         [  86% ] 000/030 VUs  2m35.1s/3m0s  20.00 iters/s
+refreshtoken   [  86% ] 000/040 VUs  2m35.1s/3m0s  40.00 iters/s
+
+running (2m37.0s), 000/100 VUs, 31225 complete and 0 interrupted iterations
+authtoken      [  87% ] 000/030 VUs  2m36.1s/3m0s  140.00 iters/s
+logout         [  87% ] 000/030 VUs  2m36.1s/3m0s  20.00 iters/s
+refreshtoken   [  87% ] 000/040 VUs  2m36.1s/3m0s  40.00 iters/s
+
+running (2m38.0s), 000/100 VUs, 31425 complete and 0 interrupted iterations
+authtoken      [  87% ] 000/030 VUs  2m37.1s/3m0s  140.00 iters/s
+logout         [  87% ] 000/030 VUs  2m37.1s/3m0s  20.00 iters/s
+refreshtoken   [  87% ] 000/040 VUs  2m37.1s/3m0s  40.00 iters/s
+
+running (2m39.0s), 000/100 VUs, 31625 complete and 0 interrupted iterations
+authtoken      [  88% ] 000/030 VUs  2m38.1s/3m0s  140.00 iters/s
+logout         [  88% ] 000/030 VUs  2m38.1s/3m0s  20.00 iters/s
+refreshtoken   [  88% ] 000/040 VUs  2m38.1s/3m0s  40.00 iters/s
+
+running (2m40.0s), 000/100 VUs, 31825 complete and 0 interrupted iterations
+authtoken      [  88% ] 000/030 VUs  2m39.1s/3m0s  140.00 iters/s
+logout         [  88% ] 000/030 VUs  2m39.1s/3m0s  20.00 iters/s
+refreshtoken   [  88% ] 000/040 VUs  2m39.1s/3m0s  40.00 iters/s
+
+running (2m41.0s), 000/100 VUs, 32025 complete and 0 interrupted iterations
+authtoken      [  89% ] 000/030 VUs  2m40.1s/3m0s  140.00 iters/s
+logout         [  89% ] 000/030 VUs  2m40.1s/3m0s  20.00 iters/s
+refreshtoken   [  89% ] 000/040 VUs  2m40.1s/3m0s  40.00 iters/s
+
+running (2m42.0s), 002/100 VUs, 32223 complete and 0 interrupted iterations
+authtoken      [  90% ] 002/030 VUs  2m41.1s/3m0s  140.00 iters/s
+logout         [  90% ] 000/030 VUs  2m41.1s/3m0s  20.00 iters/s
+refreshtoken   [  90% ] 000/040 VUs  2m41.1s/3m0s  40.00 iters/s
+
+running (2m43.0s), 000/100 VUs, 32425 complete and 0 interrupted iterations
+authtoken      [  90% ] 000/030 VUs  2m42.1s/3m0s  140.00 iters/s
+logout         [  90% ] 000/030 VUs  2m42.1s/3m0s  20.00 iters/s
+refreshtoken   [  90% ] 000/040 VUs  2m42.1s/3m0s  40.00 iters/s
+
+running (2m44.0s), 001/100 VUs, 32624 complete and 0 interrupted iterations
+authtoken      [  91% ] 001/030 VUs  2m43.1s/3m0s  140.00 iters/s
+logout         [  91% ] 000/030 VUs  2m43.1s/3m0s  20.00 iters/s
+refreshtoken   [  91% ] 000/040 VUs  2m43.1s/3m0s  40.00 iters/s
+
+running (2m45.0s), 001/100 VUs, 32824 complete and 0 interrupted iterations
+authtoken      [  91% ] 001/030 VUs  2m44.1s/3m0s  140.00 iters/s
+logout         [  91% ] 000/030 VUs  2m44.1s/3m0s  20.00 iters/s
+refreshtoken   [  91% ] 000/040 VUs  2m44.1s/3m0s  40.00 iters/s
+
+running (2m46.0s), 001/100 VUs, 33024 complete and 0 interrupted iterations
+authtoken      [  92% ] 001/030 VUs  2m45.1s/3m0s  140.00 iters/s
+logout         [  92% ] 000/030 VUs  2m45.1s/3m0s  20.00 iters/s
+refreshtoken   [  92% ] 000/040 VUs  2m45.1s/3m0s  40.00 iters/s
+
+running (2m47.0s), 000/100 VUs, 33225 complete and 0 interrupted iterations
+authtoken      [  92% ] 000/030 VUs  2m46.1s/3m0s  140.00 iters/s
+logout         [  92% ] 000/030 VUs  2m46.1s/3m0s  20.00 iters/s
+refreshtoken   [  92% ] 000/040 VUs  2m46.1s/3m0s  40.00 iters/s
+
+running (2m48.0s), 000/100 VUs, 33425 complete and 0 interrupted iterations
+authtoken      [  93% ] 000/030 VUs  2m47.1s/3m0s  140.00 iters/s
+logout         [  93% ] 000/030 VUs  2m47.1s/3m0s  20.00 iters/s
+refreshtoken   [  93% ] 000/040 VUs  2m47.1s/3m0s  40.00 iters/s
+
+running (2m49.0s), 000/100 VUs, 33625 complete and 0 interrupted iterations
+authtoken      [  93% ] 000/030 VUs  2m48.1s/3m0s  140.00 iters/s
+logout         [  93% ] 000/030 VUs  2m48.1s/3m0s  20.00 iters/s
+refreshtoken   [  93% ] 000/040 VUs  2m48.1s/3m0s  40.00 iters/s
+
+running (2m50.0s), 000/100 VUs, 33825 complete and 0 interrupted iterations
+authtoken      [  94% ] 000/030 VUs  2m49.1s/3m0s  140.00 iters/s
+logout         [  94% ] 000/030 VUs  2m49.1s/3m0s  20.00 iters/s
+refreshtoken   [  94% ] 000/040 VUs  2m49.1s/3m0s  40.00 iters/s
+
+running (2m51.0s), 000/100 VUs, 34025 complete and 0 interrupted iterations
+authtoken      [  95% ] 000/030 VUs  2m50.1s/3m0s  140.00 iters/s
+logout         [  95% ] 000/030 VUs  2m50.1s/3m0s  20.00 iters/s
+refreshtoken   [  95% ] 000/040 VUs  2m50.1s/3m0s  40.00 iters/s
+
+running (2m52.0s), 000/100 VUs, 34225 complete and 0 interrupted iterations
+authtoken      [  95% ] 000/030 VUs  2m51.1s/3m0s  140.00 iters/s
+logout         [  95% ] 000/030 VUs  2m51.1s/3m0s  20.00 iters/s
+refreshtoken   [  95% ] 000/040 VUs  2m51.1s/3m0s  40.00 iters/s
+
+running (2m53.0s), 000/100 VUs, 34425 complete and 0 interrupted iterations
+authtoken      [  96% ] 000/030 VUs  2m52.1s/3m0s  140.00 iters/s
+logout         [  96% ] 000/030 VUs  2m52.1s/3m0s  20.00 iters/s
+refreshtoken   [  96% ] 000/040 VUs  2m52.1s/3m0s  40.00 iters/s
+
+running (2m54.0s), 000/100 VUs, 34625 complete and 0 interrupted iterations
+authtoken      [  96% ] 000/030 VUs  2m53.1s/3m0s  140.00 iters/s
+logout         [  96% ] 000/030 VUs  2m53.1s/3m0s  20.00 iters/s
+refreshtoken   [  96% ] 000/040 VUs  2m53.1s/3m0s  40.00 iters/s
+
+running (2m55.0s), 000/100 VUs, 34825 complete and 0 interrupted iterations
+authtoken      [  97% ] 000/030 VUs  2m54.1s/3m0s  140.00 iters/s
+logout         [  97% ] 000/030 VUs  2m54.1s/3m0s  20.00 iters/s
+refreshtoken   [  97% ] 000/040 VUs  2m54.1s/3m0s  40.00 iters/s
+
+running (2m56.0s), 000/100 VUs, 35025 complete and 0 interrupted iterations
+authtoken      [  97% ] 000/030 VUs  2m55.1s/3m0s  140.00 iters/s
+logout         [  97% ] 000/030 VUs  2m55.1s/3m0s  20.00 iters/s
+refreshtoken   [  97% ] 000/040 VUs  2m55.1s/3m0s  40.00 iters/s
+
+running (2m57.0s), 000/100 VUs, 35225 complete and 0 interrupted iterations
+authtoken      [  98% ] 000/030 VUs  2m56.1s/3m0s  140.00 iters/s
+logout         [  98% ] 000/030 VUs  2m56.1s/3m0s  20.00 iters/s
+refreshtoken   [  98% ] 000/040 VUs  2m56.1s/3m0s  40.00 iters/s
+
+running (2m58.0s), 000/100 VUs, 35425 complete and 0 interrupted iterations
+authtoken      [  98% ] 000/030 VUs  2m57.1s/3m0s  140.00 iters/s
+logout         [  98% ] 000/030 VUs  2m57.1s/3m0s  20.00 iters/s
+refreshtoken   [  98% ] 000/040 VUs  2m57.1s/3m0s  40.00 iters/s
+
+running (2m59.0s), 000/100 VUs, 35625 complete and 0 interrupted iterations
+authtoken      [  99% ] 000/030 VUs  2m58.1s/3m0s  140.00 iters/s
+logout         [  99% ] 000/030 VUs  2m58.1s/3m0s  20.00 iters/s
+refreshtoken   [  99% ] 000/040 VUs  2m58.1s/3m0s  40.00 iters/s
+
+running (3m00.0s), 000/100 VUs, 35825 complete and 0 interrupted iterations
+authtoken      [ 100% ] 000/030 VUs  2m59.1s/3m0s  140.00 iters/s
+logout         [ 100% ] 000/030 VUs  2m59.1s/3m0s  20.00 iters/s
+refreshtoken   [ 100% ] 000/040 VUs  2m59.1s/3m0s  40.00 iters/s
+
+running (3m00.9s), 000/100 VUs, 36002 complete and 0 interrupted iterations
+authtoken    ✓ [ 100% ] 000/030 VUs  3m0s  140.00 iters/s
+logout       ✓ [ 100% ] 000/030 VUs  3m0s  20.00 iters/s
+refreshtoken ✓ [ 100% ] 000/040 VUs  3m0s  40.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    auth_flow_5xx
+    ✓ 'count==0' count=0
+
+    auth_flow_success_authtoken
+    ✓ 'rate>=0.99' rate=100.00%
+
+    auth_flow_success_logout
+    ✓ 'rate>=0.99' rate=100.00%
+
+    auth_flow_success_refreshtoken
+    ✓ 'rate>=0.99' rate=100.00%
+
+    dropped_iterations
+    ✓ 'count==0' count=0
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 36002   199.030353/s
+    checks_succeeded...: 100.00% 36002 out of 36002
+    checks_failed......: 0.00%   0 out of 36002
+
+    ✓ logout expected 204
+    ✓ authtoken expected 200
+    ✓ refreshtoken expected 200
+
+    CUSTOM
+    auth_flow_5xx.....................: 0       0/s
+    auth_flow_duration_authtoken......: min=709µs  avg=2.04ms med=1.76ms p(90)=2.89ms p(95)=3.44ms p(99)=6.76ms max=52.56ms
+    auth_flow_duration_logout.........: min=493µs  avg=1.34ms med=1.18ms p(90)=1.91ms p(95)=2.16ms p(99)=3.16ms max=16.39ms
+    auth_flow_duration_refreshtoken...: min=1.05ms avg=2.78ms med=2.52ms p(90)=3.85ms p(95)=4.36ms p(99)=7.17ms max=49.72ms
+    auth_flow_requests_authtoken......: 25201   139.319035/s
+    auth_flow_requests_logout.........: 3600    19.90193/s
+    auth_flow_requests_refreshtoken...: 7201    39.809388/s
+    auth_flow_success_authtoken.......: 100.00% 25201 out of 25201
+    auth_flow_success_logout..........: 100.00% 3600 out of 3600
+    auth_flow_success_refreshtoken....: 100.00% 7201 out of 7201
+    auth_status_authtoken_200.........: 25201   139.319035/s
+    auth_status_logout_204............: 3600    19.90193/s
+    auth_status_refreshtoken_200......: 7201    39.809388/s
+
+    HTTP
+    http_req_duration.................: min=493µs  avg=2.01ms med=1.76ms p(90)=3.08ms p(95)=3.65ms p(99)=6.32ms max=52.56ms
+      { expected_response:true }......: min=493µs  avg=2.01ms med=1.76ms p(90)=3.08ms p(95)=3.65ms p(99)=6.32ms max=52.56ms
+    http_req_failed...................: 0.00%   0 out of 39945
+    http_reqs.........................: 39945   220.828494/s
+
+    EXECUTION
+    dropped_iterations................: 0       0/s
+    iteration_duration................: min=657µs  avg=2.22ms med=1.94ms p(90)=3.28ms p(95)=3.87ms p(99)=6.79ms max=52.59ms
+    iterations........................: 36002   199.030353/s
+    vus...............................: 0       min=0              max=6  
+    vus_max...........................: 100     min=100            max=100
+
+    NETWORK
+    data_received.....................: 63 MB   347 kB/s
+    data_sent.........................: 39 MB   218 kB/s
+
+
+
+
+running (3m00.9s), 000/100 VUs, 36002 complete and 0 interrupted iterations
+authtoken    ✓ [ 100% ] 000/030 VUs  3m0s  140.00 iters/s
+logout       ✓ [ 100% ] 000/030 VUs  3m0s  20.00 iters/s
+refreshtoken ✓ [ 100% ] 000/040 VUs  3m0s  40.00 iters/s

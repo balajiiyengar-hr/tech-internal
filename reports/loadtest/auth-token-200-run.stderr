@@ -1,0 +1,9 @@
+infra samples: reports/loadtest/auth-token-200-infra.csv
+infra summary: reports/loadtest/auth-token-200-infra.summary.json
+
+==> infra CPU / memory
+target        cpu min  cpu avg  cpu p95  cpu max    rss min    rss avg    rss p95    rss max
+postgres        0.00%    0.17%    1.14%    1.61%   414.90Mi   414.91Mi   414.90Mi   415.10Mi
+redis           0.67%    5.14%    6.24%   13.33%   113.00Mi   113.57Mi   113.90Mi   114.10Mi
+jaeger          0.02%    0.55%    1.02%    1.57%   127.90Mi   327.82Mi   510.10Mi   544.90Mi
+auth_api        0.00%   11.23%   15.80%   16.90%    56.36Mi    56.46Mi    56.52Mi    56.52Mi

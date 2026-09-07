@@ -1,5 +1,5 @@
 coverage=90.1
-tests=258
+tests=263
 minimum=90
 command=./scripts/test-coverage.sh
 package=tech-internal/cmd/server	pass

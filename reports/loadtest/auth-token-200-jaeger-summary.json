@@ -1,0 +1,147 @@
+{
+  "GET /api/v1/me": {
+    "sample_size": 200,
+    "duration_ms": {
+      "min": 0.878,
+      "median": 1.368,
+      "p95_sample": 2.602,
+      "p99_sample": 4.354,
+      "max": 9.144
+    },
+    "median_trace": {
+      "trace_id": "bef040206baa1aa77b930ac816acb5a8",
+      "duration_ms": 1.368,
+      "children": [
+        {
+          "operation": "get",
+          "duration_ms": 0.565
+        },
+        {
+          "operation": "evalsha",
+          "duration_ms": 0.362
+        },
+        {
+          "operation": "get",
+          "duration_ms": 0.299
+        }
+      ]
+    },
+    "slow_trace_p95": {
+      "trace_id": "c50bee3a0115b5462d7fed323289a96a",
+      "duration_ms": 2.602,
+      "children": [
+        {
+          "operation": "get",
+          "duration_ms": 1.038
+        },
+        {
+          "operation": "get",
+          "duration_ms": 0.797
+        },
+        {
+          "operation": "evalsha",
+          "duration_ms": 0.685
+        }
+      ]
+    },
+    "child_operation_trace_counts": {
+      "get": 400,
+      "evalsha": 200
+    },
+    "traces_with_postgres_spans": 0
+  },
+  "POST /api/v1/oauth/token/refresh": {
+    "sample_size": 200,
+    "duration_ms": {
+      "min": 1.177,
+      "median": 2.077,
+      "p95_sample": 4.139,
+      "p99_sample": 7.361,
+      "max": 12.893
+    },
+    "median_trace": {
+      "trace_id": "5cfe2b94be76adb3d6e342af4f3e6f09",
+      "duration_ms": 2.077,
+      "children": [
+        {
+          "operation": "get",
+          "duration_ms": 0.554
+        },
+        {
+          "operation": "evalsha",
+          "duration_ms": 0.513
+        },
+        {
+          "operation": "evalsha",
+          "duration_ms": 0.426
+        },
+        {
+          "operation": "redis.pipeline get zadd",
+          "duration_ms": 0.391
+        }
+      ]
+    },
+    "slow_trace_p95": {
+      "trace_id": "89675db3b482156fe693ed46e25967d8",
+      "duration_ms": 4.139,
+      "children": [
+        {
+          "operation": "evalsha",
+          "duration_ms": 1.962
+        },
+        {
+          "operation": "redis.pipeline get zadd",
+          "duration_ms": 0.659
+        },
+        {
+          "operation": "evalsha",
+          "duration_ms": 0.595
+        },
+        {
+          "operation": "get",
+          "duration_ms": 0.496
+        }
+      ]
+    },
+    "child_operation_trace_counts": {
+      "evalsha": 400,
+      "redis.pipeline get zadd": 200,
+      "get": 200
+    },
+    "traces_with_postgres_spans": 0
+  },
+  "POST /api/v1/auth/logout": {
+    "sample_size": 200,
+    "duration_ms": {
+      "min": 0.402,
+      "median": 0.767,
+      "p95_sample": 1.547,
+      "p99_sample": 2.346,
+      "max": 10.088
+    },
+    "median_trace": {
+      "trace_id": "eaeb26687453d3071da15d722e529fdd",
+      "duration_ms": 0.767,
+      "children": [
+        {
+          "operation": "evalsha",
+          "duration_ms": 0.687
+        }
+      ]
+    },
+    "slow_trace_p95": {
+      "trace_id": "3b9b7696afe850fe11f0a419dd2b221e",
+      "duration_ms": 1.547,
+      "children": [
+        {
+          "operation": "evalsha",
+          "duration_ms": 1.468
+        }
+      ]
+    },
+    "child_operation_trace_counts": {
+      "evalsha": 200
+    },
+    "traces_with_postgres_spans": 0
+  }
+}

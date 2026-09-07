@@ -1,0 +1,698 @@
+{
+  "end_unix": 1788686222.047282,
+  "window_seconds": 180,
+  "queries": {
+    "http_p50": [
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/admin/users"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/auth/login/email"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/auth/logout"
+        },
+        "value": [
+          1788686222.047,
+          "0.0009116161616161616"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/oauth/token/refresh"
+        },
+        "value": [
+          1788686222.047,
+          "0.0022631114769520225"
+        ]
+      },
+      {
+        "metric": {
+          "method": "GET",
+          "route": "/api/v1/health"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "DELETE",
+          "route": "/api/v1/admin/users/:type/:identifier"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "GET",
+          "route": "/api/v1/me"
+        },
+        "value": [
+          1788686222.047,
+          "0.0017972880860801404"
+        ]
+      }
+    ],
+    "http_p95": [
+      {
+        "metric": {
+          "method": "GET",
+          "route": "/api/v1/me"
+        },
+        "value": [
+          1788686222.047,
+          "0.004137801502570186"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/admin/users"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/auth/login/email"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/auth/logout"
+        },
+        "value": [
+          1788686222.047,
+          "0.0023619890510948906"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/oauth/token/refresh"
+        },
+        "value": [
+          1788686222.047,
+          "0.00481483666061706"
+        ]
+      },
+      {
+        "metric": {
+          "method": "GET",
+          "route": "/api/v1/health"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "DELETE",
+          "route": "/api/v1/admin/users/:type/:identifier"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      }
+    ],
+    "http_p99": [
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/auth/logout"
+        },
+        "value": [
+          1788686222.047,
+          "0.0035481707317073317"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/oauth/token/refresh"
+        },
+        "value": [
+          1788686222.047,
+          "0.008613596491228077"
+        ]
+      },
+      {
+        "metric": {
+          "method": "GET",
+          "route": "/api/v1/health"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "DELETE",
+          "route": "/api/v1/admin/users/:type/:identifier"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "GET",
+          "route": "/api/v1/me"
+        },
+        "value": [
+          1788686222.047,
+          "0.007405166051660538"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/admin/users"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "method": "POST",
+          "route": "/api/v1/auth/login/email"
+        },
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      }
+    ],
+    "http_counts": [
+      {
+        "metric": {
+          "error_group": "none",
+          "method": "GET",
+          "route": "/api/v1/health",
+          "status_class": "2xx"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "error_group": "none",
+          "method": "DELETE",
+          "route": "/api/v1/admin/users/:type/:identifier",
+          "status_class": "2xx"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "error_group": "none",
+          "method": "GET",
+          "route": "/api/v1/me",
+          "status_class": "2xx"
+        },
+        "value": [
+          1788686222.047,
+          "25202.332804504727"
+        ]
+      },
+      {
+        "metric": {
+          "error_group": "none",
+          "method": "POST",
+          "route": "/api/v1/admin/users",
+          "status_class": "2xx"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "error_group": "none",
+          "method": "POST",
+          "route": "/api/v1/auth/login/email",
+          "status_class": "2xx"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "error_group": "none",
+          "method": "POST",
+          "route": "/api/v1/auth/logout",
+          "status_class": "2xx"
+        },
+        "value": [
+          1788686222.047,
+          "3600.7641945791347"
+        ]
+      },
+      {
+        "metric": {
+          "error_group": "none",
+          "method": "POST",
+          "route": "/api/v1/oauth/token/refresh",
+          "status_class": "2xx"
+        },
+        "value": [
+          1788686222.047,
+          "7200.522869975198"
+        ]
+      }
+    ],
+    "redis_p50": [
+      {
+        "metric": {
+          "command": "other"
+        },
+        "value": [
+          1788686222.047,
+          "0.0025033787719911447"
+        ]
+      },
+      {
+        "metric": {
+          "command": "pipeline"
+        },
+        "value": [
+          1788686222.047,
+          "0.0025031433361274104"
+        ]
+      },
+      {
+        "metric": {
+          "command": "get"
+        },
+        "value": [
+          1788686222.047,
+          "0.002510077288420757"
+        ]
+      }
+    ],
+    "redis_p95": [
+      {
+        "metric": {
+          "command": "other"
+        },
+        "value": [
+          1788686222.047,
+          "0.004756419666783175"
+        ]
+      },
+      {
+        "metric": {
+          "command": "pipeline"
+        },
+        "value": [
+          1788686222.047,
+          "0.004755972338642079"
+        ]
+      },
+      {
+        "metric": {
+          "command": "get"
+        },
+        "value": [
+          1788686222.047,
+          "0.004769146847999439"
+        ]
+      }
+    ],
+    "redis_p99": [
+      {
+        "metric": {
+          "command": "other"
+        },
+        "value": [
+          1788686222.047,
+          "0.004956689968542467"
+        ]
+      },
+      {
+        "metric": {
+          "command": "pipeline"
+        },
+        "value": [
+          1788686222.047,
+          "0.004956223805532272"
+        ]
+      },
+      {
+        "metric": {
+          "command": "get"
+        },
+        "value": [
+          1788686222.047,
+          "0.0049699530310731"
+        ]
+      }
+    ],
+    "redis_counts": [
+      {
+        "metric": {
+          "command": "other"
+        },
+        "value": [
+          1788686222.047,
+          "43210.175854132685"
+        ]
+      },
+      {
+        "metric": {
+          "command": "pipeline"
+        },
+        "value": [
+          1788686222.047,
+          "7206.555985073627"
+        ]
+      },
+      {
+        "metric": {
+          "command": "get"
+        },
+        "value": [
+          1788686222.047,
+          "57605.18847898465"
+        ]
+      }
+    ],
+    "pg_p50": [
+      {
+        "metric": {},
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      }
+    ],
+    "pg_p95": [
+      {
+        "metric": {},
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      }
+    ],
+    "pg_p99": [
+      {
+        "metric": {},
+        "value": [
+          1788686222.047,
+          "NaN"
+        ]
+      }
+    ],
+    "pg_counts": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      }
+    ],
+    "pg_acquires": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      }
+    ],
+    "pg_acquire_seconds": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      }
+    ],
+    "pg_empty": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      }
+    ],
+    "pg_canceled": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      }
+    ],
+    "pg_pool": [
+      {
+        "metric": {
+          "__name__": "tech_internal_api_postgres_pool_connections",
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api",
+          "state": "idle"
+        },
+        "value": [
+          1788686222.047,
+          "10"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "tech_internal_api_postgres_pool_connections",
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api",
+          "state": "in_use"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "tech_internal_api_postgres_pool_connections",
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api",
+          "state": "max"
+        },
+        "value": [
+          1788686222.047,
+          "50"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "tech_internal_api_postgres_pool_connections",
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api",
+          "state": "total"
+        },
+        "value": [
+          1788686222.047,
+          "10"
+        ]
+      }
+    ],
+    "api_cpu_avg": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "0.12156928585793134"
+        ]
+      }
+    ],
+    "api_rss_avg": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "59202855.822222225"
+        ]
+      }
+    ],
+    "api_rss_max": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "59260928"
+        ]
+      }
+    ],
+    "redis_avg": [
+      {
+        "metric": {
+          "command": "other"
+        },
+        "value": [
+          1788686222.047,
+          "0.0005519025274707369"
+        ]
+      },
+      {
+        "metric": {
+          "command": "pipeline"
+        },
+        "value": [
+          1788686222.047,
+          "0.0004995478945165338"
+        ]
+      },
+      {
+        "metric": {
+          "command": "get"
+        },
+        "value": [
+          1788686222.047,
+          "0.0006052046910576202"
+        ]
+      }
+    ],
+    "redis_pool_hits": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "108009.85408799411"
+        ]
+      }
+    ],
+    "redis_pool_misses": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      }
+    ],
+    "redis_pool_timeouts": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "0"
+        ]
+      }
+    ],
+    "redis_pool_total_max": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "31"
+        ]
+      }
+    ],
+    "redis_pool_idle_min": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "25"
+        ]
+      }
+    ],
+    "redis_pool_idle_max": [
+      {
+        "metric": {
+          "instance": "host.docker.internal:8080",
+          "job": "tech-internal-api"
+        },
+        "value": [
+          1788686222.047,
+          "31"
+        ]
+      }
+    ]
+  }
+}
