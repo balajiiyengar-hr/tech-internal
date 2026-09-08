@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"strings"
 
+	"tech-internal/internal/apierr"
 	"tech-internal/internal/auth"
 	"tech-internal/internal/models"
 	"tech-internal/internal/repository"
@@ -25,16 +26,16 @@ func Authenticate(tokens *auth.TokenService) gin.HandlerFunc {
 		raw, err := portalauth.BearerToken(c.GetHeader(portalauth.HeaderAuthorization))
 		if err != nil {
 			if errors.Is(err, portalauth.ErrMissingToken) {
-				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "missing authorization header"})
+				apierr.Abort(c, http.StatusUnauthorized, apierr.AuthMissingToken, "missing authorization header")
 				return
 			}
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "invalid authorization header"})
+			apierr.Abort(c, http.StatusUnauthorized, apierr.AuthInvalidToken, "invalid authorization header")
 			return
 		}
 
 		claims, err := tokens.Parse(raw)
 		if err != nil {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "invalid or expired token"})
+			apierr.Abort(c, http.StatusUnauthorized, apierr.AuthExpiredToken, "invalid or expired token")
 			return
 		}
 
@@ -49,26 +50,26 @@ func Auth(tokens *auth.TokenService, oauth AccessTokenStore) gin.HandlerFunc {
 		raw, err := portalauth.BearerToken(c.GetHeader(portalauth.HeaderAuthorization))
 		if err != nil {
 			if errors.Is(err, portalauth.ErrMissingToken) {
-				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "missing authorization header"})
+				apierr.Abort(c, http.StatusUnauthorized, apierr.AuthMissingToken, "missing authorization header")
 				return
 			}
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "invalid authorization header"})
+			apierr.Abort(c, http.StatusUnauthorized, apierr.AuthInvalidToken, "invalid authorization header")
 			return
 		}
 
 		claims, err := tokens.Parse(raw)
 		if err != nil {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "invalid or expired token"})
+			apierr.Abort(c, http.StatusUnauthorized, apierr.AuthExpiredToken, "invalid or expired token")
 			return
 		}
 
 		active, err := oauth.GetActiveByJTI(c.Request.Context(), claims.JTI)
 		if err != nil {
 			if errors.Is(err, repository.ErrNotFound) {
-				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "invalid, expired, or revoked token"})
+				apierr.Abort(c, http.StatusUnauthorized, apierr.AuthTokenRevoked, "invalid, expired, or revoked token")
 				return
 			}
-			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "could not validate session"})
+			apierr.Abort(c, http.StatusInternalServerError, apierr.InternalCacheError, "could not validate session")
 			return
 		}
 		if active.Kind != models.TokenKindAccess ||
@@ -79,7 +80,7 @@ func Auth(tokens *auth.TokenService, oauth AccessTokenStore) gin.HandlerFunc {
 			(claims.UserID != "" && active.MembershipID != "" && active.MembershipID != claims.UserID) ||
 			(claims.IdentityID != "" && active.IdentityID != claims.IdentityID) ||
 			(claims.OrganizationID != "" && active.OrganizationID != claims.OrganizationID) {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "invalid, expired, or revoked token"})
+			apierr.Abort(c, http.StatusUnauthorized, apierr.AuthTokenRevoked, "invalid, expired, or revoked token")
 			return
 		}
 
@@ -92,12 +93,12 @@ func AdminOnly() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		v, ok := c.Get("claims")
 		if !ok {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+			apierr.Abort(c, http.StatusUnauthorized, apierr.AuthUnauthorized, "unauthorized")
 			return
 		}
 		claims, ok := v.(*models.Claims)
 		if !ok || (!hasRole(claims, models.RoleOrgAdmin) && !hasPermission(claims, "members:write")) {
-			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "admin access required"})
+			apierr.Abort(c, http.StatusForbidden, apierr.ForbiddenAdminRequired, "admin access required")
 			return
 		}
 		c.Next()
@@ -109,11 +110,11 @@ func RequirePermission(permission string) gin.HandlerFunc {
 		v, ok := c.Get("claims")
 		claims, valid := v.(*models.Claims)
 		if !ok || !valid {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+			apierr.Abort(c, http.StatusUnauthorized, apierr.AuthUnauthorized, "unauthorized")
 			return
 		}
 		if !hasPermission(claims, permission) {
-			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "permission required: " + permission})
+			apierr.Abort(c, http.StatusForbidden, apierr.ForbiddenPermissionDenied, "permission required: "+permission)
 			return
 		}
 		c.Next()

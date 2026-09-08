@@ -4,6 +4,7 @@ import (
 	"context"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 	"time"
 
@@ -53,6 +54,48 @@ func TestGinMiddleware(t *testing.T) {
 			}
 			if rec.Code != want {
 				t.Fatalf("status=%d body=%s", rec.Code, rec.Body.String())
+			}
+		})
+	}
+}
+
+func TestAbortAuthMapsEachPortalauthErrorToItsOwnCode(t *testing.T) {
+	gin.SetMode(gin.TestMode)
+	secret := []byte("secret")
+
+	expired, err := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
+		"sub": "member", "domain": "acme", "aud": portalauth.Audience,
+		"token_use": portalauth.TokenUseAccess, "exp": time.Now().Add(-time.Hour).Unix(),
+	}).SignedString(secret)
+	if err != nil {
+		t.Fatal(err)
+	}
+	refreshUse, err := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
+		"sub": "member", "domain": "acme", "aud": portalauth.Audience,
+		"token_use": portalauth.TokenUseRefresh, "exp": time.Now().Add(time.Hour).Unix(),
+	}).SignedString(secret)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	for name, header := range map[string]string{
+		"expired":   "Bearer " + expired,
+		"wrong-use": "Bearer " + refreshUse,
+		"malformed": "Bearer not-a-jwt",
+		"missing":   "",
+	} {
+		t.Run(name, func(t *testing.T) {
+			r := gin.New()
+			r.GET("/", Authenticate(secret), func(c *gin.Context) { c.Status(204) })
+			req := httptest.NewRequest("GET", "/", nil)
+			req.Header.Set("Authorization", header)
+			rec := httptest.NewRecorder()
+			r.ServeHTTP(rec, req)
+			if rec.Code != http.StatusUnauthorized {
+				t.Fatalf("status=%d body=%s", rec.Code, rec.Body.String())
+			}
+			if !strings.Contains(rec.Body.String(), "custom_error_code") {
+				t.Fatalf("body missing custom_error_code: %s", rec.Body.String())
 			}
 		})
 	}
