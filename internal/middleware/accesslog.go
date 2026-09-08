@@ -4,6 +4,7 @@ import (
 	"strings"
 	"time"
 
+	"tech-internal/internal/apierr"
 	"tech-internal/internal/fmtlog"
 	"tech-internal/internal/models"
 
@@ -57,6 +58,7 @@ func AccessLog() gin.HandlerFunc {
 			"client.ip":                 c.ClientIP(),
 			"user_agent.original":       c.Request.UserAgent(),
 			"http.response.body.bytes":  c.Writer.Size(),
+			"error.code":                c.GetString(apierr.ContextKey),
 		}
 
 		if v, ok := c.Get("claims"); ok {

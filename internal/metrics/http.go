@@ -5,11 +5,19 @@ import (
 	"strconv"
 	"time"
 
+	"tech-internal/internal/apierr"
+
 	"github.com/gin-gonic/gin"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
+
+// httpLabels is shared by both HTTP metrics so the two stay in lockstep.
+// custom_error_code is the bounded apierr.Code enum (empty for 2xx/3xx); service
+// is the constant tag set once via SetServiceName, letting a shared Grafana/
+// Prometheus instance group and filter dashboards per service.
+var httpLabels = []string{"route", "method", "status_class", "error_group", "service", "custom_error_code"}
 
 var (
 	httpRequests = promauto.NewCounterVec(
@@ -19,7 +27,7 @@ var (
 			Name:      "requests_total",
 			Help:      "Total API HTTP requests.",
 		},
-		[]string{"route", "method", "status_class", "error_group"},
+		httpLabels,
 	)
 
 	httpRequestDuration = promauto.NewHistogramVec(
@@ -33,7 +41,7 @@ var (
 				0.025, 0.05, 0.1, 0.25, 0.5, 1,
 			},
 		},
-		[]string{"route", "method", "status_class", "error_group"},
+		httpLabels,
 	)
 )
 
@@ -59,6 +67,8 @@ func Middleware() gin.HandlerFunc {
 			c.Request.Method,
 			statusClass(status),
 			errorGroup(status),
+			ServiceName(),
+			c.GetString(apierr.ContextKey),
 		}
 		httpRequests.WithLabelValues(labels...).Inc()
 		httpRequestDuration.WithLabelValues(labels...).Observe(time.Since(start).Seconds())

@@ -4,6 +4,7 @@ import (
 	"context"
 	"strings"
 	"sync"
+	"sync/atomic"
 	"time"
 
 	"github.com/jackc/pgx/v5"
@@ -16,14 +17,34 @@ import (
 
 const clientMetricsNamespace = "tech_internal_api"
 
+// service is the constant "service" tag published on every client and HTTP
+// metric so a shared Prometheus/Grafana instance can group and filter
+// dashboards per service. Set once at startup via SetServiceName.
+var service atomic.Value
+
+func init() {
+	service.Store("")
+}
+
+// SetServiceName publishes the service tag used by all metrics in this
+// package. Call once at startup, before traffic starts.
+func SetServiceName(name string) {
+	service.Store(name)
+}
+
+// ServiceName returns the currently published service tag.
+func ServiceName() string {
+	return service.Load().(string)
+}
+
 var (
-	postgresQueryDuration = promauto.NewHistogram(prometheus.HistogramOpts{
+	postgresQueryDuration = promauto.NewHistogramVec(prometheus.HistogramOpts{
 		Namespace: clientMetricsNamespace,
 		Subsystem: "postgres",
 		Name:      "query_duration_seconds",
 		Help:      "Postgres query duration in seconds.",
 		Buckets:   prometheus.DefBuckets,
-	})
+	}, []string{"service"})
 
 	redisCommandDuration = promauto.NewHistogramVec(prometheus.HistogramOpts{
 		Namespace: clientMetricsNamespace,
@@ -31,14 +52,14 @@ var (
 		Name:      "command_duration_seconds",
 		Help:      "Redis command duration in seconds, grouped into a bounded command set.",
 		Buckets:   prometheus.DefBuckets,
-	}, []string{"command"})
+	}, []string{"command", "service"})
 
 	cacheRequests = promauto.NewCounterVec(prometheus.CounterOpts{
 		Namespace: clientMetricsNamespace,
 		Subsystem: "cache",
 		Name:      "requests_total",
 		Help:      "Cache lookup results for bounded authentication cache types.",
-	}, []string{"cache", "result"})
+	}, []string{"cache", "result", "service"})
 
 	postgresStats = &postgresPoolCollector{
 		connections: prometheus.NewDesc(
@@ -87,7 +108,7 @@ func (PostgresQueryTracer) TraceQueryStart(ctx context.Context, _ *pgx.Conn, _ p
 
 func (PostgresQueryTracer) TraceQueryEnd(ctx context.Context, _ *pgx.Conn, _ pgx.TraceQueryEndData) {
 	if start, ok := ctx.Value(queryStartKey{}).(time.Time); ok {
-		postgresQueryDuration.Observe(time.Since(start).Seconds())
+		postgresQueryDuration.WithLabelValues(ServiceName()).Observe(time.Since(start).Seconds())
 	}
 }
 
@@ -149,7 +170,7 @@ func InstrumentRedis(client *redis.Client) {
 
 // ObserveCacheRequest records a lookup for a bounded authentication cache type.
 func ObserveCacheRequest(cache, result string) {
-	cacheRequests.WithLabelValues(cache, result).Inc()
+	cacheRequests.WithLabelValues(cache, result, ServiceName()).Inc()
 }
 
 type redisStatsGetter struct {
@@ -177,7 +198,7 @@ func (redisMetricsHook) ProcessHook(next redis.ProcessHook) redis.ProcessHook {
 	return func(ctx context.Context, cmd redis.Cmder) error {
 		start := time.Now()
 		err := next(ctx, cmd)
-		redisCommandDuration.WithLabelValues(redisCommandLabel(cmd.Name())).Observe(time.Since(start).Seconds())
+		redisCommandDuration.WithLabelValues(redisCommandLabel(cmd.Name()), ServiceName()).Observe(time.Since(start).Seconds())
 		return err
 	}
 }
@@ -186,7 +207,7 @@ func (redisMetricsHook) ProcessPipelineHook(next redis.ProcessPipelineHook) redi
 	return func(ctx context.Context, cmds []redis.Cmder) error {
 		start := time.Now()
 		err := next(ctx, cmds)
-		redisCommandDuration.WithLabelValues("pipeline").Observe(time.Since(start).Seconds())
+		redisCommandDuration.WithLabelValues("pipeline", ServiceName()).Observe(time.Since(start).Seconds())
 		return err
 	}
 }
