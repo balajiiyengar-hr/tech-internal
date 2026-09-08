@@ -424,38 +424,40 @@ func TestAuthenticationErrorBranches(t *testing.T) {
 		domain     *models.DomainSettings
 		domainErr  error
 		otpErr     error
+		oauthErr   error
 		want       int
 	}{
-		{"login malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, nil, baseDomain, nil, nil, 400},
-		{"login organization", `{"identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, nil, baseDomain, nil, nil, 400},
-		{"login domain db", `{"domain":"acme","identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, nil, nil, errors.New("db"), nil, 500},
-		{"login disabled method", `{"domain":"acme","identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, nil, &models.DomainSettings{}, nil, nil, 403},
-		{"login db", `{"domain":"acme","identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, errors.New("db"), baseDomain, nil, nil, 500},
-		{"login inactive", `{"domain":"acme","identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, &models.User{}, nil, baseDomain, nil, nil, 403},
-		{"otp request malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, nil, nil, baseDomain, nil, nil, 400},
-		{"otp request organization", `{"identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, nil, nil, baseDomain, nil, nil, 400},
-		{"otp request missing", `{"domain":"acme","identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, nil, repository.ErrNotFound, baseDomain, nil, nil, 401},
-		{"otp request db", `{"domain":"acme","identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, nil, errors.New("db"), baseDomain, nil, nil, 500},
-		{"otp request inactive", `{"domain":"acme","identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, &models.User{}, nil, baseDomain, nil, nil, 403},
-		{"otp save", `{"domain":"acme","identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, active, nil, baseDomain, nil, errors.New("redis"), 500},
-		{"verify malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, nil, nil, baseDomain, nil, nil, 400},
-		{"verify organization", `{"identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, nil, nil, baseDomain, nil, nil, 400},
-		{"verify user", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, nil, errors.New("db"), baseDomain, nil, nil, 401},
-		{"verify inactive", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, &models.User{}, nil, baseDomain, nil, nil, 403},
-		{"verify expired", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, active, nil, baseDomain, nil, otp.ErrExpired, 401},
-		{"verify mismatch", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, active, nil, baseDomain, nil, otp.ErrMismatch, 401},
-		{"verify db", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, active, nil, baseDomain, nil, errors.New("redis"), 500},
-		{"oauth malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.OAuthToken }, nil, nil, baseDomain, nil, nil, 400},
-		{"refresh malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.OAuthRefresh }, nil, nil, baseDomain, nil, nil, 400},
-		{"refresh invalid", `{"refresh_token":"bad"}`, func(h *Handler) gin.HandlerFunc { return h.OAuthRefresh }, nil, nil, baseDomain, nil, nil, 401},
+		{"login malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, nil, baseDomain, nil, nil, nil, 400},
+		{"login organization", `{"identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, nil, baseDomain, nil, nil, nil, 400},
+		{"login domain db", `{"domain":"acme","identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, nil, nil, errors.New("db"), nil, nil, 500},
+		{"login disabled method", `{"domain":"acme","identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, nil, &models.DomainSettings{}, nil, nil, nil, 403},
+		{"login db", `{"domain":"acme","identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, nil, errors.New("db"), baseDomain, nil, nil, nil, 500},
+		{"login inactive", `{"domain":"acme","identifier":"a","password":"p"}`, func(h *Handler) gin.HandlerFunc { return h.LoginEmail }, &models.User{}, nil, baseDomain, nil, nil, nil, 403},
+		{"otp request malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, nil, nil, baseDomain, nil, nil, nil, 400},
+		{"otp request organization", `{"identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, nil, nil, baseDomain, nil, nil, nil, 400},
+		{"otp request missing", `{"domain":"acme","identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, nil, repository.ErrNotFound, baseDomain, nil, nil, nil, 401},
+		{"otp request db", `{"domain":"acme","identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, nil, errors.New("db"), baseDomain, nil, nil, nil, 500},
+		{"otp request inactive", `{"domain":"acme","identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, &models.User{}, nil, baseDomain, nil, nil, nil, 403},
+		{"otp save", `{"domain":"acme","identifier":"1"}`, func(h *Handler) gin.HandlerFunc { return h.RequestOTP }, active, nil, baseDomain, nil, errors.New("redis"), nil, 500},
+		{"verify malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, nil, nil, baseDomain, nil, nil, nil, 400},
+		{"verify organization", `{"identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, nil, nil, baseDomain, nil, nil, nil, 400},
+		{"verify user", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, nil, errors.New("db"), baseDomain, nil, nil, nil, 401},
+		{"verify inactive", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, &models.User{}, nil, baseDomain, nil, nil, nil, 403},
+		{"verify expired", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, active, nil, baseDomain, nil, otp.ErrExpired, nil, 401},
+		{"verify mismatch", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, active, nil, baseDomain, nil, otp.ErrMismatch, nil, 401},
+		{"verify db", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, active, nil, baseDomain, nil, errors.New("redis"), nil, 500},
+		{"oauth malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.OAuthToken }, nil, nil, baseDomain, nil, nil, nil, 400},
+		{"refresh malformed", `{`, func(h *Handler) gin.HandlerFunc { return h.OAuthRefresh }, nil, nil, baseDomain, nil, nil, nil, 400},
+		{"refresh invalid", `{"refresh_token":"bad"}`, func(h *Handler) gin.HandlerFunc { return h.OAuthRefresh }, nil, nil, baseDomain, nil, nil, nil, 401},
+		{"verify issue token error", `{"domain":"acme","identifier":"1","otp":"1"}`, func(h *Handler) gin.HandlerFunc { return h.VerifyOTP }, active, nil, baseDomain, nil, nil, errors.New("insert"), 500},
 	}
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
 			h := &Handler{
 				cfg: cfg, tokens: tokens,
-				users: &fakeStores{user: tc.user, err: tc.userErr},
+				users:   &fakeStores{user: tc.user, err: tc.userErr},
 				domains: &fakeDomain{data: tc.domain, err: tc.domainErr},
-				otps: &fakeOTP{err: tc.otpErr}, oauth: &fakeOAuth{},
+				otps:    &fakeOTP{err: tc.otpErr}, oauth: &fakeOAuth{err: tc.oauthErr},
 			}
 			rec := handlerRequest(t, tc.call(h), "POST", "/", tc.body, nil, nil)
 			if rec.Code != tc.want {

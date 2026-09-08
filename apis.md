@@ -94,6 +94,24 @@ Role create:
 - `409`: globally duplicate email/phone, duplicate role key, or last-admin
   protection.
 
+## Error responses
+
+Every error body is `{"error": "<message>", "custom_error_code": "<CODE>"}`.
+`error` is a human-readable message; `custom_error_code` is a stable, bounded
+enum (defined in `internal/apierr`) safe to group and alert on — it never
+carries free text, identifiers, or organization IDs. `custom_error_code` is
+also published as a Prometheus label (alongside a `service` tag) on
+`tech_internal_api_http_requests_total`/`..._request_duration_seconds`, in
+access logs as `error.code`, and as the `error.code` span attribute, so the
+same value correlates metrics, logs, and traces for one failure. Codes are
+grouped by concern: `AUTH_*` (missing/invalid/expired/revoked token, wrong
+portal, disabled account or login method, bad credentials), `OTP_*` (expired,
+invalid, unknown identifier), `VALIDATION_ERROR` (malformed/missing input),
+`FORBIDDEN_*` (admin/permission/cross-organization), `NOT_FOUND` /
+`ROUTE_NOT_FOUND`, `CONFLICT_*` (duplicate, last-admin) / `SELF_ACTION_BLOCKED`,
+`ROLE_*` / `PERMISSION_UNKNOWN`, and `INTERNAL_*` (DB, cache, token, crypto,
+or unclassified) for 5xx responses.
+
 ## Token claims
 
 `sub=membership_id`; V2 claims are `person_id`, `organization_id`, `org_slug`,

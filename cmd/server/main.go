@@ -9,6 +9,7 @@ import (
 	"syscall"
 	"time"
 
+	"tech-internal/internal/apierr"
 	"tech-internal/internal/auth"
 	"tech-internal/internal/config"
 	"tech-internal/internal/database"
@@ -241,7 +242,7 @@ func buildRouter(cfg config.Config, h *handlers.Handler, tokenSvc *auth.TokenSer
 		})
 	})
 	r.NoRoute(func(c *gin.Context) {
-		c.JSON(http.StatusNotFound, gin.H{"error": "not found"})
+		apierr.JSON(c, http.StatusNotFound, apierr.RouteNotFound, "not found")
 	})
 	return r
 }

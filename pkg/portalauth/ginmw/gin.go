@@ -4,6 +4,7 @@ import (
 	"errors"
 	"net/http"
 
+	"tech-internal/internal/apierr"
 	"tech-internal/pkg/portalauth"
 
 	"github.com/gin-gonic/gin"
@@ -53,14 +54,25 @@ func ClaimsFromGin(c *gin.Context) (*portalauth.Claims, bool) {
 
 func abortAuth(c *gin.Context, err error) {
 	status := http.StatusForbidden
+	code := apierr.ForbiddenPermissionDenied
 	msg := err.Error()
 	switch {
 	case errors.Is(err, portalauth.ErrMissingToken):
 		status = http.StatusUnauthorized
+		code = apierr.AuthMissingToken
 		msg = "missing authorization header"
-	case errors.Is(err, portalauth.ErrInvalidToken), errors.Is(err, portalauth.ErrExpiredToken), errors.Is(err, portalauth.ErrWrongUse):
+	case errors.Is(err, portalauth.ErrInvalidToken):
 		status = http.StatusUnauthorized
+		code = apierr.AuthInvalidToken
+		msg = "invalid or expired token"
+	case errors.Is(err, portalauth.ErrExpiredToken):
+		status = http.StatusUnauthorized
+		code = apierr.AuthExpiredToken
+		msg = "invalid or expired token"
+	case errors.Is(err, portalauth.ErrWrongUse):
+		status = http.StatusUnauthorized
+		code = apierr.AuthWrongTokenUse
 		msg = "invalid or expired token"
 	}
-	c.AbortWithStatusJSON(status, gin.H{"error": msg})
+	apierr.Abort(c, status, code, msg)
 }
