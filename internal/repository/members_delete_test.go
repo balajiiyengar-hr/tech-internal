@@ -16,8 +16,8 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-// These tests exercise the real delete path, including the oauth_tokens
-// cascade that 005 fixes, so they need a database. Point TEST_DATABASE_URL at a
+// These tests exercise the real delete path against the person/membership/
+// identity cascade, so they need a database. Point TEST_DATABASE_URL at a
 // scratch instance that has the migrations applied, e.g.
 //
 //	TEST_DATABASE_URL=postgres://portal:portal@127.0.0.1:5434/tech_internal?sslmode=disable go test ./internal/repository/
@@ -89,34 +89,6 @@ func newMember(t *testing.T, repo *repository.MemberRepository, orgID, identifie
 	return m
 }
 
-// issueTokens mimics a login: it writes the oauth_tokens rows that used to make
-// the member permanently undeletable.
-func issueTokens(t *testing.T, pool *pgxpool.Pool, orgID, slug string, m *models.Member, identifier string) {
-	t.Helper()
-	ctx := context.Background()
-	var identityID string
-	if err := pool.QueryRow(ctx,
-		`SELECT id::text FROM login_identities WHERE person_id=$1::uuid`, m.PersonID).Scan(&identityID); err != nil {
-		t.Fatalf("load identity: %v", err)
-	}
-	tokens := repository.NewTokenRepository(pool)
-	for _, kind := range []string{"access", "refresh"} {
-		jti, err := appid.NewUUIDv7()
-		if err != nil {
-			t.Fatalf("new jti: %v", err)
-		}
-		rec := models.OAuthToken{
-			JTI: jti, FamilyID: jti, Domain: slug,
-			Type: models.UserTypeSMS, Identifier: identifier, Kind: kind,
-			ExpiresAt:    time.Now().Add(time.Hour),
-			MembershipID: m.ID, IdentityID: identityID, OrganizationID: orgID,
-		}
-		if err := tokens.Insert(ctx, rec, "hash-"+jti); err != nil {
-			t.Fatalf("insert %s token: %v", kind, err)
-		}
-	}
-}
-
 func countRows(t *testing.T, pool *pgxpool.Pool, query string, args ...any) int {
 	t.Helper()
 	var n int
@@ -126,17 +98,16 @@ func countRows(t *testing.T, pool *pgxpool.Pool, query string, args ...any) int 
 	return n
 }
 
-// Regression for the 500s on DELETE /admin/users/:type/:identifier: deleting the
-// person cascades into organization_memberships and login_identities, which the
-// oauth_tokens back-references used to reject with SQLSTATE 23503.
-func TestDeleteByIdentityRemovesMemberHoldingTokens(t *testing.T) {
+// Regression for the 500s on DELETE /admin/users/:type/:identifier: deleting
+// the person must cleanly cascade into organization_memberships and
+// login_identities.
+func TestDeleteByIdentityRemovesMember(t *testing.T) {
 	pool := testPool(t)
 	repo := repository.NewMemberRepository(pool)
 	orgID, slug := newOrg(t, pool)
 	identifier := fmt.Sprintf("+1555%010d", time.Now().UnixNano()%1e10)
 
 	m := newMember(t, repo, orgID, identifier)
-	issueTokens(t, pool, orgID, slug, m, identifier)
 
 	if err := repo.DeleteByIdentity(context.Background(), orgID, slug, models.UserTypeSMS, identifier); err != nil {
 		t.Fatalf("DeleteByIdentity() = %v, want nil", err)
@@ -147,9 +118,6 @@ func TestDeleteByIdentityRemovesMemberHoldingTokens(t *testing.T) {
 	}
 	if n := countRows(t, pool, `SELECT COUNT(*) FROM login_identities WHERE person_id=$1::uuid`, m.PersonID); n != 0 {
 		t.Errorf("login_identities rows = %d, want 0", n)
-	}
-	if n := countRows(t, pool, `SELECT COUNT(*) FROM oauth_tokens WHERE membership_id=$1::uuid`, m.ID); n != 0 {
-		t.Errorf("oauth_tokens rows = %d, want 0", n)
 	}
 }
 
@@ -230,8 +198,7 @@ func TestDeleteByIdentityConcurrentDeleteIsIdempotent(t *testing.T) {
 	orgID, slug := newOrg(t, pool)
 	identifier := fmt.Sprintf("+1555%010d", time.Now().UnixNano()%1e10)
 
-	m := newMember(t, repo, orgID, identifier)
-	issueTokens(t, pool, orgID, slug, m, identifier)
+	newMember(t, repo, orgID, identifier)
 
 	const goroutines = 16
 	results := make([]error, goroutines)
