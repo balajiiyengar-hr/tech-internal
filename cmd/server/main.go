@@ -104,6 +104,7 @@ func defaultStartupDeps() startupDeps {
 }
 
 func initialize(ctx context.Context, cfg config.Config, deps startupDeps) (*application, error) {
+	metrics.SetServiceName(cfg.ServiceName)
 	shutdownTracing, traceErr := deps.initTracing(ctx, cfg.ServiceName, cfg.Environment)
 	if traceErr != nil {
 		fmtlog.Error("startup_degraded", map[string]any{"error.message": traceErr.Error(), "event.action": "tracing_init"})

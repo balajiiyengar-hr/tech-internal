@@ -7,6 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"tech-internal/internal/apierr"
+
 	"github.com/gin-gonic/gin"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
@@ -58,14 +60,16 @@ func TestMiddleware(t *testing.T) {
 	otel.SetTextMapPropagator(propagation.TraceContext{})
 
 	for _, tc := range []struct {
-		name string
-		code int
-		fail bool
-		path string
+		name      string
+		code      int
+		fail      bool
+		path      string
+		errorCode apierr.Code
 	}{
-		{"ok", 204, false, "/ok"},
-		{"server error", 500, false, "/error"},
-		{"context error", 400, true, "/failed"},
+		{"ok", 204, false, "/ok", ""},
+		{"server error", 500, false, "/error", ""},
+		{"context error", 400, true, "/failed", ""},
+		{"apierr code", 400, false, "/validation", apierr.ValidationError},
 	} {
 		t.Run(tc.name, func(t *testing.T) {
 			r := gin.New()
@@ -73,6 +77,10 @@ func TestMiddleware(t *testing.T) {
 			r.GET(tc.path, func(c *gin.Context) {
 				if tc.fail {
 					_ = c.Error(errors.New("failed"))
+				}
+				if tc.errorCode != "" {
+					apierr.JSON(c, tc.code, tc.errorCode, "bad request")
+					return
 				}
 				c.Status(tc.code)
 			})

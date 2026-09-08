@@ -15,7 +15,7 @@ import (
 )
 
 func TestObserveCacheRequest(t *testing.T) {
-	counter := cacheRequests.WithLabelValues("identity", "hit")
+	counter := cacheRequests.WithLabelValues("identity", "hit", ServiceName())
 	before := &dto.Metric{}
 	if err := counter.Write(before); err != nil {
 		t.Fatal(err)

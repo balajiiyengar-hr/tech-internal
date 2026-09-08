@@ -25,7 +25,8 @@ Do **not** write logs from Gin handlers into Postgres or Kafka. At auth TPS that
   "client.ip": "10.0.1.12",
   "user.domain": "techhr.com",
   "user.id": "admin@techhr.com",
-  "user.roles": "admin"
+  "user.roles": "admin",
+  "error.code": "AUTH_INVALID_CREDENTIALS"
 }
 ```
 
@@ -38,6 +39,7 @@ Do **not** write logs from Gin handlers into Postgres or Kafka. At auth TPS that
 | `service.environment` | `APP_ENV` |
 | `trace.id` | `X-Request-ID` in or generated |
 | `event.duration` | Nanoseconds (ECS) |
+| `error.code` | Bounded `custom_error_code` enum from `internal/apierr` (dropped when empty, i.e. 2xx/3xx); same value tags the `tech_internal_api_http_requests_total`/`..._request_duration_seconds` metrics and the request's trace span, so one value correlates logs, metrics, and traces for a failure |
 
 `GET /api/v1/health` and CORS `OPTIONS` are not access-logged. `GET /metrics` **is** access-logged; Prometheus scrapes it every 1s in local compose, so filter `url.path=/metrics` in the collector if that noise matters. Passwords are never logged. Plaintext OTP appears only as `otp.dev_code` when `DEV_LOG_OTP=true` — drop that field in the collector. `/metrics` request series themselves exclude scrapes (`internal/metrics`).
 

@@ -9,6 +9,8 @@ import (
 	"strings"
 	"time"
 
+	"tech-internal/internal/apierr"
+
 	"github.com/gin-gonic/gin"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
@@ -105,6 +107,9 @@ func Middleware() gin.HandlerFunc {
 			attribute.Int64("http.request.duration_ns", time.Since(start).Nanoseconds()),
 			attribute.String("url.path", c.Request.URL.Path),
 		)
+		if code := c.GetString(apierr.ContextKey); code != "" {
+			span.SetAttributes(attribute.String("error.code", code))
+		}
 		if len(c.Errors) > 0 {
 			err := errors.New(c.Errors.String())
 			span.RecordError(err)
